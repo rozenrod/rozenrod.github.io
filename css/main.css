@@ -503,17 +503,27 @@ header{
 .form-group textarea[type="text"]::placeholder { color: #fff; }
 
 
-.block_social{
+/* .block_social{
 	float: right;
 	width: 30%;
 	height: 317px;
-	/*border: 1px solid #2f2f2f;*/
 }
 .social{
 	width: 72px;
 	height: 72px;
 	background: rgba(244, 67, 54, 0.95);
 	margin-top: 5px;
+} */
+.block_social{
+	display: table;
+	position: relative;
+}
+.social{
+	width: 72px;
+	height: 72px;
+	background: rgba(244, 67, 54, 0.95);
+	margin: 5px;
+	float: left;
 }
 .social img{
 	width: 55px;
