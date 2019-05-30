@@ -1,0 +1,26 @@
+<script type="text/javascript"></script>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Погода</title>
+        <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="js/main.js"></script>
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+    </head>
+    <body ng-app="jsbin">
+        <div id='background'></div>
+        <div id='background_body'></div>
+        <center ng-controller="Ctrl as vm">
+            <div class="top" id="top_img"></div>
+
+            <div class="bottom">
+                <br><span id="data_name"></span><br>
+                <span id="temp">°C</span><br>
+                <span>{{vm.data.weather[0].description}}</span><br><br>
+            </div>
+        </center>
+    </body>
+</html>
