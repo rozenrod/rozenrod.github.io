@@ -1,0 +1,88 @@
+/* 0-999 px */
+@media (max-width: 999px){
+    .menu{
+    	display: none;
+    }
+
+    .container{
+    	width: 100%;
+    }
+    .title{
+        width: 90%;
+        font-size: 35px;
+    }
+    .block_content{
+        width: 90%;
+    }
+    .slider{
+        width: 100%;
+        padding: 0px;
+    }
+    .slide-list {
+    	height: 235px;
+    }
+    .slide-item {
+    	width: 320px;
+        padding: 10px 0 10px 0;
+    }
+    .navy {
+        margin-top: 230px;
+        height: 30px;
+        width: 30px;
+    }
+    .prev-slide {
+        left: 10px;
+        background: #dbdbdb url(http://web.archive.org/web/20180903171730im_/http://rozenrod.pro/img/left-arrow.png) 9px 50% no-repeat;
+    }
+    .next-slide {
+        right: 10px;
+        background: #dbdbdb url(http://web.archive.org/web/20180903171730im_/http://rozenrod.pro/img/right-arrow.png) 12px 50% no-repeat;
+    }
+    .auto {
+        z-index: 999;
+        height: 30px;
+        width: 30px;
+    	cursor: pointer;
+    	margin: 10px 0 0 0;
+    }
+
+    .scale {
+        width: 47%;
+    }
+    .project {
+        width: 310px;
+        height: 227px;
+        margin: 5px 0 5px 0;
+    }
+    .detail_project {
+        width: 300px;
+        height: 115px;
+        margin-top: 80px;
+        padding: 10px 10px;
+    }
+    .view_project{
+    	margin-top: 86.5px;
+        width: 165px;
+    	height: 54px;
+        padding: 10px 10px;
+    }
+    .text {
+        color: #fff;
+        font-size: 16px;
+    }
+    .support {
+        width: 98%;
+    }
+}
+
+/* 1000-ထ px */
+@media (min-width: 1000px){
+    .menu_little,
+    .top_wrapper,
+    .top_descr{
+    	display: none;
+    }
+    .menu_buttom{
+        display: none;
+    }
+}

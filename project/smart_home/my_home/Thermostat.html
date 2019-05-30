@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>my home - термостат</title>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' crossorigin='anonymous'>
+</head>
+<body>
+<style media='screen'>
+    body{
+        background-color: #e6e6e6;
+    }
+    section {
+        width: 90%;
+        max-width: 462px;
+        min-width: 180px;
+        margin-bottom: 20px;
+        background: #4a4a4a;
+        color: #ffffff;
+        border-radius: 1em;
+        padding: 1em;
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, 0);
+    }
+
+    .block{
+        width: calc(50% - 2.2px);
+        height: 100px;
+        display: inline-block;
+        padding: 25px;
+        position: relative;
+        transition: .2s;
+    }
+    .block:hover{
+        text-decoration: none;
+        opacity: 0.7;
+    }
+    .block_home{
+        width: calc(100% - 46px);
+        height: 40px;
+        margin: 4px 0;
+        display: inline-flex;
+        padding: 4px 17px 0;
+        color: #fff;
+        font-size: 20px;
+        background: #333;
+    }
+    .block svg{
+        width: 50px;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, 0%);
+    }
+</style>
+    <section>
+        <a class='block block_home' href='Server.html'>my home</a><a class="block block_home" href="Settings.html" style="width: 46px;background: #404040;">≡</a>
+        <br>
+        <a class='block' href='Server.html' style='background: #488bf3'>
+            <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 297 297' enable-background='new 0 0 297 297' width='51px' height='51px'>
+              <g>
+                <path d='m293.697,128.584l-138.368-124.672c-3.798-3.422-9.566-3.424-13.366-0.008l-138.652,124.672c-3.076,2.766-4.13,7.143-2.647,11.004 1.48,3.863 5.189,6.414 9.327,6.414h31.38v139.672c0,5.518 4.473,9.99 9.989,9.99h194.281c5.517,0 9.989-4.473 9.989-9.99v-139.672h31.38c4.136,0 7.843-2.549 9.325-6.408 1.484-3.861 0.435-8.234-2.638-11.002zm-58.046,147.092h-174.301v-135.194l87.152-77.676 87.148,77.676v135.194zm13.796-149.66l-94.297-84.047c-3.787-3.377-9.506-3.377-13.293,0l-94.302,84.047h-11.512l112.594-101.243 112.363,101.242h-11.553z' fill='#FFFFFF'/>
+                <path d='m114.675,152.313c-23.291,0.459-42.097,19.549-42.097,42.947 0,23.686 19.271,42.955 42.956,42.955h22.977v4.496h-6.494c-5.517,0-9.989,4.473-9.989,9.988 0,5.518 4.473,9.99 9.989,9.99h32.967c5.517,0 9.989-4.473 9.989-9.99 0-5.516-4.473-9.988-9.989-9.988h-6.494v-4.496h31.219c19.141,0 34.714-15.572 34.714-34.715 0-18.947-15.262-34.4-34.138-34.709-4.513-18.887-21.534-32.971-41.784-32.971-13.292,5.68434e-14-25.753,6.19-33.826,16.493zm56.802,26.462c0,0.334-0.013,0.662-0.026,0.992-0.145,3.318 1.37,6.492 4.043,8.467 2.671,1.975 6.15,2.49 9.279,1.381 1.586-0.564 3.246-0.85 4.936-0.85 8.124,0 14.734,6.609 14.734,14.734s-6.61,14.734-14.734,14.734h-74.174c-12.67,0-22.977-10.307-22.977-22.975 0-12.67 10.307-22.977 22.977-22.977 0.955,0 1.932,0.064 2.983,0.201 4.033,0.52 7.97-1.457 9.97-4.99 4.08-7.215 11.748-11.695 20.013-11.695 12.669,0.002 22.976,10.309 22.976,22.978z' fill='#FFFFFF'/>
+              </g>
+            </svg>
+        </a>
+        <a class='block' href='Server.html' style='background: rgb(78, 184, 72);'>
+            <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='Capa_1' x='0px' y='0px' width='51px' height='51px' viewBox='0 0 45.579 45.579' style='enable-background:new 0 0 45.579 45.579;' xml:space='preserve'>
+            <g>
+            	<path d='M44.514,23.82c-0.746-0.898-1.843-1.416-3.01-1.416c-2.132,0-3.945,1.457-4.406,3.541   c-1.463,6.574-7.41,11.35-14.142,11.35c-7.998,0-14.506-6.506-14.506-14.505c0-8,6.508-14.506,14.506-14.506   c2.633,0,5.16,0.704,7.399,2.052l-1.221,1.237c-0.361,0.366-0.467,0.916-0.267,1.391c0.202,0.476,0.669,0.781,1.185,0.776   l7.954,0.004c0.933-0.008,1.707-0.845,1.703-1.762l-0.032-7.979c-0.002-0.529-0.314-0.994-0.793-1.189   c-0.479-0.193-1.025-0.081-1.388,0.285l-1.205,1.223C32.423,1.525,27.739,0,22.955,0C10.39,0,0.166,10.224,0.166,22.79   c0,12.565,10.224,22.789,22.79,22.789c10.937,0,20.351-7.796,22.388-18.535C45.562,25.896,45.26,24.722,44.514,23.82z' fill='#FFFFFF'/>
+            </g>
+            </svg>
+        </a>
+        <br><br>
+
+        <!-- Кнопки -->
+        <style>
+            .block:hover{
+                opacity: 1 !important;
+            }
+            form{
+                background: #404040;
+                padding: 5px !important;
+                height: 160px !important;
+                margin: 4px 0;
+            }
+            form p{
+                width: 100%;
+                height: 40px;
+                padding: 4px 17px 0;
+                color: #fff;
+                font-size: 20px;
+                background: #333;
+                display: inline-block;
+                position: relative;
+            }
+            form input{
+                border: 0;
+                width: 100%;
+                height: 40px;
+                display: inline-flex;
+                padding: 0px 17px;
+                color: #fff;
+                font-size: 18px;
+                background: #333;
+                margin: 4px 0px;
+            }
+        </style>
+
+        <form class='block' style='margin: 3px 0;'>
+            <p>В комнате</p>
+            <br>
+            <input type='text' name='Temp' value='20°'><br />
+            <input type='text' name='Temp' value='Выключен'>
+        </form>
+
+        <form class='block' action='Gest' method='get'>
+            <p>Гистерезис</p>
+            <br>
+            <input type='text' name='Gest' value='20°'><br />
+            <input type='submit' value='Отправить' style='background: #777;'>
+        </form>
+
+        <form class='block' action='TempDay' method='get'>
+            <p>День</p>
+            <br>
+            <input type='text' name='TempDay' value='21°'><br />
+            <input type='submit' value='Отправить' style='background: #777;'>
+        </form>
+
+        <form class='block' action='TempNight' method='get'>
+            <p>Ночь</p>
+            <br>
+            <input type='text' name='TempNight' value='19.5°'><br />
+            <input type='submit' value='Отправить' style='background: #777;'>
+        </form>
+
+
+
+
+        <!-- <br><br>
+        <form method='POST' action='/update' enctype='multipart/form-data' style='padding: 6px 30px 0;margin: 0 auto;background: #333;'>
+            <input style='width: 152px;color: white;padding: 0px 11px 10px;margin: 0 auto;font-family: monospace;font-weight: 100;font-size: 16px;border: 0;background: #333333;' type='file' accept='application/octet-stream' name='update'>
+            <input style='height: 32px;width: 131px;color: #fff;padding: 0px 21px;background: 0;margin: 0px 11px;border: 2px solid #fff;' type='submit' value='ОБНОВИТЬ'>
+            <span style='color:#fff'>S2.18.11.1</span>
+        </form> -->
+
+    </section>
+
+</body>
+</html>
