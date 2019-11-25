@@ -2,24 +2,24 @@
 <script>
 var data_url='https://api.openweathermap.org/data/2.5/weather?q=Toretsk&lang=ru&units=metric&appid=f972879aeef6f855db849291d62b2bef';
 getWeather(function (data) {
-        if (data.weather[0].icon  == '01d') {var top_img = 'https://w.rozenrod.pro/img/w/01d.png';var color = 'linear-gradient(to right, #b0ef6c, #b0ef6c, #e2e2e2)';}
-        else if (data.weather[0].icon == '02d') {var top_img = 'https://w.rozenrod.pro/img/w/02d.png';var color = 'linear-gradient(to right, #83c5c2, #83c5c2, #e2e2e2)';}
-        else if (data.weather[0].icon == '03d') {var top_img = 'https://w.rozenrod.pro/img/w/03d.png';var color = 'linear-gradient(to right, #90b9de, #90b9de, #e2e2e2)';}
-        else if (data.weather[0].icon == '04d') {var top_img = 'https://w.rozenrod.pro/img/w/04d.png';var color = 'linear-gradient(to right, #de7e7e, #de7e7e, #e2e2e2)';}
-        else if (data.weather[0].icon == '09d') {var top_img = 'https://w.rozenrod.pro/img/w/09d.png';var color = 'linear-gradient(to right, #96c583, #96c583, #e2e2e2)';}
-        else if (data.weather[0].icon == '10d') {var top_img = 'https://w.rozenrod.pro/img/w/10d.png';var color = 'linear-gradient(to right, #5a7a8c, #5a7a8c, #e2e2e2)';}
-        else if (data.weather[0].icon == '11d') {var top_img = 'https://w.rozenrod.pro/img/w/11d.png';var color = 'linear-gradient(to right, #4981a0, #4981a0, #e2e2e2)';}
-        else if (data.weather[0].icon == '13d') {var top_img = 'https://w.rozenrod.pro/img/w/13d.png';var color = 'linear-gradient(to right, #f1f1f1, #f1f1f1, #e2e2e2)';}
-        else if (data.weather[0].icon == '50d') {var top_img = 'https://w.rozenrod.pro/img/w/50d.png';var color = 'linear-gradient(to right, #d6d6d6, #d6d6d6, #e2e2e2)';}
-        else if (data.weather[0].icon == '01n') {var top_img = 'https://w.rozenrod.pro/img/w/01n.png';var color = 'linear-gradient(to right, #5451ec, #9198e5)';}
-        else if (data.weather[0].icon == '02n') {var top_img = 'https://w.rozenrod.pro/img/w/02n.png';var color = 'linear-gradient(to right, #5451ec, #9198e5)';}
-        else if (data.weather[0].icon == '03n') {var top_img = 'https://w.rozenrod.pro/img/w/03n.png';var color = 'linear-gradient(to right, #5451ec, #9198e5)';}
-        else if (data.weather[0].icon == '04n') {var top_img = 'https://w.rozenrod.pro/img/w/04n.png';var color = 'linear-gradient(to right, #5451ec, #9198e5)';}
-        else if (data.weather[0].icon == '09n') {var top_img = 'https://w.rozenrod.pro/img/w/09n.png';var color = 'linear-gradient(to right, #5451ec, #9198e5)';}
-        else if (data.weather[0].icon == '10n') {var top_img = 'https://w.rozenrod.pro/img/w/10n.png';var color = 'linear-gradient(to right, #5451ec, #9198e5)';}
-        else if (data.weather[0].icon == '11n') {var top_img = 'https://w.rozenrod.pro/img/w/11n.png';var color = 'linear-gradient(to right, #5451ec, #9198e5)';}
-        else if (data.weather[0].icon == '13n') {var top_img = 'https://w.rozenrod.pro/img/w/13n.png';var color = 'linear-gradient(to right, #5451ec, #9198e5)';}
-        else {var top_img = 'https://w.rozenrod.pro/img/w/50n.png';var color = 'linear-gradient(to right, #5451ec, #9198e5)';}
+        if (data.weather[0].icon  == '01d') {var top_img = 'https://rozenrod.github.io/w/img/w/01d.png';var color = 'linear-gradient(to right, #b0ef6c, #b0ef6c, #e2e2e2)';}
+        else if (data.weather[0].icon == '02d') {var top_img = 'https://rozenrod.github.io/w/img/w/02d.png';var color = 'linear-gradient(to right, #83c5c2, #83c5c2, #e2e2e2)';}
+        else if (data.weather[0].icon == '03d') {var top_img = 'https://rozenrod.github.io/w/img/w/03d.png';var color = 'linear-gradient(to right, #90b9de, #90b9de, #e2e2e2)';}
+        else if (data.weather[0].icon == '04d') {var top_img = 'https://rozenrod.github.io/w/img/w/04d.png';var color = 'linear-gradient(to right, #de7e7e, #de7e7e, #e2e2e2)';}
+        else if (data.weather[0].icon == '09d') {var top_img = 'https://rozenrod.github.io/w/img/w/09d.png';var color = 'linear-gradient(to right, #96c583, #96c583, #e2e2e2)';}
+        else if (data.weather[0].icon == '10d') {var top_img = 'https://rozenrod.github.io/w/img/w/10d.png';var color = 'linear-gradient(to right, #5a7a8c, #5a7a8c, #e2e2e2)';}
+        else if (data.weather[0].icon == '11d') {var top_img = 'https://rozenrod.github.io/w/img/w/11d.png';var color = 'linear-gradient(to right, #4981a0, #4981a0, #e2e2e2)';}
+        else if (data.weather[0].icon == '13d') {var top_img = 'https://rozenrod.github.io/w/img/w/13d.png';var color = 'linear-gradient(to right, #f1f1f1, #f1f1f1, #e2e2e2)';}
+        else if (data.weather[0].icon == '50d') {var top_img = 'https://rozenrod.github.io/w/img/w/50d.png';var color = 'linear-gradient(to right, #d6d6d6, #d6d6d6, #e2e2e2)';}
+        else if (data.weather[0].icon == '01n') {var top_img = 'https://rozenrod.github.io/w/img/w/01n.png';var color = 'linear-gradient(to right, #5451ec, #9198e5)';}
+        else if (data.weather[0].icon == '02n') {var top_img = 'https://rozenrod.github.io/w/img/w/02n.png';var color = 'linear-gradient(to right, #5451ec, #9198e5)';}
+        else if (data.weather[0].icon == '03n') {var top_img = 'https://rozenrod.github.io/w/img/w/03n.png';var color = 'linear-gradient(to right, #5451ec, #9198e5)';}
+        else if (data.weather[0].icon == '04n') {var top_img = 'https://rozenrod.github.io/w/img/w/04n.png';var color = 'linear-gradient(to right, #5451ec, #9198e5)';}
+        else if (data.weather[0].icon == '09n') {var top_img = 'https://rozenrod.github.io/w/img/w/09n.png';var color = 'linear-gradient(to right, #5451ec, #9198e5)';}
+        else if (data.weather[0].icon == '10n') {var top_img = 'https://rozenrod.github.io/w/img/w/10n.png';var color = 'linear-gradient(to right, #5451ec, #9198e5)';}
+        else if (data.weather[0].icon == '11n') {var top_img = 'https://rozenrod.github.io/w/img/w/11n.png';var color = 'linear-gradient(to right, #5451ec, #9198e5)';}
+        else if (data.weather[0].icon == '13n') {var top_img = 'https://rozenrod.github.io/w/img/w/13n.png';var color = 'linear-gradient(to right, #5451ec, #9198e5)';}
+        else {var top_img = 'https://rozenrod.github.io/w/img/w/50n.png';var color = 'linear-gradient(to right, #5451ec, #9198e5)';}
     var background = '<style>.block_w{background:' + color + ';}</style>';
     document.getElementById('background').innerHTML = background;
     document.getElementById('top_img').innerHTML = '<img src=' + top_img + '>';
