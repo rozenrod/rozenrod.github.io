@@ -1,5 +1,8 @@
 /* 0-999 px */
 @media (max-width: 999px){
+    .body_content{
+    	width: 100%;
+    }
     .menu{
     	display: none;
     }
@@ -10,9 +13,6 @@
     .title{
         width: 90%;
         font-size: 35px;
-    }
-    .block_content{
-        width: 90%;
     }
     .slider{
         width: 100%;
@@ -77,6 +77,9 @@
 
 /* 1000-ထ px */
 @media (min-width: 1000px){
+    .body_content{
+    	width: 1000px;
+    }
     .menu_little,
     .top_wrapper,
     .top_descr{
