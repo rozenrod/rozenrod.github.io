@@ -1,6 +1,7 @@
 .content_text{
   width: 100%;
   max-width: 1000px;
+  margin-left: 10px;
 }
 .content_text img{
   width: 100%;
