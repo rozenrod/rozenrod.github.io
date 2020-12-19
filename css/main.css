@@ -42,6 +42,7 @@ a {
 
 a:hover{
 	color: #f44336;
+	color: #b5b4b4;
 	text-decoration: none;
 }
 
@@ -142,6 +143,7 @@ header{
 }
 .menu a:hover{
 	color: #f44336;
+	color: #b5b4b4;
 }
 /*Меню_little*/
 .menu_little{
@@ -206,6 +208,7 @@ header{
 }
 .menu_button_a>ul>li>a:hover{
 	color: #F44336;
+	color: #b5b4b4;
 	background-color: rgba(255,255,255,.05);
 }
 
@@ -288,9 +291,6 @@ header{
 .text{
 	color: #fff;
 	font-size: 20px;
-}
-.project_p{
-	float: left;
 }
 
 /*Навыки*/
@@ -385,7 +385,8 @@ header{
 .detail_project{
 	width: 400px;
 	height: 125px;
-	background: rgba(244, 67, 54, 0.95);
+	/* background: rgba(244, 67, 54, 0.95); */
+	background: rgb(47 47 47 / 0.95);
 	position: relative;
 	z-index: 10;
 	text-align: left;
@@ -404,13 +405,14 @@ header{
 	text-transform: uppercase;
 	box-shadow: 0 2px 12px rgba(0,0,0,0.2);
 	transition: all .5s;
-	background: #2f2f2f;
+	/* background: #2f2f2f; */
+	background: #464646;
 	color: #fff;
 }
 .detail_project a:hover{
 	transition: all .5s;
 	box-shadow: 0px 2px 12px rgba(0,0,0,0.5);
-	background: #2f2f2f;
+	background: #505050;
 	color: #fff;
 }
 .view_project{
@@ -533,7 +535,8 @@ header{
 .social{
 	width: 72px;
 	height: 72px;
-	background: rgba(244, 67, 54, 0.95);
+	/* background: rgba(244, 67, 54, 0.95); */
+	background: rgb(47 47 47 / 0.95);
 	margin: 5px;
 	float: left;
 }
@@ -547,7 +550,8 @@ header{
 .support{
 	min-width: 172px;
 	height: 100px;
-	background: rgba(244, 67, 54, 0.95);
+	/* background: rgba(244, 67, 54, 0.95); */
+	background: rgb(47 47 47 / 0.95);
 	padding-top: 15px;
 	display: inline-block;
 	margin: 1%;
