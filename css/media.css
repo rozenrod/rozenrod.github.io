@@ -12,6 +12,9 @@
     details {
       font-size: 20px;
     }
+    .block_content_p{
+    	padding-left: 22px;
+    }
     .body_content{
     	width: 100%;
     }
@@ -99,6 +102,9 @@
     }
     .menu_buttom{
         display: none;
+    }
+    .block_content_p{
+    	padding-left: 30px;
     }
     .content_text h1{
       font-size: 40px;
