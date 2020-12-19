@@ -81,6 +81,7 @@ body{
 		background: #fff;
     /* background: #2f2f2f; */
 		background: #d8d6d6;
+		background: #ebeaea;
 }
 .body{
 	overflow: hidden;
@@ -120,7 +121,7 @@ header{
 	font-family: 'Russo One', sans-serif;
 }
 .logo img{
-	margin-top: -5px;
+	margin-top: -4px;
 	width: 40px;
 	height: 40px;
 }
@@ -262,6 +263,7 @@ header{
 }
 .title{
 	/* width: 1000px; */
+	margin-left: 5px;
 	text-align: left;
 	color: #2f2f2f;
 	padding-top: 10px;
