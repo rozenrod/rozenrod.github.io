@@ -1,5 +1,17 @@
 /* 0-999 px */
 @media (max-width: 999px){
+    .content_text h1{
+      font-size: 30px;
+    }
+    .content_text p{
+      font-size: 20px;
+    }
+    .content_text a {
+      font-size: 20px;
+    }
+    details {
+      font-size: 20px;
+    }
     .body_content{
     	width: 100%;
     }
@@ -87,5 +99,17 @@
     }
     .menu_buttom{
         display: none;
+    }
+    .content_text h1{
+      font-size: 40px;
+    }
+    .content_text p{
+      font-size: 25px;
+    }
+    .content_text a {
+      font-size: 25px;
+    }
+    details {
+      font-size: 25px;
     }
 }

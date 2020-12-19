@@ -4,7 +4,7 @@ details{
   padding: 5px 10px;
   position: relative;
   z-index: 10;
-  font-size: 25px;
+  /* font-size: 25px; */
   font-weight: 400;
   font-family: 'Roboto Condensed', sans-serif;
   border: 2px solid #d8d6d6;
@@ -25,7 +25,7 @@ details{
   padding-top: 10px;
   position: relative;
   z-index: 10;
-  font-size: 40px;
+  /* font-size: 40px; */
   text-transform: uppercase;
   font-family: 'Russo One', sans-serif;
 }
@@ -36,13 +36,13 @@ details{
   padding-top: 10px;
   position: relative;
   z-index: 10;
-  font-size: 25px;
+  /* font-size: 25px; */
   font-weight: 400;
   font-family: 'Roboto Condensed', sans-serif;
 }
 .content_text a{
   color: #2f2f2f;
-  font-size: 25px;
+  /* font-size: 25px; */
   font-weight: 400;
   font-family: 'Roboto Condensed', sans-serif;
   border-bottom: 1px solid #f44336;
