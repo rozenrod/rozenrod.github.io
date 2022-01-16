@@ -53,16 +53,9 @@
 
 
 <center>
-    <div class="release-block block_header_small" id="release_block">
+    <div class="release-block block_header_small">
+      <div id="release_block"></div>
           <script type="text/javascript">
-            // var paramsString = document.location.search; // ?page=4&limit=10&sortby=desc
-            // var searchParams = new URLSearchParams(paramsString);
-            //
-            // searchParams.get("page"); // 4
-            // searchParams.get("sortby"); // desc
-
-
-
             var url_relise = '';
             var paramsString = document.location.search;
             var searchParams = new URLSearchParams(paramsString);
@@ -103,20 +96,43 @@
             })
           </script>
 
+          <br />
 
+          <div id="serie_href" style="max-width: 800px;"></div>
+          <script type="text/javascript">
+            var paramsString = document.location.search;
+            var searchParams = new URLSearchParams(paramsString);
+            fetch('https://api.anilibria.tv/v2/getTitle?id='+searchParams.get("id")+'&filter=id,player')
+            .then(function (response) {
+              if (response.status !== 200) {
+                return Promise.reject(new Error(response.statusText))
+              }
+              return Promise.resolve(response)
+            })
+            .then(function (response) {
+              return response.json()
+            })
+            .then(function (data) {
+              // var url_relise = data["player"]["host"]+data["player"]["playlist"][1]["hls"]["hd"];
+              var data2=data["player"]["series"]["last"];
+              for (let i = 0; i < data2; i++) {
+                // url_relise = ''+data["player"]["host"];
+                console.log(i);
+                // console.log(data3[i]["hls"]);
+                var i2 = i+1;
+                var div = document.createElement('div');
+                document.getElementById('serie_href').appendChild(div);
+                div.setAttribute("style", "display: contents;");
+                div.innerHTML = '<a href="https://'+data["player"]["host"]+data["player"]["playlist"][i2]["hls"]["hd"]+'" class="release-href" style="margin: 5px !important;">Серия '+ i2 +'</a>';
 
+              }
+            })
 
-          <!-- <div class="release-player">
-            <div id="player"></div>
-          </div>
-            <script>
-               var player = new Playerjs({id:"player", file:""});
-               var player = new Playerjs({
-                 id:"player",
-                 poster:"https://raw.githubusercontent.com/anilibria/anilibria/master/img/pleer2.jpg",
-                 file:[]
-              });
-            </script> -->
+            .catch(function (error) {
+              console.log('error', error)
+            })
+
+          </script>
     </div>
 </center>
 
