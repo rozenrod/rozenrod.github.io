@@ -1,0 +1,8 @@
+{
+  "name": "AniLibria iPad",
+  "short_name": "AniLibria iPad",
+  "start_url": "http://192.168.100.48",
+  "scope": "/",
+  "icons": [{ "src": "Logo-180.png", "sizes": "180x180" }],
+  "display": "standalone"
+}
