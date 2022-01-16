@@ -98,7 +98,7 @@
 
           <br />
 
-          <div id="serie_href" style="max-width: 800px;"></div>
+          <div id="serie_href" style="max-width: 730px;"></div>
           <script type="text/javascript">
             var paramsString = document.location.search;
             var searchParams = new URLSearchParams(paramsString);
@@ -123,7 +123,7 @@
                 var div = document.createElement('div');
                 document.getElementById('serie_href').appendChild(div);
                 div.setAttribute("style", "display: contents;");
-                div.innerHTML = '<a href="https://'+data["player"]["host"]+data["player"]["playlist"][i2]["hls"]["hd"]+'" class="release-href" style="margin: 5px !important;">Серия '+ i2 +'</a>';
+                div.innerHTML = '<a href="https://'+data["player"]["host"]+data["player"]["playlist"][i2]["hls"]["hd"]+'" class="release-href release-href_hov" style="margin: 5px !important;width: 33px;">'+ i2 +'</a>';
 
               }
             })
@@ -132,7 +132,7 @@
               console.log('error', error)
             })
 
-          </script>
+          </script><br /><br />
     </div>
 </center>
 
