@@ -52,7 +52,7 @@
       <center>
         <div class="article-list block_header_small" id="article_block">
           <script type="text/javascript">
-            fetch('http://api.anilibria.tv/v2/getChanges?filter=id,names,poster,description,player,type&limit=400')
+            fetch('https://api.anilibria.tv/v2/getChanges?filter=id,names,poster,description,player,type&limit=400')
             .then(function (response) {
               if (response.status !== 200) {
                 return Promise.reject(new Error(response.statusText))

@@ -71,7 +71,7 @@
             </div>
 
           <script type="text/javascript">
-            fetch('http://api.anilibria.tv/v2/advancedSearch?query={season.code} == 1 and 2 and 3 and 4&order_by=in_favorites&sort_direction=1&filter=id,names,poster,description,player,type&limit=10')
+            fetch('https://api.anilibria.tv/v2/advancedSearch?query={season.code} == 1 and 2 and 3 and 4&order_by=in_favorites&sort_direction=1&filter=id,names,poster,description,player,type&limit=10')
             .then(function (response) {
               if (response.status !== 200) {
                 return Promise.reject(new Error(response.statusText))
@@ -113,7 +113,7 @@
           </div> -->
           <script type="text/javascript">
 
-            fetch('http://api.anilibria.tv/v2/getUpdates?limit=24&filter=id,season,type,names,poster,genres,description,playlist,player,in_favorites')
+            fetch('https://api.anilibria.tv/v2/getUpdates?limit=24&filter=id,season,type,names,poster,genres,description,playlist,player,in_favorites')
             .then(function (response) {
               if (response.status !== 200) {
                 return Promise.reject(new Error(response.statusText))

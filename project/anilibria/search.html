@@ -54,7 +54,7 @@
           <script type="text/javascript">
             var paramsString = document.location.search; // ?page=4&limit=10&sortby=desc
             var searchParams = new URLSearchParams(paramsString);
-            var search = "http://api.anilibria.tv/v2/searchTitles?search="+searchParams.get("q")+" &filter=id,names,poster,description,player,type&limit=240";
+            var search = "https://api.anilibria.tv/v2/searchTitles?search="+searchParams.get("q")+" &filter=id,names,poster,description,player,type&limit=240";
             fetch(search)
             .then(function (response) {
               if (response.status !== 200) {

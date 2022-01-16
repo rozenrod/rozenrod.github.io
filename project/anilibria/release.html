@@ -67,7 +67,7 @@
             var paramsString = document.location.search;
             var searchParams = new URLSearchParams(paramsString);
             searchParams.get("id");
-            fetch('http://api.anilibria.tv/v2/getTitle?id='+searchParams.get("id")+'&filter=id,season,type,names,poster,genres,description,playlist,player,in_favorites')
+            fetch('https://api.anilibria.tv/v2/getTitle?id='+searchParams.get("id")+'&filter=id,season,type,names,poster,genres,description,playlist,player,in_favorites')
             .then(function (response) {
               if (response.status !== 200) {
                 return Promise.reject(new Error(response.statusText))
