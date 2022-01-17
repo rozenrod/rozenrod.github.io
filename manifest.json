@@ -1,0 +1,8 @@
+{
+  "name": "AniLibria iPad",
+  "short_name": "AniLibria iPad",
+  "start_url": "https://rozenrod.ml/project/anilibria",
+  "scope": "/",
+  "icons": [{ "src": "Logo-180.png", "sizes": "180x180" }],
+  "display": "standalone"
+}
