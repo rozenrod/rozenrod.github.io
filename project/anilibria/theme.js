@@ -48,7 +48,7 @@ window.onload = function() {
   setTimeout(function(){
     fadeOutnojquery(preloader_preload);
     fadeOutnojquery(preloader_preload);
-  },1000);
+  },400);
 };
 function theme1() {
   $.cookie('Theme', 'theme2');
