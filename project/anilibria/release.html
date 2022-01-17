@@ -60,7 +60,14 @@
             var paramsString = document.location.search;
             var searchParams = new URLSearchParams(paramsString);
             searchParams.get("id");
-            fetch('https://api.anilibria.tv/v2/getTitle?id='+searchParams.get("id")+'&filter=id,season,type,names,poster,genres,description,playlist,player,in_favorites')
+            if (!searchParams.get("id") && searchParams.get("random") == '1') {
+              url = 'https://api.anilibria.tv/v2/getRandomTitle?filter=id,season,type,names,poster,genres,description,playlist,player,in_favorites';
+            } else if (searchParams.get("id")) {
+              url = 'https://api.anilibria.tv/v2/getTitle?id='+searchParams.get("id")+'&filter=id,season,type,names,poster,genres,description,playlist,player,in_favorites';
+            } else {
+                document.getElementById('release_block').setAttribute("style", "display:none;");
+            }
+            fetch(url)
             .then(function (response) {
               if (response.status !== 200) {
                 return Promise.reject(new Error(response.statusText))
@@ -71,8 +78,14 @@
               return response.json()
             })
             .then(function (data) {
-              var div = document.createElement('div');
+              var url = document.location;
+              var paramsString = document.location.search;
+              var searchParams = new URLSearchParams(paramsString);
+              if (!searchParams.get("id") && searchParams.get("random") == '1') {
+                window.location.search = "id="+data["id"]+"";
+              }
               var genres = '';
+              var div = document.createElement('div');
               document.getElementById('release_block').appendChild(div);
               div.className = 'release-list';
               div.setAttribute("style", "");
@@ -117,7 +130,6 @@
               var data2=data["player"]["series"]["last"];
               for (let i = 0; i < data2; i++) {
                 // url_relise = ''+data["player"]["host"];
-                console.log(i);
                 // console.log(data3[i]["hls"]);
                 var i2 = i+1;
                 var div = document.createElement('div');

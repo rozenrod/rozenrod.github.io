@@ -1,4 +1,14 @@
 window.onload = function() {
+  if (!$.cookie('PHPSESSID')) {
+    document.getElementById('form_logout').setAttribute("style", "display:none;");
+    document.getElementById('relise_block').setAttribute("style", "display:none;");
+    document.getElementById('form_login').setAttribute("style", "");
+  } else {
+    document.getElementById('form_logout').setAttribute("style", "");
+    document.getElementById('relise_block').setAttribute("style", "");
+    document.getElementById('form_login').setAttribute("style", "display:none;");
+  }
+
   if ($.cookie('Theme') == 'theme1') {
     document.getElementById('b_theme2').setAttribute("style", "display:none;");
     document.getElementById('b_theme1').setAttribute("style", "");

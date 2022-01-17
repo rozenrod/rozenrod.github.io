@@ -9,6 +9,21 @@ for (var i = 0; i < vse_divi.length; i++) {
   vse_divi[i].setAttribute("style" , "width:" + result + "px;display: inline-block;");
 }
 
+// function Login() {
+//   var formData = new FormData();
+//   formData.append('name', 'Tom');
+//   formData.append('age', 23);
+//
+//   var request = new XMLHttpRequest();
+//   function reqReadyStateChange() {
+//       if (request.readyState == 4 && request.status == 200)
+//           document.getElementById("output").innerHTML=request.responseText;
+//   }
+//
+//   request.open("POST", "http://localhost:8080/display.php");
+//   request.onreadystatechange = reqReadyStateChange;
+//   request.send(formData);
+// }
 
 
 

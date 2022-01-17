@@ -50,7 +50,27 @@
     </header>
     <div class="article-block">
       <center>
-        <div class="article-list block_header_small" id="article_block">
+        <div class="article-list block_header_small">
+          <div id="relise_block"></div>
+
+          <form name="form_login" class="login_block" id="form_login">
+            <label>Логин</label><input value="1234" type="text" name="input_login" class="logins_box" style="margin-left: 23px;">
+            <label>Пароль</label><input value="1234" type="password" name="input_pass" class="logins_box">
+            <!-- <input type="submit" name="submit" id="submit" class="login_button" value="Вход"> -->
+            <button type="submit" class="login_button" id="submit" onclick="sendRequest2()">Вход</button>
+          </form>
+          <form method="post" class="login_block" id="form_logout" style="display:none;">
+            <input type="submit" name="logout" id="logout" class="login_button" value="Выход">
+          </form>
+          <script>
+            // получаем объект формы
+            var form = document.forms.form_login;
+            var login = form.elements.input_login;
+            var pass = form.elements.input_pass;
+            var cookie = $.cookie('PHPSESSID');
+
+
+          </script>
 
         </div>
 
@@ -58,6 +78,56 @@
     </div>
     <br /><br /><br /><br />
 
+<script type="text/javascript">
+  var cookie = $.cookie('PHPSESSID');
+  url = "http://api.anilibria.tv/v2/getFavorites?session="+cookie+"&filter=id,season,type,names,poster,genres,description,playlist,player,in_favorites";
+  console.log(url);
+
+  fetch(url)
+  .then(function (response) {
+    if (response.status !== 200) {
+      return Promise.reject(new Error(response.statusText))
+    }
+    return Promise.resolve(response)
+  })
+  .then(function (response) {
+    return response.json()
+  })
+  .then(function (data) {
+    for (let i = 0; data[i]; i++) {
+
+      var series_t = data[i]["type"]["series"];
+      var string_t = data[i]["type"]["code"];
+      var last_t = data[i]["player"]["series"]["last"];
+      var series_type;
+      if (series_t == '0' && string_t != '0' && string_t != '2' && string_t != '3' && string_t != '4') {
+        series_type = 'Серия '+ last_t;
+      } else if(string_t == '4') {
+        series_type = 'Спешл';
+      } else if(string_t == '0') {
+        series_type = 'Фильм';
+      } else if(string_t == '3') {
+        series_type = 'ONA';
+      } else if(string_t == '2') {
+        series_type = 'OVA';
+      } else {
+        series_type = 'Серия '+last_t+'/'+series_t;
+      }
+
+      var div = document.createElement('div');
+      document.getElementById('relise_block').appendChild(div);
+      div.className = 'article';
+      div.setAttribute("style", "background-image: url('https://www.anilibria.tv"+data[i]["poster"]["url"]+"')");
+      div.innerHTML = '<div class="article-text"><p class="article-name">'+data[i]["names"]["ru"]+'</p><p class="article-description">'+data[i]["description"]+'</p><a class="article_rel" href="release.html?id='+data[i]["id"]+'">Смотреть</a><div class="article_ser">'+series_type+'</div></div>';
+
+    }
+  })
+
+  .catch(function (error) {
+    console.log('error', error)
+  })
+
+</script>
 
 <script type="text/javascript" src="script.js" ></script>
 </body>

@@ -52,7 +52,7 @@
       <center>
         <div class="article-list block_header_small">
           <a href="/" class="block_header_small_a">Расписание</a>
-          <a href="/" class="block_header_small_a">Случайный релиз</a>
+          <a href="release.html?random=1" class="block_header_small_a">Случайный релиз</a>
         </div>
 
         <!-- <div class="article-list block_header_small block_slider" id="article_block_small" style="overflow-x: scroll;white-space: nowrap;">
@@ -83,12 +83,28 @@
             })
             .then(function (data) {
               for (let i = 0; data[i]; i++) {
-
+                var series_t = data[i]["type"]["series"];
+                var string_t = data[i]["type"]["code"];
+                var last_t = data[i]["player"]["series"]["last"];
+                var series_type;
+                if (series_t == '0' && string_t != '0' && string_t != '2' && string_t != '3' && string_t != '4') {
+                  series_type = 'Серия '+ last_t;
+                } else if(string_t == '4') {
+                  series_type = 'Спешл';
+                } else if(string_t == '0') {
+                  series_type = 'Фильм';
+                } else if(string_t == '3') {
+                  series_type = 'ONA';
+                } else if(string_t == '2') {
+                  series_type = 'OVA';
+                } else {
+                  series_type = 'Серия '+last_t+'/'+series_t;
+                }
                 var div = document.createElement('div');
                 document.getElementById('article_block_small').appendChild(div);
                 div.className = 'article';
                 div.setAttribute("style", "background-image: url('https://www.anilibria.tv"+data[i]["poster"]["url"]+"');margin-top: 45px;width: 200px;height: 290px;");
-                div.innerHTML = '              <div class="article-text"> <p class="article-name">'+data[i]["names"]["ru"]+'</p> <a style="width: calc(100% - 130px);margin: 20px 50px;" class="article_rel" href="release.html?id='+data[i]["id"]+'">Смотреть</a> <div class="article_ser">Серия '+data[i]["player"]["series"]["last"]+'</div> </div>';
+                div.innerHTML = '              <div class="article-text"> <p class="article-name">'+data[i]["names"]["ru"]+'</p> <a style="width: calc(100% - 130px);margin: 20px 50px;" class="article_rel" href="release.html?id='+data[i]["id"]+'">Смотреть</a> <div class="article_ser">'+series_type+'</div> </div>';
 
               }
             })
@@ -102,50 +118,108 @@
 
           <br /><br />
 
-        <div class="article-list block_header_small" id="article_block">
-          <!-- <div class="article" style="background-image: url('https://www.anilibria.tv')">
-              <div class="article-text">
-                <p class="article-name"></p>
-                <p class="article-description"></p>
-                <a class="article_rel" href="">Смотреть</a>
-                <div class="article_ser">Серия</div>
-              </div>
-          </div> -->
-          <script type="text/javascript">
-
-            fetch('https://api.anilibria.tv/v2/getUpdates?limit=24&filter=id,season,type,names,poster,genres,description,playlist,player,in_favorites')
-            .then(function (response) {
-              if (response.status !== 200) {
-                return Promise.reject(new Error(response.statusText))
-              }
-              return Promise.resolve(response)
-            })
-            .then(function (response) {
-              return response.json()
-            })
-            .then(function (data) {
-              for (let i = 0; data[i]; i++) {
-                var div = document.createElement('div');
-                document.getElementById('article_block').appendChild(div);
-                div.className = 'article';
-                div.setAttribute("style", "background-image: url('https://www.anilibria.tv"+data[i]["poster"]["url"]+"')");
-                div.innerHTML = '<div class="article-text"><p class="article-name">'+data[i]["names"]["ru"]+'</p><p class="article-description">'+data[i]["description"]+'</p><a class="article_rel" href="release.html?id='+data[i]["id"]+'">Смотреть</a><div class="article_ser">Серия '+data[i]["player"]["series"]["last"]+'</div></div>';
-
-              }
-            })
-
-            .catch(function (error) {
-              console.log('error', error)
-            })
-
-          </script>
+        <div class="article-list block_header_small">
+          <div id="article_block"></div>
+          <br><br>
+          <a id="page_a1" class="pages_catalog" href="" style="cursor:pointer;display:none;"><</a>
+          <a id="page_a2" class="pages_catalog" style="cursor:pointer;"><</a>
+          <span id="page_s" class="pages_catalog"></span>
+          <a id="page_a3" class="pstrnav pages_catalog" href="">></a>
+          <br><br>
         </div>
 
       </center>
     </div>
     <br /><br /><br /><br />
 
+<script type="text/javascript">
+  var page;
+  var num;
+  var max_nam;
+  var after;
+  var total;
+  var page_p;
+  var page_m;
+  var url;
 
+
+  var paramsString = document.location.search;
+  var searchParams = new URLSearchParams(paramsString);
+  var page = searchParams.get("page");
+
+
+  num = 12;
+  max_nam = 100000;
+  after = ((page * num)-num);
+  total = ((max_nam - 1) / num) + 1;
+  total = parseInt(total);
+  page = parseInt(page);
+  if (!page || page < 0) page = 1;
+  if(page > total) page = total;
+  page_p = page + 1;
+  page_m = page - 1;
+
+  if (page != 1) {
+    document.getElementById('page_s').innerHTML = page;
+    document.getElementById('page_a1').href = "index.html?page=" + page_m;
+    document.getElementById('page_a1').setAttribute("style", "cursor:pointer;");
+    document.getElementById('page_a2').setAttribute("style", "cursor:pointer;display:none;");
+  } else {
+    document.getElementById('page_s').innerHTML = '1';
+    document.getElementById('page_a1').setAttribute("style", "cursor:pointer;display:none;");
+    document.getElementById('page_a2').setAttribute("style", "cursor:pointer;");
+  }
+  if (page != total) {
+    document.getElementById('page_a3').href ="index.html?page=" + page_p;
+  }
+
+  url = "https://api.anilibria.tv/v2/getUpdates?filter=id,season,type,names,poster,genres,description,playlist,player,in_favorites&limit="+num+"&after="+after
+
+  fetch(url)
+  .then(function (response) {
+    if (response.status !== 200) {
+      return Promise.reject(new Error(response.statusText))
+    }
+    return Promise.resolve(response)
+  })
+  .then(function (response) {
+    return response.json()
+  })
+  .then(function (data) {
+    for (let i = 0; data[i]; i++) {
+
+      var series_t = data[i]["type"]["series"];
+      var string_t = data[i]["type"]["code"];
+      var last_t = data[i]["player"]["series"]["last"];
+      var series_type;
+      if (series_t == '0' && string_t != '0' && string_t != '2' && string_t != '3' && string_t != '4') {
+        series_type = 'Серия '+ last_t;
+      } else if(string_t == '4') {
+        series_type = 'Спешл';
+      } else if(string_t == '0') {
+        series_type = 'Фильм';
+      } else if(string_t == '3') {
+        series_type = 'ONA';
+      } else if(string_t == '2') {
+        series_type = 'OVA';
+      } else {
+        series_type = 'Серия '+last_t+'/'+series_t;
+      }
+
+      var div = document.createElement('div');
+      document.getElementById('article_block').appendChild(div);
+      div.className = 'article';
+      div.setAttribute("style", "background-image: url('https://www.anilibria.tv"+data[i]["poster"]["url"]+"')");
+      div.innerHTML = '<div class="article-text"><p class="article-name">'+data[i]["names"]["ru"]+'</p><p class="article-description">'+data[i]["description"]+'</p><a class="article_rel" href="release.html?id='+data[i]["id"]+'">Смотреть</a><div class="article_ser">'+series_type+'</div></div>';
+
+    }
+  })
+
+  .catch(function (error) {
+    console.log('error', error)
+  })
+
+</script>
 <script type="text/javascript" src="script.js" ></script>
 </body>
 </html>

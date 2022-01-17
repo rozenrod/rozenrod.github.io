@@ -403,3 +403,20 @@ header{
   box-shadow: var(--shadow-l3);
   transition: .3s ease;
 }
+.pages_catalog{
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--card-text-color-2);
+  padding: 6px 15px;
+  background: var(--card-background-3);
+  border-radius: 2px;
+  margin: 10px 7px;
+  transition: .3s ease;
+}
+.pages_catalog:hover{
+  opacity: 0.9;
+  color: var(--card-text-color-2);
+  box-shadow: var(--shadow-l3);
+  transition: .3s ease;
+}
