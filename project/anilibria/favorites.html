@@ -54,10 +54,10 @@
           <div id="relise_block"></div>
 
           <form name="form_login" class="login_block" id="form_login">
-            <label>Логин</label><input value="1234" type="text" name="input_login" class="logins_box" style="margin-left: 23px;">
-            <label>Пароль</label><input value="1234" type="password" name="input_pass" class="logins_box">
+            <label>Логин</label><input type="text" name="input_login" class="logins_box" style="margin-left: 23px;">
+            <label>Пароль</label><input type="password" name="input_pass" class="logins_box">
             <!-- <input type="submit" name="submit" id="submit" class="login_button" value="Вход"> -->
-            <button type="submit" class="login_button" id="submit" onclick="sendRequest2()">Вход</button>
+            <button type="submit" class="login_button" id="submit">Вход</button>
           </form>
           <form method="post" class="login_block" id="form_logout" style="display:none;">
             <input type="submit" name="logout" id="logout" class="login_button" value="Выход">
@@ -130,5 +130,6 @@
 </script>
 
 <script type="text/javascript" src="script.js" ></script>
+<div id="preloader"><div id="preloader_preload"></div></div>
 </body>
 </html>
