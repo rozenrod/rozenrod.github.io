@@ -990,6 +990,7 @@ socket.addEventListener('open', function (event) {
 socket.addEventListener('message', function (event) {
     console.log('Message from server:', event.data);
     let data_WebSocket = JSON.parse(event.data);
+    console.log(data_WebSocket['title_update']['title']['names']['ru']);
     if (data_WebSocket['type'] == 'title_update') {
       load_api_cash(); // Если появился новый тайтл,
     }
