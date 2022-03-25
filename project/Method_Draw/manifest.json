@@ -1,7 +1,7 @@
 {
     "name": "Method Draw",
     "short_name": "Method Draw",
-    "start_url": ".",
+    "start_url": "https://rozenrod.github.io/project/Method_Draw/index.html",
     "icons": [
 			{ "src": "icon/web/favicon.ico", "type": "image/x-icon", "sizes": "16x16 32x32" },
 			{ "src": "icon/web/icon-192.png", "type": "image/png", "sizes": "192x192" },
