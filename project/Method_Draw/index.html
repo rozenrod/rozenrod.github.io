@@ -12,7 +12,16 @@
 	<link rel="manifest" href="manifest.json">
 	<link rel="icon" href="icon/web/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="icon/web/apple-touch-icon.png">
-
+	<script>
+		if ('serviceWorker' in navigator) {
+		// Весь код регистрации у нас асинхронный.
+		navigator.serviceWorker.register('./sw.js')
+			.then(() => navigator.serviceWorker.ready.then((worker) => {
+				worker.sync.register('syncdata');
+			}))
+			.catch((err) => console.log(err));
+	}
+	</script>
   <!-- build:css all.css -->
   <link rel="stylesheet" href="css/base.css" type="text/css"/>
   <link rel="stylesheet" href="css/method-draw.css" type="text/css"/>
