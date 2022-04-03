@@ -162,11 +162,11 @@
   </head>
   <body>
 		<center>
-		<details id="det_1" style="text-align: center;">
+		<details id="det_1" style="text-align: center;" open>
 			<summary>Воскресная встреча</summary>
 			<center>
 				<div class="block_week">
-					<input name="name1_1" class="i0" type="text" value="20.03.2022" placeholder="Дата">
+					<input id="date_1_1" class="i0" type="text" value="20.03.2022" placeholder="Дата">
 					<div class="line" title="Ведущий">
 						<div class="s1"><span>В.</span></div>
 						<input name="name1_2" class="i1" type="text" value="" placeholder="Имя Фа.">
@@ -190,7 +190,7 @@
 				</div>
 
 				<div class="block_week">
-					<input name="name2_1" class="i0" type="text" value="20.03.2022" placeholder="Дата">
+					<input id="date_1_2" class="i0" type="text" value="20.03.2022" placeholder="Дата">
 					<div class="line" title="Ведущий">
 						<div class="s1"><span>В.</span></div>
 						<input name="name2_2" class="i1" type="text" value="" placeholder="Имя Фа.">
@@ -214,7 +214,7 @@
 				</div>
 
 				<div class="block_week">
-					<input name="name3_1" class="i0" type="text" value="20.03.2022" placeholder="Дата">
+					<input id="date_1_3" class="i0" type="text" value="20.03.2022" placeholder="Дата">
 					<div class="line" title="Ведущий">
 						<div class="s1"><span>В.</span></div>
 						<input name="name3_2" class="i1" type="text" value="" placeholder="Имя Фа.">
@@ -238,7 +238,7 @@
 				</div>
 
 				<div class="block_week">
-					<input name="name4_1" class="i0" type="text" value="20.03.2022" placeholder="Дата">
+					<input id="date_1_4" class="i0" type="text" value="20.03.2022" placeholder="Дата">
 					<div class="line" title="Ведущий">
 						<div class="s1"><span>В.</span></div>
 						<input name="name4_2" class="i1" type="text" value="" placeholder="Имя Фа.">
@@ -269,7 +269,7 @@
 			<center>
 
 				<div class="block_week">
-					<input class="i0" type="text" value="20.03.2022" placeholder="Дата">
+					<input id="date_2_1" class="i0" type="text" value="20.03.2022" placeholder="Дата">
 					<div class="line" title="Ведущий">
 						<div class="s1 c1"><span>В.</span></div>
 						<input class="i1" type="text" value="" placeholder="Имя Фа.">
@@ -323,7 +323,7 @@
 				</div>
 
 				<div class="block_week">
-					<input class="i0" type="text" value="20.03.2022" placeholder="Дата">
+					<input id="date_2_2" class="i0" type="text" value="20.03.2022" placeholder="Дата">
 					<div class="line" title="Ведущий">
 						<div class="s1 c1"><span>В.</span></div>
 						<input class="i1" type="text" value="" placeholder="Имя Фа.">
@@ -377,7 +377,7 @@
 				</div>
 
 				<div class="block_week">
-					<input class="i0" type="text" value="20.03.2022" placeholder="Дата">
+					<input id="date_2_3" class="i0" type="text" value="20.03.2022" placeholder="Дата">
 					<div class="line" title="Ведущий">
 						<div class="s1 c1"><span>В.</span></div>
 						<input class="i1" type="text" value="" placeholder="Имя Фа.">
@@ -431,7 +431,7 @@
 				</div>
 
 				<div class="block_week">
-					<input class="i0" type="text" value="20.03.2022" placeholder="Дата">
+					<input id="date_2_4" class="i0" type="text" value="20.03.2022" placeholder="Дата">
 					<div class="line" title="Ведущий">
 						<div class="s1 c1"><span>В.</span></div>
 						<input class="i1" type="text" value="" placeholder="Имя Фа.">
@@ -713,6 +713,34 @@
 			}
 		});
 
+
+		var date = new Date();
+		var n_Year = date.getFullYear();
+		var n_Month = date.getMonth() + 1;
+		var n_Date = date.getDate();
+
+		var date_input_1_1 = document.getElementById("date_1_1");
+		var date_input_2_1 = document.getElementById("date_1_2");
+		var date_input_3_1 = document.getElementById("date_1_3");
+		var date_input_4_1 = document.getElementById("date_1_4");
+
+		var date_input_1_2 = document.getElementById("date_2_1");
+		var date_input_2_2 = document.getElementById("date_2_2");
+		var date_input_3_2 = document.getElementById("date_2_3");
+		var date_input_4_2 = document.getElementById("date_2_4");
+
+		date_input_1_1.value = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();
+		date_input_1_2.value = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();
+		date.setDate(date.getDate()+7)
+		date_input_2_1.value = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();
+		date_input_2_2.value = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();
+		date.setDate(date.getDate()+7)
+		date_input_3_1.value = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();
+		date_input_3_2.value = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();
+		date.setDate(date.getDate()+7)
+		date_input_4_1.value = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();	
+		date_input_4_2.value = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();	
+		
 
 		function save_1	(){
 			document.getElementById('doc').innerHTML = '';
