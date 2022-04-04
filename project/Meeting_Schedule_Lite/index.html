@@ -4,7 +4,28 @@
     <meta charset="utf-8">
     <title>Meeting Schedule Lite</title>
 		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+		<link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
+		<!-- iOS web app configuration -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="LiteGame">
+	
+		<!-- WEB web app icons -->
+		<link rel="icon" href="img/favicon.ico" sizes="any">
+		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+	
+		<link rel="apple-touch-icon" sizes="152x152" href="img/Logo-152.png">
+		<link rel="apple-touch-icon" sizes="167x167" href="img/Logo-167.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="img/Logo-180.png">
+		<!-- WEB splash screens -->
+		<!-- iPad -->
+		<link rel="apple-touch-startup-image" href="img/apple-touch-icon.png">
+	
+		<link rel="manifest" href="manifest.json">
+
+		<script src="js/script.js"></script>
 		<script src="js/StackBlur.js"></script>
 		<script src="js/rgbcolor.js"></script>
 		<script src="js/canvg.js"></script>
@@ -27,7 +48,7 @@
 				src: url(woff/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_ROW4.woff2) format('woff2');
 				unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 			}
-		
+
 			details {
 				text-align: left;
 				color: #323232;
@@ -51,8 +72,6 @@
       }
 			h1{
 				color: #323232;
-				width: 200px;
-				height: 28px;
 				position: relative;
 				display: inline-block;
 				border-radius: 10px;
@@ -63,7 +82,7 @@
 				font-size: 24px;
 				margin-top: 50px;
 			}
-      
+
       .block_week{
         width: 655px;
         background: #f6f6f6;
@@ -158,10 +177,40 @@
 			.c3{
 				background: #a14a2e;
 			}
+			.c4{
+				background: #779953;
+				color: #e7e7e7;
+			}
+			.c5 {
+				background: #bb4444;
+				color: #e7e7e7;
+			}
+			.block_save_name{
+				color: #323232;
+				max-width: calc(800px - 10px);
+				padding: 10px;
+				background: #e7e7e7;
+				margin-top: 10px;
+				border-radius: 10px;
+				margin: 10px;
+			}
+			.block_save_i2{
+				height: 28px;
+				position: relative;
+				display: inline-block;
+				text-align: left;
+				border-radius: 10px;
+				padding: 0 5px;
+				border: 0;
+				margin: 1.5px;
+			}
     </style>
   </head>
   <body>
 		<center>
+		<br>
+		<h2>Meeting Schedule Lite</h2>
+		<br>
 		<details id="det_1" style="text-align: center;">
 			<summary>Воскресная встреча</summary>
 			<center>
@@ -169,23 +218,23 @@
 					<input id="date_1_1" class="i0" type="text" value="20.03.2022" placeholder="Дата">
 					<div class="line" title="Ведущий">
 						<div class="s1"><span>В.</span></div>
-						<input name="name1_2" class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input name="name1_2" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Докладчик и доклад">
 						<div class="s1"><span>Д.</span></div>
-						<input name="name1_3" class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input name="name1_3" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 						<input name="name1_4" class="i2" type="text" value="" placeholder="Название доклада">
 					</div>
 					<div class="line" title="Изучение и чтец">
 						<div class="s1"><span>И.</span></div>
-						<input name="name1_5" class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input name="name1_5" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 
 						<div class="s1"><span>Ч.</span></div>
-						<input name="name1_6" class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input name="name1_6" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Молитва">
 						<div class="s1"><span>М.</span></div>
-						<input name="name1_7" class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input name="name1_7" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 				</div>
 
@@ -193,23 +242,23 @@
 					<input id="date_1_2" class="i0" type="text" value="20.03.2022" placeholder="Дата">
 					<div class="line" title="Ведущий">
 						<div class="s1"><span>В.</span></div>
-						<input name="name2_2" class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input name="name2_2" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Докладчик и доклад">
 						<div class="s1"><span>Д.</span></div>
-						<input name="name2_3" class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input name="name2_3" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 						<input name="name2_4" class="i2" type="text" value="" placeholder="Название доклада">
 					</div>
 					<div class="line" title="Изучение и чтец">
 						<div class="s1"><span>И.</span></div>
-						<input name="name2_5" class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input name="name2_5" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 
 						<div class="s1"><span>Ч.</span></div>
-						<input name="name2_6" class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input name="name2_6" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Молитва">
 						<div class="s1"><span>М.</span></div>
-						<input name="name2_7" class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input name="name2_7" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 				</div>
 
@@ -217,23 +266,23 @@
 					<input id="date_1_3" class="i0" type="text" value="20.03.2022" placeholder="Дата">
 					<div class="line" title="Ведущий">
 						<div class="s1"><span>В.</span></div>
-						<input name="name3_2" class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input name="name3_2" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Докладчик и доклад">
 						<div class="s1"><span>Д.</span></div>
-						<input name="name3_3" class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input name="name3_3" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 						<input name="name3_4" class="i2" type="text" value="" placeholder="Название доклада">
 					</div>
 					<div class="line" title="Изучение и чтец">
 						<div class="s1"><span>И.</span></div>
-						<input name="name3_5" class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input name="name3_5" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 
 						<div class="s1"><span>Ч.</span></div>
-						<input name="name3_6" class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input name="name3_6" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Молитва">
 						<div class="s1"><span>М.</span></div>
-						<input name="name3_7" class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input name="name3_7" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 				</div>
 
@@ -241,28 +290,28 @@
 					<input id="date_1_4" class="i0" type="text" value="20.03.2022" placeholder="Дата">
 					<div class="line" title="Ведущий">
 						<div class="s1"><span>В.</span></div>
-						<input name="name4_2" class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input name="name4_2" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Докладчик и доклад">
 						<div class="s1"><span>Д.</span></div>
-						<input name="name4_3" class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input name="name4_3" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 						<input name="name4_4" class="i2" type="text" value="" placeholder="Название доклада">
 					</div>
 					<div class="line" title="Изучение и чтец">
 						<div class="s1"><span>И.</span></div>
-						<input name="name4_5" class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input name="name4_5" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 
 						<div class="s1"><span>Ч.</span></div>
-						<input name="name4_6" class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input name="name4_6" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Молитва">
 						<div class="s1"><span>М.</span></div>
-						<input name="name4_7" class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input name="name4_7" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 				</div>
 				<button onclick="save_1()">Сохранить</button>
 			</center>
-		</details>	
+		</details>
 
 		<details id="det_2" style="text-align: center;">
 			<summary>Будняя встреча</summary>
@@ -272,53 +321,53 @@
 					<input id="date_2_1" class="i0" type="text" value="20.03.2022" placeholder="Дата">
 					<div class="line" title="Ведущий">
 						<div class="s1 c1"><span>В.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Речь">
 						<div class="s1 c1"><span>Р.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Жемчужины">
 						<div class="s1 c1"><span>Ж.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Чтение Библии">
 						<div class="s1 c1"><span>Ч.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Навыки служения">
 						<div class="s1 c2"><span style="margin-left: 3px;">Н1</span></div>
-						<input class="i3" type="text" value="" placeholder="Имя Фа.">
+						<input class="i3" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Навыки служения">
 						<div class="s1 c2"><span style="margin-left: 3px;">Н2</span></div>
-						<input class="i3" type="text" value="" placeholder="Имя Фа.">
+						<input class="i3" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Навыки служения">
 						<div class="s1 c2"><span style="margin-left: 3px;">Н3</span></div>
-						<input class="i3" type="text" value="" placeholder="Имя Фа.">
+						<input class="i3" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Навыки служения">
 						<div class="s1 c2"><span style="margin-left: 3px;">Н4</span></div>
-						<input class="i3" type="text" value="" placeholder="Имя Фа.">
+						<input class="i3" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Пункты">
 						<div class="s1 c3"><span style="margin-left: 2px;">П1</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 						<div class="s1 c3"><span style="margin-left: 2px;">П2</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 						<div class="s1 c3"><span style="margin-left: 2px;">П3</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Изучение и чтец">
 						<div class="s1 c3"><span>И.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 						<div class="s1 c3"><span>Ч.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Молитва">
 						<div class="s1 c3"><span>М.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 				</div>
 
@@ -326,53 +375,53 @@
 					<input id="date_2_2" class="i0" type="text" value="20.03.2022" placeholder="Дата">
 					<div class="line" title="Ведущий">
 						<div class="s1 c1"><span>В.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Речь">
 						<div class="s1 c1"><span>Р.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Жемчужины">
 						<div class="s1 c1"><span>Ж.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Чтение Библии">
 						<div class="s1 c1"><span>Ч.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Навыки служения">
 						<div class="s1 c2"><span style="margin-left: 3px;">Н1</span></div>
-						<input class="i3" type="text" value="" placeholder="Имя Фа.">
+						<input class="i3" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Навыки служения">
 						<div class="s1 c2"><span style="margin-left: 3px;">Н2</span></div>
-						<input class="i3" type="text" value="" placeholder="Имя Фа.">
+						<input class="i3" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Навыки служения">
 						<div class="s1 c2"><span style="margin-left: 3px;">Н3</span></div>
-						<input class="i3" type="text" value="" placeholder="Имя Фа.">
+						<input class="i3" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Навыки служения">
 						<div class="s1 c2"><span style="margin-left: 3px;">Н4</span></div>
-						<input class="i3" type="text" value="" placeholder="Имя Фа.">
+						<input class="i3" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Пункты">
 						<div class="s1 c3"><span style="margin-left: 2px;">П1</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 						<div class="s1 c3"><span style="margin-left: 2px;">П2</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 						<div class="s1 c3"><span style="margin-left: 2px;">П3</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Изучение и чтец">
 						<div class="s1 c3"><span>И.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 						<div class="s1 c3"><span>Ч.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Молитва">
 						<div class="s1 c3"><span>М.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 				</div>
 
@@ -380,53 +429,53 @@
 					<input id="date_2_3" class="i0" type="text" value="20.03.2022" placeholder="Дата">
 					<div class="line" title="Ведущий">
 						<div class="s1 c1"><span>В.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Речь">
 						<div class="s1 c1"><span>Р.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Жемчужины">
 						<div class="s1 c1"><span>Ж.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Чтение Библии">
 						<div class="s1 c1"><span>Ч.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Навыки служения">
 						<div class="s1 c2"><span style="margin-left: 3px;">Н1</span></div>
-						<input class="i3" type="text" value="" placeholder="Имя Фа.">
+						<input class="i3" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Навыки служения">
 						<div class="s1 c2"><span style="margin-left: 3px;">Н2</span></div>
-						<input class="i3" type="text" value="" placeholder="Имя Фа.">
+						<input class="i3" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Навыки служения">
 						<div class="s1 c2"><span style="margin-left: 3px;">Н3</span></div>
-						<input class="i3" type="text" value="" placeholder="Имя Фа.">
+						<input class="i3" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Навыки служения">
 						<div class="s1 c2"><span style="margin-left: 3px;">Н4</span></div>
-						<input class="i3" type="text" value="" placeholder="Имя Фа.">
+						<input class="i3" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Пункты">
 						<div class="s1 c3"><span style="margin-left: 2px;">П1</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 						<div class="s1 c3"><span style="margin-left: 2px;">П2</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 						<div class="s1 c3"><span style="margin-left: 2px;">П3</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Изучение и чтец">
 						<div class="s1 c3"><span>И.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 						<div class="s1 c3"><span>Ч.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Молитва">
 						<div class="s1 c3"><span>М.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 				</div>
 
@@ -434,61 +483,61 @@
 					<input id="date_2_4" class="i0" type="text" value="20.03.2022" placeholder="Дата">
 					<div class="line" title="Ведущий">
 						<div class="s1 c1"><span>В.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Речь">
 						<div class="s1 c1"><span>Р.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Жемчужины">
 						<div class="s1 c1"><span>Ж.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Чтение Библии">
 						<div class="s1 c1"><span>Ч.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Навыки служения">
 						<div class="s1 c2"><span style="margin-left: 3px;">Н1</span></div>
-						<input class="i3" type="text" value="" placeholder="Имя Фа.">
+						<input class="i3" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Навыки служения">
 						<div class="s1 c2"><span style="margin-left: 3px;">Н2</span></div>
-						<input class="i3" type="text" value="" placeholder="Имя Фа.">
+						<input class="i3" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Навыки служения">
 						<div class="s1 c2"><span style="margin-left: 3px;">Н3</span></div>
-						<input class="i3" type="text" value="" placeholder="Имя Фа.">
+						<input class="i3" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Навыки служения">
 						<div class="s1 c2"><span style="margin-left: 3px;">Н4</span></div>
-						<input class="i3" type="text" value="" placeholder="Имя Фа.">
+						<input class="i3" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Пункты">
 						<div class="s1 c3"><span style="margin-left: 2px;">П1</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 						<div class="s1 c3"><span style="margin-left: 2px;">П2</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 						<div class="s1 c3"><span style="margin-left: 2px;">П3</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Изучение и чтец">
 						<div class="s1 c3"><span>И.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 						<div class="s1 c3"><span>Ч.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Молитва">
 						<div class="s1 c3"><span>М.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 				</div>
 
-				
+
 				<button onclick="save_2()">Сохранить в столбец</button>
 				<button onclick="save_3()">Сохранить в линию</button>
 			</center>
-		</details>	
+		</details>
 
 		<details id="det_3" style="text-align: center;">
 			<summary>Посещение</summary>
@@ -498,54 +547,54 @@
 					<input class="i0" type="text" value="Вторник" placeholder="Дата">
 					<div class="line" title="Ведущий">
 						<div class="s1 c1"><span>В.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Речь">
 						<div class="s1 c1"><span>Р.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Жемчужины">
 						<div class="s1 c1"><span>Ж.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Чтение Библии">
 						<div class="s1 c1"><span>Ч.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Навыки служения">
 						<div class="s1 c2"><span style="margin-left: 3px;">Н1</span></div>
-						<input class="i3" type="text" value="" placeholder="Имя Фа.">
+						<input class="i3" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Навыки служения">
 						<div class="s1 c2"><span style="margin-left: 3px;">Н2</span></div>
-						<input class="i3" type="text" value="" placeholder="Имя Фа.">
+						<input class="i3" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Навыки служения">
 						<div class="s1 c2"><span style="margin-left: 3px;">Н3</span></div>
-						<input class="i3" type="text" value="" placeholder="Имя Фа.">
+						<input class="i3" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Навыки служения">
 						<div class="s1 c2"><span style="margin-left: 3px;">Н4</span></div>
-						<input class="i3" type="text" value="" placeholder="Имя Фа.">
+						<input class="i3" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Пункты">
 						<div class="s1 c3"><span style="margin-left: 2px;">П1</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 						<div class="s1 c3"><span style="margin-left: 2px;">П2</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 						<div class="s1 c3"><span style="margin-left: 2px;">П3</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Речь">
 						<div class="s1 c3"><span>Р.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 						<input class="i2" type="text" value="" placeholder="Название доклада">
 					</div>
 					<div class="line" title="Молитва">
 						<div class="s1 c3"><span>П.</span></div>
 						<input class="i1" type="text" value="" placeholder="№ Песни">
 						<div class="s1 c3"><span>М.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 				</div>
 
@@ -555,7 +604,7 @@
 					<div class="line" title="Ведущий">
 						<div class="s1"><span>1.</span></div>
 						<input class="i4" type="text" value="" placeholder="Время">
-						<input class="i5" type="text" value="" placeholder="Название встречи">	
+						<input class="i5" type="text" value="" placeholder="Название встречи">
 					</div>
 					<div class="line" title="Докладчик и доклад">
 						<div class="s1"><span>2.</span></div>
@@ -579,7 +628,7 @@
 					<div class="line" title="Ведущий">
 						<div class="s1"><span>1.</span></div>
 						<input class="i4" type="text" value="" placeholder="Время">
-						<input class="i5" type="text" value="" placeholder="Название встречи">	
+						<input class="i5" type="text" value="" placeholder="Название встречи">
 					</div>
 					<div class="line" title="Докладчик и доклад">
 						<div class="s1"><span>2.</span></div>
@@ -603,7 +652,7 @@
 					<div class="line" title="Ведущий">
 						<div class="s1"><span>1.</span></div>
 						<input class="i4" type="text" value="" placeholder="Время">
-						<input class="i5" type="text" value="" placeholder="Название встречи">	
+						<input class="i5" type="text" value="" placeholder="Название встречи">
 					</div>
 					<div class="line" title="Докладчик и доклад">
 						<div class="s1"><span>2.</span></div>
@@ -627,7 +676,7 @@
 					<div class="line" title="Ведущий">
 						<div class="s1"><span>1.</span></div>
 						<input class="i4" type="text" value="" placeholder="Время">
-						<input class="i5" type="text" value="" placeholder="Название встречи">	
+						<input class="i5" type="text" value="" placeholder="Название встречи">
 					</div>
 					<div class="line" title="Докладчик и доклад">
 						<div class="s1"><span>2.</span></div>
@@ -650,44 +699,111 @@
 					<input class="i0" type="text" value="Воскресенье" placeholder="Дата">
 					<div class="line" title="Ведущий">
 						<div class="s1"><span>В.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 						<div class="s1"><span>П.</span></div>
 						<input class="i1" type="text" value="" placeholder="№ Песни">
 					</div>
 					<div class="line" title="Докладчик и доклад">
 						<div class="s1"><span>Д.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 						<input class="i2" type="text" value="" placeholder="Название доклада">
 					</div>
 					<div class="line" title="Изучение и чтец">
 						<div class="s1"><span>И.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 
 						<div class="s1"><span>Ч.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 					<div class="line" title="Докладчик и доклад">
 						<div class="s1"><span>Д.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 						<input class="i2" type="text" value="" placeholder="Название доклада">
 					</div>
 					<div class="line" title="Молитва">
 						<div class="s1"><span>П.</span></div>
 						<input class="i1" type="text" value="" placeholder="№ Песни">
 						<div class="s1"><span>М.</span></div>
-						<input class="i1" type="text" value="" placeholder="Имя Фа.">
+						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 					</div>
 				</div>
-				
+
 
 				<button onclick="save_4()">Сохранить</button>
 			</center>
-		</details>	
+		</details>
 
 		<h1 id="text_end" style="display: none;">Результат:</h1>
 		<div id="doc"></div>
 		<button onclick="download_1()" id="button_download" style="display: none;">Скачать</button>
+
+		<div class="block_save_name">
+			<p>Сохранение имен подсказок (они будут предложены при вводе имени)</p>
+			<br>
+			<input id="save_name_i" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
+			<input class="block_save_i2 c4" type="submit" value="Сохранить" onclick="save_name()">
+			<br><br>
+			<input class="block_save_i2 c5" type="submit" value="Удалить все" onclick="dell_name()">
+		</div>
 	</center>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			for (let id = 0; id < 151; id++) {
+				var input = document.getElementsByTagName("input")[id];
+				input.value = sessionStorage.getItem(id);
+				(function(id, input) {
+					input.addEventListener("change", function() {
+						sessionStorage.setItem(id, input.value);
+					});
+				})(id, input);
+
+				if(id != 0 && id != 7 && id != 14 && id != 21 && id != 28 && id != 43 && id != 58 &&
+					 id != 73 && id != 88 && id != 104 && id != 113 && id != 122 && id != 131 && id != 140 ){
+						input.value = sessionStorage.getItem(id);
+					 }
+			}
+		});
+	</script>
+	<datalist id="list_name">
+	</datalist>
+
+	<script>
+		load_datalist()
+
+		function save_name(){
+			let array = new Object;
+			input_t = document.querySelector('#save_name_i');
+			if (localStorage.getItem('my_name')){
+				array = JSON.parse(localStorage.getItem('my_name'));
+				array.unshift(input_t.value);
+				localStorage.setItem('my_name', JSON.stringify(array));
+			} else {
+				array = '["' + input_t.value + '"]';
+				localStorage.setItem('my_name', array);
+			}
+			load_datalist()
+		}
+
+		function dell_name(){
+			localStorage.setItem('my_name', '');
+			load_datalist()
+		}
+
+		function load_datalist(){
+			document.getElementById('list_name').innerHTML = '';
+			let array = new Object;
+			if (localStorage.getItem('my_name')){
+				array = JSON.parse(localStorage.getItem('my_name'));
+			}
+			for (let i = 0; i < array.length; i++) {
+				var option = document.createElement('option');
+				document.getElementById('list_name').appendChild(option);
+				option.innerHTML = array[i];
+			}
+		}
+	</script>
+
 
 	<script>
 		const details_1 = document.querySelector('#det_1');
@@ -738,9 +854,23 @@
 		date_input_3_1.value = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();
 		date_input_3_2.value = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();
 		date.setDate(date.getDate()+7)
-		date_input_4_1.value = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();	
-		date_input_4_2.value = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();	
-		
+		date_input_4_1.value = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();
+		date_input_4_2.value = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();
+
+    if(!sessionStorage.getItem(0)){sessionStorage.setItem(0, document.getElementsByTagName("input")[0].value);}
+    if(!sessionStorage.getItem(7)){sessionStorage.setItem(7, document.getElementsByTagName("input")[7].value);}
+    if(!sessionStorage.getItem(14)){sessionStorage.setItem(14, document.getElementsByTagName("input")[14].value);}
+    if(!sessionStorage.getItem(21)){sessionStorage.setItem(21, document.getElementsByTagName("input")[21].value);}
+    if(!sessionStorage.getItem(28)){sessionStorage.setItem(28, document.getElementsByTagName("input")[28].value);}
+    if(!sessionStorage.getItem(43)){sessionStorage.setItem(43, document.getElementsByTagName("input")[43].value);}
+    if(!sessionStorage.getItem(58)){sessionStorage.setItem(58, document.getElementsByTagName("input")[58].value);}
+    if(!sessionStorage.getItem(73)){sessionStorage.setItem(73, document.getElementsByTagName("input")[73].value);}
+    if(!sessionStorage.getItem(88)){sessionStorage.setItem(88, document.getElementsByTagName("input")[88].value);}
+    if(!sessionStorage.getItem(104)){sessionStorage.setItem(104, document.getElementsByTagName("input")[104].value);}
+    if(!sessionStorage.getItem(113)){sessionStorage.setItem(113, document.getElementsByTagName("input")[113].value);}
+    if(!sessionStorage.getItem(122)){sessionStorage.setItem(122, document.getElementsByTagName("input")[122].value);}
+    if(!sessionStorage.getItem(131)){sessionStorage.setItem(131, document.getElementsByTagName("input")[131].value);}
+    if(!sessionStorage.getItem(140)){sessionStorage.setItem(140, document.getElementsByTagName("input")[140].value);}
 
 		function save_1	(){
 			document.getElementById('doc').innerHTML = '';
@@ -750,7 +880,7 @@
 					name1_4 = document.getElementsByTagName("input")[3].value,
 					name1_5 = document.getElementsByTagName("input")[4].value,
 					name1_6 = document.getElementsByTagName("input")[5].value,
-					name1_7 = document.getElementsByTagName("input")[6].value,	
+					name1_7 = document.getElementsByTagName("input")[6].value,
 					name2_1 = document.getElementsByTagName("input")[7].value,
 					name2_2 = document.getElementsByTagName("input")[8].value,
 					name2_3 = document.getElementsByTagName("input")[9].value,
@@ -898,7 +1028,7 @@
 
 				</svg>
 			`;
-			
+
 			document.getElementById('button_download').setAttribute("style", 'display: block;');
 			document.getElementById('text_end').setAttribute("style", 'display: block;');
 		}
@@ -911,7 +1041,7 @@
 					name_2_1_4 = document.getElementsByTagName("input")[31].value,
 					name_2_1_5 = document.getElementsByTagName("input")[32].value,
 					name_2_1_6 = document.getElementsByTagName("input")[33].value,
-					name_2_1_7 = document.getElementsByTagName("input")[34].value,	
+					name_2_1_7 = document.getElementsByTagName("input")[34].value,
 					name_2_1_8 = document.getElementsByTagName("input")[35].value,
 					name_2_1_9 = document.getElementsByTagName("input")[36].value,
 					name_2_1_10 = document.getElementsByTagName("input")[37].value,
@@ -926,7 +1056,7 @@
 					name_2_2_4 = document.getElementsByTagName("input")[46].value,
 					name_2_2_5 = document.getElementsByTagName("input")[47].value,
 					name_2_2_6 = document.getElementsByTagName("input")[48].value,
-					name_2_2_7 = document.getElementsByTagName("input")[49].value,	
+					name_2_2_7 = document.getElementsByTagName("input")[49].value,
 					name_2_2_8 = document.getElementsByTagName("input")[50].value,
 					name_2_2_9 = document.getElementsByTagName("input")[51].value,
 					name_2_2_10 = document.getElementsByTagName("input")[52].value,
@@ -941,7 +1071,7 @@
 					name_2_3_4 = document.getElementsByTagName("input")[61].value,
 					name_2_3_5 = document.getElementsByTagName("input")[62].value,
 					name_2_3_6 = document.getElementsByTagName("input")[63].value,
-					name_2_3_7 = document.getElementsByTagName("input")[64].value,	
+					name_2_3_7 = document.getElementsByTagName("input")[64].value,
 					name_2_3_8 = document.getElementsByTagName("input")[65].value,
 					name_2_3_9 = document.getElementsByTagName("input")[66].value,
 					name_2_3_10 = document.getElementsByTagName("input")[67].value,
@@ -956,7 +1086,7 @@
 					name_2_4_4 = document.getElementsByTagName("input")[76].value,
 					name_2_4_5 = document.getElementsByTagName("input")[77].value,
 					name_2_4_6 = document.getElementsByTagName("input")[78].value,
-					name_2_4_7 = document.getElementsByTagName("input")[79].value,	
+					name_2_4_7 = document.getElementsByTagName("input")[79].value,
 					name_2_4_8 = document.getElementsByTagName("input")[80].value,
 					name_2_4_9 = document.getElementsByTagName("input")[81].value,
 					name_2_4_10 = document.getElementsByTagName("input")[82].value,
@@ -965,7 +1095,7 @@
 					name_2_4_13 = document.getElementsByTagName("input")[85].value,
 					name_2_4_14 = document.getElementsByTagName("input")[86].value,
 					name_2_4_15 = document.getElementsByTagName("input")[87].value;
-					
+
 
 
 
@@ -1348,7 +1478,7 @@
 
 				</svg>
 			`;
-			
+
 			document.getElementById('button_download').setAttribute("style", 'display: block;');
 			document.getElementById('text_end').setAttribute("style", 'display: block;');
 		}
@@ -1361,7 +1491,7 @@
 					name_2_1_4 = document.getElementsByTagName("input")[31].value,
 					name_2_1_5 = document.getElementsByTagName("input")[32].value,
 					name_2_1_6 = document.getElementsByTagName("input")[33].value,
-					name_2_1_7 = document.getElementsByTagName("input")[34].value,	
+					name_2_1_7 = document.getElementsByTagName("input")[34].value,
 					name_2_1_8 = document.getElementsByTagName("input")[35].value,
 					name_2_1_9 = document.getElementsByTagName("input")[36].value,
 					name_2_1_10 = document.getElementsByTagName("input")[37].value,
@@ -1376,7 +1506,7 @@
 					name_2_2_4 = document.getElementsByTagName("input")[46].value,
 					name_2_2_5 = document.getElementsByTagName("input")[47].value,
 					name_2_2_6 = document.getElementsByTagName("input")[48].value,
-					name_2_2_7 = document.getElementsByTagName("input")[49].value,	
+					name_2_2_7 = document.getElementsByTagName("input")[49].value,
 					name_2_2_8 = document.getElementsByTagName("input")[50].value,
 					name_2_2_9 = document.getElementsByTagName("input")[51].value,
 					name_2_2_10 = document.getElementsByTagName("input")[52].value,
@@ -1391,7 +1521,7 @@
 					name_2_3_4 = document.getElementsByTagName("input")[61].value,
 					name_2_3_5 = document.getElementsByTagName("input")[62].value,
 					name_2_3_6 = document.getElementsByTagName("input")[63].value,
-					name_2_3_7 = document.getElementsByTagName("input")[64].value,	
+					name_2_3_7 = document.getElementsByTagName("input")[64].value,
 					name_2_3_8 = document.getElementsByTagName("input")[65].value,
 					name_2_3_9 = document.getElementsByTagName("input")[66].value,
 					name_2_3_10 = document.getElementsByTagName("input")[67].value,
@@ -1406,7 +1536,7 @@
 					name_2_4_4 = document.getElementsByTagName("input")[76].value,
 					name_2_4_5 = document.getElementsByTagName("input")[77].value,
 					name_2_4_6 = document.getElementsByTagName("input")[78].value,
-					name_2_4_7 = document.getElementsByTagName("input")[79].value,	
+					name_2_4_7 = document.getElementsByTagName("input")[79].value,
 					name_2_4_8 = document.getElementsByTagName("input")[80].value,
 					name_2_4_9 = document.getElementsByTagName("input")[81].value,
 					name_2_4_10 = document.getElementsByTagName("input")[82].value,
@@ -1415,7 +1545,7 @@
 					name_2_4_13 = document.getElementsByTagName("input")[85].value,
 					name_2_4_14 = document.getElementsByTagName("input")[86].value,
 					name_2_4_15 = document.getElementsByTagName("input")[87].value;
-					
+
 
 
 
@@ -1806,11 +1936,11 @@
 
 				</svg>
 			`;
-			
+
 			document.getElementById('button_download').setAttribute("style", 'display: block;');
 			document.getElementById('text_end').setAttribute("style", 'display: block;');
 		}
-		
+
 		function save_4	(){
 			document.getElementById('doc').innerHTML = '';
 			var r_1 = document.getElementsByTagName("input")[88].value,
@@ -1876,8 +2006,8 @@
 					r_61 = document.getElementsByTagName("input")[148].value,
 					r_62 = document.getElementsByTagName("input")[149].value;
 					r_63 = document.getElementsByTagName("input")[150].value;
-			
-			
+
+
 
 			var div = document.createElement('div');
 			document.getElementById('doc').appendChild(div);
@@ -2150,33 +2280,32 @@
 
 				</svg>
 			`;
-			
+
 			document.getElementById('button_download').setAttribute("style", 'display: block;');
 			document.getElementById('text_end').setAttribute("style", 'display: block;');
 		}
-		
+
 	</script>
 
-	
-<script>
-  function download_1(){
-		var svg = document.querySelector('svg');
-		var canvas = document.createElement('canvas');
-		canvas.height = svg.getAttribute('height');
-		canvas.width = svg.getAttribute('width');
-		canvg(canvas, svg.parentNode.innerHTML.trim());
-		var dataURL = canvas.toDataURL('image/png');
-		var data = atob(dataURL.substring('data:image/png;base64,'.length)),
-						asArray = new Uint8Array(data.length);
 
-		for (var i = 0, len = data.length; i < len; ++i) {
-				asArray[i] = data.charCodeAt(i);
+	<script>
+		function download_1(){
+			var svg = document.querySelector('svg');
+			var canvas = document.createElement('canvas');
+			canvas.height = svg.getAttribute('height');
+			canvas.width = svg.getAttribute('width');
+			canvg(canvas, svg.parentNode.innerHTML.trim());
+			var dataURL = canvas.toDataURL('image/png');
+			var data = atob(dataURL.substring('data:image/png;base64,'.length)),
+							asArray = new Uint8Array(data.length);
+
+			for (var i = 0, len = data.length; i < len; ++i) {
+					asArray[i] = data.charCodeAt(i);
+			}
+
+			var blob = new Blob([asArray.buffer], {type: 'image/png'});
+			saveAs(blob, 'График_' + Date.now() + '.png');
 		}
-
-		var blob = new Blob([asArray.buffer], {type: 'image/png'});
-		saveAs(blob, 'График_' + Date.now() + '.png');
-	}
-</script>
-
+	</script>
   </body>
 </html>
