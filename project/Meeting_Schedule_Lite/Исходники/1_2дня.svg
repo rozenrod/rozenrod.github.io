@@ -1,0 +1,63 @@
+<svg width="695" height="500" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="null" fill="#ffffff" x="0" y="0" width="695" height="500" id="svg_8"/>
+  <rect rx="10" id="svg_9" height="235" width="675" y="10" x="10" fill="#f6f6f6"/>
+  <text font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="24" stroke-width="0" id="svg_10" y="50" x="275.98438" fill="#323232">${name1_1}</text>
+  <rect rx="10" id="svg_11" height="40" width="655" y="198" x="20" fill="#ffffff"/>
+  <rect rx="10" id="svg_12" height="40" width="655" y="65" x="20" fill="#ffffff"/>
+  <rect rx="10" id="svg_13" height="40" width="655" y="109" x="20" fill="#ffffff"/>
+  <rect rx="10" id="svg_14" height="40" width="655" y="153" x="20" fill="#ffffff"/>
+  <rect rx="10" stroke="null" id="svg_15" height="30" width="30" y="203" x="28" stroke-width="0" fill="#779953"/>
+  <rect rx="10" stroke="null" id="svg_14" height="30" width="120" y="203" x="61.5" stroke-width="0" fill="#f6f6f6"/>
+  <text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_17" y="223" x="36" fill="#f6f6f6">М.</text>
+  <text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_18" y="223" x="67" fill="#323232">${name1_7}</text>
+  <rect rx="10" stroke="null" id="svg_20" height="30" width="30" y="158" x="188" stroke-width="0" fill="#779953"/>
+  <rect rx="10" stroke="null" id="svg_21" height="30" width="120" y="158" x="222" stroke-width="0" fill="#f6f6f6"/>
+  <text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_22" y="178" x="197" fill="#f6f6f6">Ч.</text>
+  <text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_23" y="178" x="227.5" fill="#323232">${name1_6}</text>
+  <rect rx="10" stroke="null" id="svg_25" height="30" width="30" y="158" x="27.5" stroke-width="0" fill="#779953"/>
+  <rect rx="10" stroke="null" id="svg_26" height="30" width="120" y="158" x="61.5" stroke-width="0" fill="#f6f6f6"/>
+  <text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_27" y="178" x="67" fill="#323232">${name1_5}</text>
+  <text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_28" y="178" x="36.5" fill="#f6f6f6">И.</text>
+  <rect rx="10" stroke="null" id="svg_30" height="30" width="480" y="114" x="187.5" stroke-width="0" fill="#f6f6f6"/>
+  <text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" id="svg_31" y="134" x="195" stroke-width="0" stroke="null" fill="#323232">${name1_4}</text>
+  <rect rx="10" stroke="null" id="svg_33" height="30" width="30" y="114" x="27.5" stroke-width="0" fill="#779953"/>
+  <rect rx="10" stroke="null" id="svg_34" height="30" width="120" y="114" x="61.5" stroke-width="0" fill="#f6f6f6"/>
+  <text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_35" y="134" x="67" fill="#323232">${name1_3}</text>
+  <text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_36" y="134" x="36" fill="#f6f6f6">Д.</text>
+  <rect rx="10" stroke="null" id="svg_38" height="30" width="30" y="70" x="27.5" stroke-width="0" fill="#779953"/>
+  <rect rx="10" stroke="null" id="svg_39" height="30" width="120" y="70" x="61.5" stroke-width="0" fill="#f6f6f6"/>
+  <text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_40" y="90" x="36.5" fill="#f6f6f6">В.</text>
+  <text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_41" y="90" x="67" fill="#323232">${name1_2}</text>
+  <rect rx="10" id="svg_44" height="235" width="675" y="256" x="10" fill="#f6f6f6"/>
+  <text font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="24" stroke-width="0" id="svg_45" y="295" x="275.98438" fill="#323232">${name2_1}</text>
+  <rect rx="10" id="svg_51" height="40" width="655" y="443" x="20" fill="#ffffff"/>
+  <rect rx="10" id="svg_54" height="40" width="655" y="310" x="20" fill="#ffffff"/>
+  <rect rx="10" id="svg_55" height="40" width="655" y="354" x="20" fill="#ffffff"/>
+  <rect rx="10" id="svg_59" height="40" width="655" y="398" x="20" fill="#ffffff"/>
+  <rect rx="10" stroke="null" id="svg_62" height="30" width="30" y="448" x="28" stroke-width="0" fill="#779953"/>
+  <rect rx="10" stroke="null" id="svg_63" height="30" width="120" y="448" x="61.5" stroke-width="0" fill="#f6f6f6"/>
+  <text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_68" y="468" x="36" fill="#f6f6f6">М.</text>
+  <text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_71" y="468" x="67" fill="#323232">${name2_7}</text>
+  <rect rx="10" stroke="null" id="svg_78" height="30" width="30" y="403" x="188" stroke-width="0" fill="#779953"/>
+  <rect rx="10" stroke="null" id="svg_79" height="30" width="120" y="403" x="222" stroke-width="0" fill="#f6f6f6"/>
+  <text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_80" y="423" x="197" fill="#f6f6f6">Ч.</text>
+  <text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_81" y="423" x="227.5" fill="#323232">${name2_6}</text>
+  <rect rx="10" stroke="null" id="svg_83" height="30" width="30" y="403" x="27.5" stroke-width="0" fill="#779953"/>
+  <rect rx="10" stroke="null" id="svg_84" height="30" width="120" y="403" x="61.5" stroke-width="0" fill="#f6f6f6"/>
+  <text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_85" y="423" x="67" fill="#323232">${name2_5}</text>
+  <text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_86" y="423" x="36.5" fill="#f6f6f6">И.</text>
+  <rect rx="10" stroke="null" id="svg_88" height="30" width="480" y="359" x="187.5" stroke-width="0" fill="#f6f6f6"/>
+  <text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" id="svg_89" y="379" x="195" stroke-width="0" stroke="null" fill="#323232">${name2_4}</text>
+  <rect rx="10" stroke="null" id="svg_91" height="30" width="30" y="359" x="28" stroke-width="0" fill="#779953"/>
+  <rect rx="10" stroke="null" id="svg_92" height="30" width="120" y="359" x="62" stroke-width="0" fill="#f6f6f6"/>
+  <text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_93" y="379" x="67.5" fill="#323232">${name2_3}</text>
+  <text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_94" y="379" x="36.5" fill="#f6f6f6">Д.</text>
+  <rect rx="10" stroke="null" id="svg_96" height="30" width="30" y="315" x="27.5" stroke-width="0" fill="#779953"/>
+  <rect rx="10" stroke="null" id="svg_97" height="30" width="120" y="315" x="61.5" stroke-width="0" fill="#f6f6f6"/>
+  <text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_98" y="335" x="36.5" fill="#f6f6f6">В.</text>
+  <text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_99" y="335" x="67" fill="#323232">${name2_2}</text>
+ </g>
+
+</svg>
