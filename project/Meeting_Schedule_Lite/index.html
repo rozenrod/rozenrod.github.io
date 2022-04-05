@@ -208,6 +208,10 @@
 				border: 0;
 				margin: 1.5px;
 			}
+			#doc div svg{
+				width: 800px;
+    		height: auto;
+			}
     </style>
   </head>
   <body>
@@ -747,7 +751,9 @@
 			<input id="save_name_i" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
 			<input class="block_save_i2 c4" type="submit" value="Сохранить" onclick="save_name()">
 			<br><br>
-			<input class="block_save_i2 c5" type="submit" value="Удалить все" onclick="dell_name()">
+			<input class="block_save_i2 c6" type="submit" value="Добавить стандартные имена" onclick="reset_name()">
+
+			<input class="block_save_i2 c5" type="submit" value="Сброс имён" onclick="dell_name()">
 		</div>
 	</center>
 
@@ -780,11 +786,33 @@
 			input_t = document.querySelector('#save_name_i');
 			if (localStorage.getItem('my_name')){
 				array = JSON.parse(localStorage.getItem('my_name'));
-				array.unshift(input_t.value);
+				var resulr = array.filter(function(el){return el.indexOf(input_t.value) > -1;});
+				if(resulr != input_t.value){
+					array.unshift(input_t.value);
+				}
 				localStorage.setItem('my_name', JSON.stringify(array));
 			} else {
 				array = '["' + input_t.value + '"]';
 				localStorage.setItem('my_name', array);
+			}
+			load_datalist()
+		}
+
+		function reset_name(){
+			let array = new Object;
+			let standard_name = ["Николай","Серафим","Алексей","Евгений","Денис","Юрий","Александр","Игорь","Сергей","Борис","Никита","Владимир","Дмитрий","Трансляция"];
+			if (localStorage.getItem('my_name')){
+				array = JSON.parse(localStorage.getItem('my_name'));
+				for (let i = 0; i < standard_name.length; i++) {
+
+					var resulr = array.filter(function(el){return el.indexOf(standard_name[i]) > -1;});
+					if(resulr != standard_name[i]){
+						array.unshift(standard_name[i]);
+					}
+				}
+				localStorage.setItem('my_name', JSON.stringify(array));
+			} else {
+				localStorage.setItem('my_name', '["Николай","Серафим","Алексей","Евгений","Денис","Юрий","Александр","Игорь","Сергей","Борис","Никита","Владимир","Дмитрий","Трансляция"]');
 			}
 			load_datalist()
 		}
@@ -912,7 +940,7 @@
 			var div = document.createElement('div');
 			document.getElementById('doc').appendChild(div);
 			div.innerHTML = `
-			<svg width="695" height="990" xmlns="http://www.w3.org/2000/svg" version="1.1">
+			<svg width="1390" height="1980" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 695 990" preserveAspectRatio="xMinYMin">
 				<g>
 					<title>Layer 1</title>
 					<rect id="svg_8" height="990" width="695" y="0" x="0" fill="#ffffff"/>
@@ -1106,7 +1134,7 @@
 			var div = document.createElement('div');
 			document.getElementById('doc').appendChild(div);
 			div.innerHTML = `
-			<svg width="1380" height="1130" xmlns="http://www.w3.org/2000/svg" version="1.1">
+			<svg width="2760" height="2260" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1380 1130" preserveAspectRatio="xMinYMin">
 				<g>
 					<title>Layer 1</title>
 					<rect stroke-width="0" id="svg_2" height="1130" width="1380" y="0" x="0" stroke="#000" fill="#fff"/>
@@ -1556,7 +1584,7 @@
 			var div = document.createElement('div');
 			document.getElementById('doc').appendChild(div);
 			div.innerHTML = `
-			<svg width="695" height="2260" xmlns="http://www.w3.org/2000/svg" version="1.1">
+			<svg width="1390" height="4520" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 695 2260" preserveAspectRatio="xMinYMin">
 				<g>
 					<title>Layer 1</title>
 					<rect id="svg_400" height="2260" width="695" y="0" x="0" stroke-width="0" fill="#ffffff"/>
@@ -2016,7 +2044,7 @@
 			var div = document.createElement('div');
 			document.getElementById('doc').appendChild(div);
 			div.innerHTML = `
-			<svg width="695" height="1835" xmlns="http://www.w3.org/2000/svg" version="1.1">
+			<svg width="1390" height="3670" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 695 1835" preserveAspectRatio="xMinYMin">
 				<g>
 					<title>Layer 1</title>
 					<rect id="svg_3" height="1835" width="695" y="0" x="0" stroke-width="0" stroke="null" fill="#ffffff"/>
