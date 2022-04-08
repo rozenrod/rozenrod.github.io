@@ -48,13 +48,18 @@
 				src: url(woff/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_ROW4.woff2) format('woff2');
 				unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 			}
-
+			.logo{
+				font-size: 24px;
+				color: #323232;
+				text-decoration: none;
+				border-bottom: 2px solid #779953;
+			}
 			details {
 				text-align: left;
 				color: #323232;
 				max-width: calc(800px - 10px);
 				padding: 10px;
-				background: #e7e7e7;
+				background: #ededed;
 				margin-top: 10px;
 				border-radius: 10px;
 				margin: 10px;
@@ -193,7 +198,7 @@
 				color: #323232;
 				max-width: calc(800px - 10px);
 				padding: 10px;
-				background: #e7e7e7;
+				background: #ededed;
 				margin-top: 10px;
 				border-radius: 10px;
 				margin: 10px;
@@ -217,8 +222,8 @@
   <body>
 		<center>
 		<br>
-		<h2>Meeting Schedule Lite</h2>
-		<br>
+		<a href="https://rozenrod.github.io/project/Meeting_Schedule_Lite/index.html" class="logo">Meeting Schedule Lite</a>
+		<br><br>
 		<details id="det_1" style="text-align: center;">
 			<summary>Воскресная встреча</summary>
 			<center>
@@ -749,8 +754,8 @@
 			<p>Сохранение имен подсказок (они будут предложены при вводе имени)</p>
 			<br>
 			<input id="save_name_i" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
-			<input class="block_save_i2 c4" type="submit" value="Сохранить" onclick="save_name()">
-			<br><br>
+			<input class="block_save_i2 c4" type="submit" value="Добавить" onclick="save_name()">
+			<!-- <br><br> -->
 			<input class="block_save_i2 c6" type="submit" value="Добавить стандартные имена" onclick="reset_name()">
 
 			<input class="block_save_i2 c5" type="submit" value="Сброс имён" onclick="dell_name()">
