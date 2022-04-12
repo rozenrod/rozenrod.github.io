@@ -232,6 +232,9 @@
 					<div class="line" title="Ведущий">
 						<div class="s1"><span>В.</span></div>
 						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
+
+						<div class="s1"><span>П.</span></div>
+						<input class="i1" type="text" value="" placeholder="№ Песни">
 					</div>
 					<div class="line" title="Докладчик и доклад">
 						<div class="s1"><span>Д.</span></div>
@@ -256,6 +259,9 @@
 					<div class="line" title="Ведущий">
 						<div class="s1"><span>В.</span></div>
 						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
+
+						<div class="s1"><span>П.</span></div>
+						<input class="i1" type="text" value="" placeholder="№ Песни">
 					</div>
 					<div class="line" title="Докладчик и доклад">
 						<div class="s1"><span>Д.</span></div>
@@ -280,6 +286,9 @@
 					<div class="line" title="Ведущий">
 						<div class="s1"><span>В.</span></div>
 						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
+
+						<div class="s1"><span>П.</span></div>
+						<input class="i1" type="text" value="" placeholder="№ Песни">
 					</div>
 					<div class="line" title="Докладчик и доклад">
 						<div class="s1"><span>Д.</span></div>
@@ -304,6 +313,9 @@
 					<div class="line" title="Ведущий">
 						<div class="s1"><span>В.</span></div>
 						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
+
+						<div class="s1"><span>П.</span></div>
+						<input class="i1" type="text" value="" placeholder="№ Песни">
 					</div>
 					<div class="line" title="Докладчик и доклад">
 						<div class="s1"><span>Д.</span></div>
@@ -895,21 +907,21 @@
 		date_input_4_2.value = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();
 
     if(!sessionStorage.getItem(0)){sessionStorage.setItem(0, document.getElementsByTagName("input")[0].value);}
-    if(!sessionStorage.getItem(7)){sessionStorage.setItem(7, document.getElementsByTagName("input")[7].value);}
-    if(!sessionStorage.getItem(14)){sessionStorage.setItem(14, document.getElementsByTagName("input")[14].value);}
-    if(!sessionStorage.getItem(21)){sessionStorage.setItem(21, document.getElementsByTagName("input")[21].value);}
-    if(!sessionStorage.getItem(28)){sessionStorage.setItem(28, document.getElementsByTagName("input")[28].value);}
-    if(!sessionStorage.getItem(43)){sessionStorage.setItem(43, document.getElementsByTagName("input")[43].value);}
-    if(!sessionStorage.getItem(58)){sessionStorage.setItem(58, document.getElementsByTagName("input")[58].value);}
-    if(!sessionStorage.getItem(73)){sessionStorage.setItem(73, document.getElementsByTagName("input")[73].value);}
-    if(!sessionStorage.getItem(88)){sessionStorage.setItem(88, document.getElementsByTagName("input")[88].value);}
-    if(!sessionStorage.getItem(104)){sessionStorage.setItem(104, document.getElementsByTagName("input")[104].value);}
-    if(!sessionStorage.getItem(113)){sessionStorage.setItem(113, document.getElementsByTagName("input")[113].value);}
-    if(!sessionStorage.getItem(122)){sessionStorage.setItem(122, document.getElementsByTagName("input")[122].value);}
-    if(!sessionStorage.getItem(131)){sessionStorage.setItem(131, document.getElementsByTagName("input")[131].value);}
-    if(!sessionStorage.getItem(140)){sessionStorage.setItem(140, document.getElementsByTagName("input")[140].value);}
+    if(!sessionStorage.getItem(8)){sessionStorage.setItem(8, document.getElementsByTagName("input")[8].value);}
+    if(!sessionStorage.getItem(16)){sessionStorage.setItem(16, document.getElementsByTagName("input")[16].value);}
+    if(!sessionStorage.getItem(24)){sessionStorage.setItem(24, document.getElementsByTagName("input")[24].value);}
+    if(!sessionStorage.getItem(32)){sessionStorage.setItem(32, document.getElementsByTagName("input")[32].value);}
+    if(!sessionStorage.getItem(47)){sessionStorage.setItem(47, document.getElementsByTagName("input")[47].value);}
+    if(!sessionStorage.getItem(62)){sessionStorage.setItem(62, document.getElementsByTagName("input")[62].value);}
+    if(!sessionStorage.getItem(77)){sessionStorage.setItem(77, document.getElementsByTagName("input")[77].value);}
+    if(!sessionStorage.getItem(92)){sessionStorage.setItem(92, document.getElementsByTagName("input")[92].value);}
+    if(!sessionStorage.getItem(108)){sessionStorage.setItem(108, document.getElementsByTagName("input")[108].value);}
+    if(!sessionStorage.getItem(117)){sessionStorage.setItem(117, document.getElementsByTagName("input")[117].value);}
+    if(!sessionStorage.getItem(126)){sessionStorage.setItem(126, document.getElementsByTagName("input")[126].value);}
+    if(!sessionStorage.getItem(135)){sessionStorage.setItem(135, document.getElementsByTagName("input")[135].value);}
+    if(!sessionStorage.getItem(144)){sessionStorage.setItem(144, document.getElementsByTagName("input")[144].value);}
 
-		function save_1	(){
+		function save_1(){
 			document.getElementById('doc').innerHTML = '';
 			var name1_1 = document.getElementsByTagName("input")[0].value,
 					name1_2 = document.getElementsByTagName("input")[1].value,
@@ -918,228 +930,226 @@
 					name1_5 = document.getElementsByTagName("input")[4].value,
 					name1_6 = document.getElementsByTagName("input")[5].value,
 					name1_7 = document.getElementsByTagName("input")[6].value,
-					name2_1 = document.getElementsByTagName("input")[7].value,
-					name2_2 = document.getElementsByTagName("input")[8].value,
-					name2_3 = document.getElementsByTagName("input")[9].value,
-					name2_4 = document.getElementsByTagName("input")[10].value,
-					name2_5 = document.getElementsByTagName("input")[11].value,
-					name2_6 = document.getElementsByTagName("input")[12].value,
-					name2_7 = document.getElementsByTagName("input")[13].value,
-					name3_1 = document.getElementsByTagName("input")[14].value,
-					name3_2 = document.getElementsByTagName("input")[15].value,
-					name3_3 = document.getElementsByTagName("input")[16].value,
-					name3_4 = document.getElementsByTagName("input")[17].value,
-					name3_5 = document.getElementsByTagName("input")[18].value,
-					name3_6 = document.getElementsByTagName("input")[19].value,
-					name3_7 = document.getElementsByTagName("input")[20].value,
-					name4_1 = document.getElementsByTagName("input")[21].value,
-					name4_2 = document.getElementsByTagName("input")[22].value,
-					name4_3 = document.getElementsByTagName("input")[23].value,
-					name4_4 = document.getElementsByTagName("input")[24].value,
-					name4_5 = document.getElementsByTagName("input")[25].value,
-					name4_6 = document.getElementsByTagName("input")[26].value,
-					name4_7 = document.getElementsByTagName("input")[27].value;
+					name1_8 = document.getElementsByTagName("input")[7].value,
+					name2_1 = document.getElementsByTagName("input")[8].value,
+					name2_2 = document.getElementsByTagName("input")[9].value,
+					name2_3 = document.getElementsByTagName("input")[10].value,
+					name2_4 = document.getElementsByTagName("input")[11].value,
+					name2_5 = document.getElementsByTagName("input")[12].value,
+					name2_6 = document.getElementsByTagName("input")[13].value,
+					name2_7 = document.getElementsByTagName("input")[14].value,
+					name2_8 = document.getElementsByTagName("input")[15].value,
+					name3_1 = document.getElementsByTagName("input")[16].value,
+					name3_2 = document.getElementsByTagName("input")[17].value,
+					name3_3 = document.getElementsByTagName("input")[18].value,
+					name3_4 = document.getElementsByTagName("input")[19].value,
+					name3_5 = document.getElementsByTagName("input")[20].value,
+					name3_6 = document.getElementsByTagName("input")[21].value,
+					name3_7 = document.getElementsByTagName("input")[22].value,
+					name3_8 = document.getElementsByTagName("input")[23].value,
+					name4_1 = document.getElementsByTagName("input")[24].value,
+					name4_2 = document.getElementsByTagName("input")[25].value,
+					name4_3 = document.getElementsByTagName("input")[26].value,
+					name4_4 = document.getElementsByTagName("input")[27].value,
+					name4_5 = document.getElementsByTagName("input")[28].value,
+					name4_6 = document.getElementsByTagName("input")[29].value,
+					name4_7 = document.getElementsByTagName("input")[30].value,
+					name4_8 = document.getElementsByTagName("input")[31].value;
 
 
 
 			var div = document.createElement('div');
 			document.getElementById('doc').appendChild(div);
 			var svg_1_1 = `
-				<g id="svg_147">
-					<rect fill="#f6f6f6" x="10" y="10" width="675" height="235" id="svg_9" rx="10"/>
-					<text fill="#323232" x="275.98438" y="50" id="svg_10" stroke-width="0" font-size="24" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve" font-weight="normal" font-style="normal">${name1_1}</text>
-					<g id="svg_16">
-						<g id="svg_6">
-							<rect fill="#ffffff" x="20" y="198" width="655" height="40" id="svg_11" rx="10"/>
-							<rect fill="#779953" stroke-width="0" x="28" y="203" width="30" height="30" id="svg_15" stroke="null" rx="10"/>
-							<rect fill="#f6f6f6" stroke-width="0" x="61.5" y="203" width="120" height="30" id="svg_14" stroke="null" rx="10"/>
-							<text fill="#f6f6f6" x="36" y="223" id="svg_17" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">М.</text>
-						</g>
-						<text fill="#323232" x="67" y="223" id="svg_18" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name1_7}</text>
+			<g id="svg_181">
+				<g id="svg_173">
+					<rect rx="10" id="svg_9" height="235" width="675" y="10" x="10" fill="#f6f6f6"/>
+					<g id="svg_6">
+					<rect rx="10" id="svg_11" height="40" width="655" y="198" x="20" fill="#ffffff"/>
+					<rect rx="10" stroke="null" id="svg_15" height="30" width="30" y="203" x="28" stroke-width="0" fill="#779953"/>
+					<rect rx="10" stroke="null" id="svg_14" height="30" width="120" y="203" x="61.5" stroke-width="0" fill="#f6f6f6"/>
+					<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_17" y="223" x="36" fill="#f6f6f6">М.</text>
 					</g>
-					<g id="svg_38">
-						<g id="svg_5">
-							<rect fill="#ffffff" x="20" y="153" width="655" height="40" id="svg_14" rx="10"/>
-							<rect fill="#779953" stroke-width="0" x="188" y="158" width="30" height="30" id="svg_20" stroke="null" rx="10"/>
-							<rect fill="#f6f6f6" stroke-width="0" x="222" y="158" width="120" height="30" id="svg_21" stroke="null" rx="10"/>
-							<text fill="#f6f6f6" x="197" y="178" id="svg_22" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Ч.</text>
-							<rect fill="#779953" stroke-width="0" x="27.5" y="158" width="30" height="30" id="svg_25" stroke="null" rx="10"/>
-							<rect fill="#f6f6f6" stroke-width="0" x="61.5" y="158" width="120" height="30" id="svg_26" stroke="null" rx="10"/>
-							<text fill="#f6f6f6" x="36.5" y="178" id="svg_28" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">И.</text>
-						</g>
-						<text fill="#323232" x="227.5" y="178" id="svg_23" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name1_6}</text>
-						<text fill="#323232" x="67" y="178" id="svg_27" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name1_5}</text>
+					<g id="svg_5">
+					<rect rx="10" id="svg_14" height="40" width="655" y="153" x="20" fill="#ffffff"/>
+					<rect rx="10" stroke="null" id="svg_20" height="30" width="30" y="158" x="188" stroke-width="0" fill="#779953"/>
+					<rect rx="10" stroke="null" id="svg_21" height="30" width="120" y="158" x="222" stroke-width="0" fill="#f6f6f6"/>
+					<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_22" y="178" x="197" fill="#f6f6f6">Ч.</text>
+					<rect rx="10" stroke="null" id="svg_25" height="30" width="30" y="158" x="27.5" stroke-width="0" fill="#779953"/>
+					<rect rx="10" stroke="null" id="svg_26" height="30" width="120" y="158" x="61.5" stroke-width="0" fill="#f6f6f6"/>
+					<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_28" y="178" x="36.5" fill="#f6f6f6">И.</text>
 					</g>
-					<g id="svg_42">
-						<g id="svg_4">
-							<rect fill="#ffffff" x="20" y="109" width="655" height="40" id="svg_13" rx="10"/>
-							<rect fill="#f6f6f6" stroke-width="0" x="187.5" y="114" width="480" height="30" id="svg_30" stroke="null" rx="10"/>
-							<rect fill="#779953" stroke-width="0" x="27.5" y="114" width="30" height="30" id="svg_33" stroke="null" rx="10"/>
-							<rect fill="#f6f6f6" stroke-width="0" x="61.5" y="114" width="120" height="30" id="svg_34" stroke="null" rx="10"/>
-							<text fill="#f6f6f6" x="36" y="134" id="svg_36" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Д.</text>
-						</g>
-						<text fill="#323232" stroke="null" stroke-width="0" x="195" y="134" id="svg_31" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name1_4}</text>
-						<text fill="#323232" x="67" y="134" id="svg_35" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name1_3}</text>
+					<g id="svg_4">
+					<rect rx="10" id="svg_13" height="40" width="655" y="109" x="20" fill="#ffffff"/>
+					<rect rx="10" stroke="null" id="svg_30" height="30" width="480" y="114" x="187.5" stroke-width="0" fill="#f6f6f6"/>
+					<rect rx="10" stroke="null" id="svg_33" height="30" width="30" y="114" x="27.5" stroke-width="0" fill="#779953"/>
+					<rect rx="10" stroke="null" id="svg_34" height="30" width="120" y="114" x="61.5" stroke-width="0" fill="#f6f6f6"/>
+					<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_36" y="134" x="36" fill="#f6f6f6">Д.</text>
 					</g>
-					<g id="svg_95">
-						<g id="svg_3">
-							<rect fill="#ffffff" x="20" y="65" width="655" height="40" id="svg_12" rx="10"/>
-							<rect fill="#f6f6f6" stroke-width="0" x="61.5" y="70" width="120" height="30" id="svg_39" stroke="null" rx="10"/>
-							<rect fill="#779953" stroke-width="0" x="27.5" y="70" width="30" height="30" id="svg_2" stroke="null" rx="10"/>
-							<text fill="#f6f6f6" x="36.5" y="90" id="svg_40" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">В.</text>
-						</g>
-						<text fill="#323232" x="67" y="90" id="svg_41" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name1_2}</text>
+					<g id="svg_172">
+					<rect rx="10" id="svg_12" height="40" width="655" y="65" x="20" fill="#ffffff"/>
+					<rect rx="10" stroke="null" id="svg_39" height="30" width="120" y="70" x="61.5" stroke-width="0" fill="#f6f6f6"/>
+					<rect rx="10" stroke="null" id="svg_2" height="30" width="30" y="70" x="27.5" stroke-width="0" fill="#779953"/>
+					<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_40" y="90" x="36.5" fill="#f6f6f6">В.</text>
+					<rect rx="10" stroke="null" id="svg_145" height="30" width="120" y="70" x="222" stroke-width="0" fill="#f6f6f6"/>
+					<rect rx="10" stroke="null" id="svg_146" height="30" width="30" y="70" x="188" stroke-width="0" fill="#779953"/>
+					<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_147" y="90" x="197" fill="#f6f6f6">П.</text>
 					</g>
 				</g>
+				<text font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="24" stroke-width="0" id="svg_10" y="50" x="275.98438" fill="#323232">${name1_1}</text>
+				<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_18" y="223" x="67" fill="#323232">${name1_8}</text>
+				<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_23" y="178" x="227.5" fill="#323232">${name1_7}</text>
+				<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_27" y="178" x="67" fill="#323232">${name1_6}</text>
+				<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" id="svg_31" y="134" x="195" stroke-width="0" stroke="null" fill="#323232">${name1_5}</text>
+				<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_35" y="134" x="67" fill="#323232">${name1_4}</text>
+				<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_41" y="90" x="67" fill="#323232">${name1_2}</text>
+				<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_148" y="90" x="227.5" fill="#323232">${name1_3}</text>
+			</g>
 			`;
 			var svg_1_2 = `
-				<g id="svg_148">
-					<rect fill="#f6f6f6" x="10" y="256" width="675" height="235" id="svg_44" rx="10"/>
-					<text fill="#323232" x="275.98438" y="295" id="svg_45" stroke-width="0" font-size="24" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve" font-weight="normal" font-style="normal">${name2_1}</text>
-					<g id="svg_100">
-						<g id="svg_7">
-							<rect fill="#ffffff" x="20" y="310" width="655" height="40" id="svg_54" rx="10"/>
-							<rect fill="#779953" stroke-width="0" x="27.5" y="315" width="30" height="30" id="svg_96" stroke="null" rx="10"/>
-							<rect fill="#f6f6f6" stroke-width="0" x="61.5" y="315" width="120" height="30" id="svg_97" stroke="null" rx="10"/>
-							<text fill="#f6f6f6" x="36.5" y="335" id="svg_98" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">В.</text>
-						</g>
-						<text fill="#323232" x="67" y="335" id="svg_99" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name2_2}</text>
+			<g id="svg_182">
+				<g id="svg_178">
+					<rect rx="10" id="svg_44" height="235" width="675" y="256" x="10" fill="#f6f6f6"/>
+					<g id="svg_90">
+					<rect rx="10" id="svg_55" height="40" width="655" y="354" x="20" fill="#ffffff"/>
+					<rect rx="10" stroke="null" id="svg_88" height="30" width="480" y="359" x="187.5" stroke-width="0" fill="#f6f6f6"/>
+					<rect rx="10" stroke="null" id="svg_91" height="30" width="30" y="359" x="28" stroke-width="0" fill="#779953"/>
+					<rect rx="10" stroke="null" id="svg_92" height="30" width="120" y="359" x="62" stroke-width="0" fill="#f6f6f6"/>
+					<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_94" y="379" x="36.5" fill="#f6f6f6">Д.</text>
 					</g>
-					<g id="svg_101">
-						<g id="svg_90">
-							<rect fill="#ffffff" x="20" y="354" width="655" height="40" id="svg_55" rx="10"/>
-							<rect fill="#f6f6f6" stroke-width="0" x="187.5" y="359" width="480" height="30" id="svg_88" stroke="null" rx="10"/>
-							<rect fill="#779953" stroke-width="0" x="28" y="359" width="30" height="30" id="svg_91" stroke="null" rx="10"/>
-							<rect fill="#f6f6f6" stroke-width="0" x="62" y="359" width="120" height="30" id="svg_92" stroke="null" rx="10"/>
-							<text fill="#f6f6f6" x="36.5" y="379" id="svg_94" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Д.</text>
-						</g>
-						<text fill="#323232" stroke="null" stroke-width="0" x="195" y="379" id="svg_89" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name2_4}</text>
-						<text fill="#323232" x="67.5" y="379" id="svg_93" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name2_3}</text>
+					<g id="svg_19">
+					<rect rx="10" id="svg_59" height="40" width="655" y="398" x="20" fill="#ffffff"/>
+					<rect rx="10" stroke="null" id="svg_78" height="30" width="30" y="403" x="188" stroke-width="0" fill="#779953"/>
+					<rect rx="10" stroke="null" id="svg_79" height="30" width="120" y="403" x="222" stroke-width="0" fill="#f6f6f6"/>
+					<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_80" y="423" x="197" fill="#f6f6f6">Ч.</text>
+					<rect rx="10" stroke="null" id="svg_83" height="30" width="30" y="403" x="27.5" stroke-width="0" fill="#779953"/>
+					<rect rx="10" stroke="null" id="svg_84" height="30" width="120" y="403" x="61.5" stroke-width="0" fill="#f6f6f6"/>
+					<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_86" y="423" x="36.5" fill="#f6f6f6">И.</text>
 					</g>
-					<g id="svg_116">
-						<g id="svg_19">
-							<rect fill="#ffffff" x="20" y="398" width="655" height="40" id="svg_59" rx="10"/>
-							<rect fill="#779953" stroke-width="0" x="188" y="403" width="30" height="30" id="svg_78" stroke="null" rx="10"/>
-							<rect fill="#f6f6f6" stroke-width="0" x="222" y="403" width="120" height="30" id="svg_79" stroke="null" rx="10"/>
-							<text fill="#f6f6f6" x="197" y="423" id="svg_80" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Ч.</text>
-							<rect fill="#779953" stroke-width="0" x="27.5" y="403" width="30" height="30" id="svg_83" stroke="null" rx="10"/>
-							<rect fill="#f6f6f6" stroke-width="0" x="61.5" y="403" width="120" height="30" id="svg_84" stroke="null" rx="10"/>
-							<text fill="#f6f6f6" x="36.5" y="423" id="svg_86" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">И.</text>
-						</g>
-						<text fill="#323232" x="227.5" y="423" id="svg_81" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name2_6}</text>
-						<text fill="#323232" x="67" y="423" id="svg_85" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name2_5}</text>
+					<g id="svg_24">
+					<rect rx="10" id="svg_51" height="40" width="655" y="443" x="20" fill="#ffffff"/>
+					<rect rx="10" stroke="null" id="svg_62" height="30" width="30" y="448" x="28" stroke-width="0" fill="#779953"/>
+					<rect rx="10" stroke="null" id="svg_63" height="30" width="120" y="448" x="61.5" stroke-width="0" fill="#f6f6f6"/>
+					<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_68" y="468" x="36" fill="#f6f6f6">М.</text>
 					</g>
-					<g id="svg_125">
-						<g id="svg_24">
-							<rect fill="#ffffff" x="20" y="443" width="655" height="40" id="svg_51" rx="10"/>
-							<rect fill="#779953" stroke-width="0" x="28" y="448" width="30" height="30" id="svg_62" stroke="null" rx="10"/>
-							<rect fill="#f6f6f6" stroke-width="0" x="61.5" y="448" width="120" height="30" id="svg_63" stroke="null" rx="10"/>
-							<text fill="#f6f6f6" x="36" y="468" id="svg_68" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">М.</text>
-						</g>
-						<text fill="#323232" x="67" y="468" id="svg_71" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name2_7}</text>
+					<g id="svg_176">
+					<rect rx="10" id="svg_54" height="40" width="655" y="310" x="20" fill="#ffffff"/>
+					<rect rx="10" stroke="null" id="svg_96" height="30" width="30" y="315" x="27.5" stroke-width="0" fill="#779953"/>
+					<rect rx="10" stroke="null" id="svg_97" height="30" width="120" y="315" x="61.5" stroke-width="0" fill="#f6f6f6"/>
+					<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_98" y="335" x="36.5" fill="#f6f6f6">В.</text>
+					<rect rx="10" stroke="null" id="svg_156" height="30" width="120" y="315" x="222" stroke-width="0" fill="#f6f6f6"/>
+					<rect rx="10" stroke="null" id="svg_157" height="30" width="30" y="315" x="188" stroke-width="0" fill="#779953"/>
+					<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_158" y="335" x="197" fill="#f6f6f6">П.</text>
 					</g>
 				</g>
+				<text font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="24" stroke-width="0" id="svg_45" y="295" x="275.98438" fill="#323232">${name2_1}</text>
+				<text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" id="svg_89" y="379" x="195" stroke-width="0" stroke="null" fill="#323232">${name2_5}</text>
+				<text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_93" y="379" x="67.5" fill="#323232">${name2_4}</text>
+				<text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_81" y="423" x="227.5" fill="#323232">${name2_7}</text>
+				<text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_85" y="423" x="67" fill="#323232">${name2_6}</text>
+				<text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_71" y="468" x="67" fill="#323232">${name2_8}</text>
+				<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_159" y="335" x="227.5" fill="#323232">${name1_3}</text>
+				<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_99" y="335" x="67" fill="#323232">${name2_2}</text>
+			</g>
 			`;
 			var svg_1_3 = `
-				<g id="svg_149">
-					<rect fill="#f6f6f6" x="10" y="500" width="675" height="235" id="svg_102" rx="10"/>
-					<text fill="#323232" x="275.98438" y="540" id="svg_103" stroke-width="0" font-size="24" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve" font-weight="normal" font-style="normal">${name3_1}</text>
-					<g id="svg_130">
-						<g id="svg_29">
-							<rect fill="#ffffff" x="20" y="555" width="655" height="40" id="svg_105" rx="10"/>
-							<rect fill="#779953" stroke-width="0" x="27.5" y="560" width="30" height="30" id="svg_131" stroke="null" rx="10"/>
-							<rect fill="#f6f6f6" stroke-width="0" x="61.5" y="560" width="120" height="30" id="svg_132" stroke="null" rx="10"/>
-							<text fill="#f6f6f6" x="36.5" y="580" id="svg_133" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">В.</text>
-						</g>
-						<text fill="#323232" x="67" y="580" id="svg_134" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name3_2}</text>
+			<g id="svg_184">
+				<g id="svg_179">
+					<rect rx="10" id="svg_102" height="235" width="675" y="500" x="10" fill="#f6f6f6"/>
+					<g id="svg_170">
+					<rect rx="10" id="svg_105" height="40" width="655" y="555" x="20" fill="#ffffff"/>
+					<g id="svg_161">
+						<rect rx="10" stroke="null" id="svg_131" height="30" width="30" y="560" x="27.5" stroke-width="0" fill="#779953"/>
+						<rect rx="10" stroke="null" id="svg_132" height="30" width="120" y="560" x="61.5" stroke-width="0" fill="#f6f6f6"/>
+						<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_133" y="580" x="36.5" fill="#f6f6f6">В.</text>
 					</g>
-					<g id="svg_135">
-						<g id="svg_32">
-							<rect fill="#ffffff" x="20" y="599" width="655" height="40" id="svg_106" rx="10"/>
-							<rect fill="#f6f6f6" stroke-width="0" x="187.5" y="604" width="480" height="30" id="svg_123" stroke="null" rx="10"/>
-							<rect fill="#779953" stroke-width="0" x="27.5" y="604" width="30" height="30" id="svg_126" stroke="null" rx="10"/>
-							<rect fill="#f6f6f6" stroke-width="0" x="61.5" y="604" width="120" height="30" id="svg_127" stroke="null" rx="10"/>
-							<text fill="#f6f6f6" x="36" y="624" id="svg_129" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Д.</text>
-						</g>
-						<text fill="#323232" stroke="null" stroke-width="0" x="195" y="624" id="svg_124" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name3_4}</text>
-						<text fill="#323232" x="67" y="624" id="svg_128" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name3_3}</text>
+					<rect rx="10" stroke="null" id="svg_3" height="30" width="120" y="560" x="222" stroke-width="0" fill="#f6f6f6"/>
+					<rect rx="10" stroke="null" id="svg_95" height="30" width="30" y="560" x="188" stroke-width="0" fill="#779953"/>
+					<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_112" y="580" x="197" fill="#f6f6f6">П.</text>
 					</g>
-					<g id="svg_136">
-						<g id="svg_37">
-							<rect fill="#ffffff" x="20" y="643" width="655" height="40" id="svg_107" rx="10"/>
-							<rect fill="#779953" stroke-width="0" x="188" y="648" width="30" height="30" id="svg_113" stroke="null" rx="10"/>
-							<rect fill="#f6f6f6" stroke-width="0" x="222" y="648" width="120" height="30" id="svg_114" stroke="null" rx="10"/>
-							<text fill="#f6f6f6" x="197" y="668" id="svg_115" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Ч.</text>
-							<rect fill="#779953" stroke-width="0" x="27.5" y="648" width="30" height="30" id="svg_118" stroke="null" rx="10"/>
-							<rect fill="#f6f6f6" stroke-width="0" x="61.5" y="648" width="120" height="30" id="svg_119" stroke="null" rx="10"/>
-							<text fill="#f6f6f6" x="36.5" y="668" id="svg_121" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">И.</text>
-						</g>
-						<text fill="#323232" x="227.5" y="668" id="svg_114" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name3_6}</text>
-						<text fill="#323232" x="67" y="668" id="svg_120" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name3_5}</text>
+					<g id="svg_32">
+					<rect rx="10" id="svg_106" height="40" width="655" y="599" x="19" fill="#ffffff"/>
+					<rect rx="10" stroke="null" id="svg_123" height="30" width="480" y="604" x="186.5" stroke-width="0" fill="#f6f6f6"/>
+					<rect rx="10" stroke="null" id="svg_126" height="30" width="30" y="604" x="26.5" stroke-width="0" fill="#779953"/>
+					<rect rx="10" stroke="null" id="svg_127" height="30" width="120" y="604" x="60.5" stroke-width="0" fill="#f6f6f6"/>
+					<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_129" y="624" x="35" fill="#f6f6f6">Д.</text>
 					</g>
-					<g id="svg_138">
-						<g id="svg_117">
-							<rect fill="#ffffff" x="20" y="688" width="655" height="40" id="svg_104" rx="10"/>
-							<rect fill="#779953" stroke-width="0" x="28" y="693" width="30" height="30" id="svg_108" stroke="null" rx="10"/>
-							<rect fill="#f6f6f6" stroke-width="0" x="61.5" y="693" width="120" height="30" id="svg_109" stroke="null" rx="10"/>
-							<text fill="#f6f6f6" x="36" y="713" id="svg_110" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">М.</text>
-						</g>
-						<text fill="#323232" x="67" y="713" id="svg_111" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name3_7}</text>
+					<g id="svg_37">
+					<rect rx="10" id="svg_107" height="40" width="655" y="643" x="20" fill="#ffffff"/>
+					<rect rx="10" stroke="null" id="svg_113" height="30" width="30" y="648" x="188" stroke-width="0" fill="#779953"/>
+					<rect rx="10" stroke="null" id="svg_114" height="30" width="120" y="648" x="222" stroke-width="0" fill="#f6f6f6"/>
+					<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_115" y="668" x="197" fill="#f6f6f6">Ч.</text>
+					<rect rx="10" stroke="null" id="svg_118" height="30" width="30" y="648" x="27.5" stroke-width="0" fill="#779953"/>
+					<rect rx="10" stroke="null" id="svg_119" height="30" width="120" y="648" x="61.5" stroke-width="0" fill="#f6f6f6"/>
+					<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_121" y="668" x="36.5" fill="#f6f6f6">И.</text>
+					</g>
+					<g id="svg_117">
+					<rect rx="10" id="svg_104" height="40" width="655" y="688" x="20" fill="#ffffff"/>
+					<rect rx="10" stroke="null" id="svg_108" height="30" width="30" y="693" x="28" stroke-width="0" fill="#779953"/>
+					<rect rx="10" stroke="null" id="svg_109" height="30" width="120" y="693" x="61.5" stroke-width="0" fill="#f6f6f6"/>
+					<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_110" y="713" x="36" fill="#f6f6f6">М.</text>
 					</g>
 				</g>
+				<text font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="24" stroke-width="0" id="svg_103" y="540" x="275.98438" fill="#323232">${name3_1}</text>
+				<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_134" y="580" x="67" fill="#323232">${name3_2}</text>
+				<text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" id="svg_124" y="624" x="195" stroke-width="0" stroke="null" fill="#323232">${name3_5}</text>
+				<text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_128" y="624" x="67" fill="#323232">${name3_4}</text>
+				<text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_114" y="668" x="227.5" fill="#323232">${name3_7}</text>
+				<text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_120" y="668" x="67" fill="#323232">${name3_6}</text>
+				<text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_111" y="713" x="67" fill="#323232">${name3_8}</text>
+				<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_122" y="580" x="227.5" fill="#323232">${name1_3}</text>
+			</g>
 			`;
 			var svg_1_4 = `
-				<g id="svg_150">
-					<rect fill="#f6f6f6" x="10" y="745" width="675" height="235" id="svg_46" rx="10"/>
-					<text fill="#323232" x="275.98438" y="785" id="svg_47" stroke-width="0" font-size="24" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve" font-weight="normal" font-style="normal">${name4_1}</text>
-					<g id="svg_139">
-						<g id="svg_43">
-						<rect fill="#ffffff" x="20" y="800" width="655" height="40" id="svg_56" rx="10"/>
-						<rect fill="#779953" stroke-width="0" x="27.5" y="805" width="30" height="30" id="svg_57" stroke="null" rx="10"/>
-						<rect fill="#f6f6f6" stroke-width="0" x="61.5" y="805" width="120" height="30" id="svg_58" stroke="null" rx="10"/>
-						<text fill="#f6f6f6" x="36.5" y="825" id="svg_60" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">В.</text>
-						</g>
-						<text fill="#323232" x="67" y="825" id="svg_61" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name4_2}</text>
+			<g id="svg_185">
+				<g id="svg_180">
+					<rect rx="10" id="svg_46" height="235" width="675" y="745" x="10" fill="#f6f6f6"/>
+					<g id="svg_75">
+					<rect rx="10" id="svg_64" height="40" width="655" y="844" x="20" fill="#ffffff"/>
+					<rect rx="10" stroke="null" id="svg_67" height="30" width="480" y="849" x="187.5" stroke-width="0" fill="#f6f6f6"/>
+					<rect rx="10" stroke="null" id="svg_65" height="30" width="30" y="849" x="27.5" stroke-width="0" fill="#779953"/>
+					<rect rx="10" stroke="null" id="svg_66" height="30" width="120" y="849" x="61.5" stroke-width="0" fill="#f6f6f6"/>
+					<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_154" y="869" x="36" fill="#f6f6f6">Д.</text>
 					</g>
-					<g id="svg_140">
-						<g id="svg_75">
-							<rect fill="#ffffff" x="20" y="844" width="655" height="40" id="svg_64" rx="10"/>
-							<rect fill="#f6f6f6" stroke-width="0" x="187.5" y="849" width="480" height="30" id="svg_67" stroke="null" rx="10"/>
-							<rect fill="#779953" stroke-width="0" x="27.5" y="849" width="30" height="30" id="svg_65" stroke="null" rx="10"/>
-							<rect fill="#f6f6f6" stroke-width="0" x="61.5" y="849" width="120" height="30" id="svg_66" stroke="null" rx="10"/>
-							<text fill="#f6f6f6" x="36" y="869" id="svg_154" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Д.</text>
-						</g>
-						<text fill="#323232" stroke="null" stroke-width="0" x="195" y="869" id="svg_70" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name4_4}</text>
-						<text fill="#323232" x="67" y="869" id="svg_69" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name4_3}</text>
+					<g id="svg_82">
+					<rect rx="10" id="svg_72" height="40" width="655" y="888" x="20" fill="#ffffff"/>
+					<rect rx="10" stroke="null" id="svg_73" height="30" width="30" y="893" x="188" stroke-width="0" fill="#779953"/>
+					<rect rx="10" stroke="null" id="svg_74" height="30" width="120" y="893" x="222" stroke-width="0" fill="#f6f6f6"/>
+					<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_76" y="913" x="197" fill="#f6f6f6">Ч.</text>
+					<rect rx="10" stroke="null" id="svg_152" height="30" width="30" y="893" x="27.5" stroke-width="0" fill="#779953"/>
+					<rect rx="10" stroke="null" id="svg_153" height="30" width="120" y="893" x="61.5" stroke-width="0" fill="#f6f6f6"/>
+					<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_1" y="913" x="36.5" fill="#f6f6f6">И.</text>
 					</g>
-					<g id="svg_141">
-						<g id="svg_82">
-							<rect fill="#ffffff" x="20" y="888" width="655" height="40" id="svg_72" rx="10"/>
-							<rect fill="#779953" stroke-width="0" x="188" y="893" width="30" height="30" id="svg_73" stroke="null" rx="10"/>
-							<rect fill="#f6f6f6" stroke-width="0" x="222" y="893" width="120" height="30" id="svg_74" stroke="null" rx="10"/>
-							<text fill="#f6f6f6" x="197" y="913" id="svg_76" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Ч.</text>
-							<rect fill="#779953" stroke-width="0" x="27.5" y="893" width="30" height="30" id="svg_152" stroke="null" rx="10"/>
-							<rect fill="#f6f6f6" stroke-width="0" x="61.5" y="893" width="120" height="30" id="svg_153" stroke="null" rx="10"/>
-							<text fill="#f6f6f6" x="36.5" y="913" id="svg_1" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">И.</text>
-						</g>
-						<text fill="#323232" x="227.5" y="913" id="svg_77" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name4_6}</text>
-						<text fill="#323232" x="67" y="913" id="svg_155" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name4_5}</text>
+					<g id="svg_87">
+					<rect rx="10" id="svg_48" height="40" width="655" y="933" x="20" fill="#ffffff"/>
+					<rect rx="10" stroke="null" id="svg_49" height="30" width="30" y="938" x="28" stroke-width="0" fill="#779953"/>
+					<rect rx="10" stroke="null" id="svg_50" height="30" width="120" y="938" x="61.5" stroke-width="0" fill="#f6f6f6"/>
+					<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_52" y="958" x="36" fill="#f6f6f6">М.</text>
 					</g>
-					<g id="svg_142">
-						<g id="svg_87">
-							<rect fill="#ffffff" x="20" y="933" width="655" height="40" id="svg_48" rx="10"/>
-							<rect fill="#779953" stroke-width="0" x="28" y="938" width="30" height="30" id="svg_49" stroke="null" rx="10"/>
-							<rect fill="#f6f6f6" stroke-width="0" x="61.5" y="938" width="120" height="30" id="svg_50" stroke="null" rx="10"/>
-							<text fill="#f6f6f6" x="36" y="958" id="svg_52" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">М.</text>
-						</g>
-						<text fill="#323232" x="67" y="958" id="svg_53" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${name4_7}</text>
+					<g id="svg_169">
+					<rect rx="10" id="svg_56" height="40" width="655" y="800" x="20" fill="#ffffff"/>
+					<rect rx="10" stroke="null" id="svg_57" height="30" width="30" y="805" x="188" stroke-width="0" fill="#779953"/>
+					<rect rx="10" stroke="null" id="svg_58" height="30" width="120" y="805" x="222" stroke-width="0" fill="#f6f6f6"/>
+					<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_60" y="825" x="197" fill="#f6f6f6">П.</text>
+					<rect rx="10" stroke="null" id="svg_163" height="30" width="30" y="805" x="27.5" stroke-width="0" fill="#779953"/>
+					<rect rx="10" stroke="null" id="svg_164" height="30" width="120" y="805" x="61.5" stroke-width="0" fill="#f6f6f6"/>
+					<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_165" y="825" x="36.5" fill="#f6f6f6">В.</text>
 					</g>
 				</g>
+				<text font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="24" stroke-width="0" id="svg_47" y="785" x="275.98438" fill="#323232">${name4_1}</text>
+				<text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" id="svg_70" y="869" x="195" stroke-width="0" stroke="null" fill="#323232">${name4_5}</text>
+				<text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_69" y="869" x="67" fill="#323232">${name4_4}</text>
+				<text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_77" y="913" x="227.5" fill="#323232">${name4_7}</text>
+				<text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_155" y="913" x="67" fill="#323232">${name4_6}</text>
+				<text style="cursor: move;" xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_53" y="958" x="67" fill="#323232">${name4_8}</text>
+				<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_61" y="825" x="227.5" fill="#323232">${name4_3}</text>
+				<text xml:space="preserve" text-anchor="start" font-family="'Roboto Mono'" font-size="14" stroke-width="0" id="svg_166" y="825" x="67" fill="#323232">${name4_2}</text>
+			</g>
 			`;
 
-			if(!name4_2 && !name4_3 && !name4_4 && !name4_5 && !name4_6 && !name4_7 &&
-				 !name3_2 && !name3_3 && !name3_4 && !name3_5 && !name3_6 && !name3_7 &&
-				 !name2_2 && !name2_3 && !name2_4 && !name2_5 && !name2_6 && !name2_7){
+			if(!name4_2 && !name4_3 && !name4_4 && !name4_5 && !name4_6 && !name4_7 && !name4_8 &&
+				 !name3_2 && !name3_3 && !name3_4 && !name3_5 && !name3_6 && !name3_7 && !name3_8 &&
+				 !name2_2 && !name2_3 && !name2_4 && !name2_5 && !name2_6 && !name2_7 && !name2_8){
 
 				div.innerHTML = `
 					<svg width="1390" height="500" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 695 255">
@@ -1148,8 +1158,8 @@
 							${svg_1_1} 
 						</g>
 					</svg>`;
-			} else if(!name4_2 && !name4_3 && !name4_4 && !name4_5 && !name4_6 && !name4_7 &&
-				        !name3_2 && !name3_3 && !name3_4 && !name3_5 && !name3_6 && !name3_7){
+			} else if(!name4_2 && !name4_3 && !name4_4 && !name4_5 && !name4_6 && !name4_7 && !name4_8 &&
+				        !name3_2 && !name3_3 && !name3_4 && !name3_5 && !name3_6 && !name3_7 && !name3_9){
 				div.innerHTML = `
 					<svg width="1390" height="1000" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 695 500">
 						<g>
@@ -1158,7 +1168,7 @@
 							${svg_1_2} 
 						</g>
 					</svg>`;
-			} else if(!name4_2 && !name4_3 && !name4_4 && !name4_5 && !name4_6 && !name4_7){
+			} else if(!name4_2 && !name4_3 && !name4_4 && !name4_5 && !name4_6 && !name4_7 && !name4_8){
 				div.innerHTML = `
 					<svg width="1390" height="1490" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 695 745">
 						<g>
@@ -1187,66 +1197,66 @@
 
 		function save_2	(){
 			document.getElementById('doc').innerHTML = '';
-			var name_2_1_1 = document.getElementsByTagName("input")[28].value,
-					name_2_1_2 = document.getElementsByTagName("input")[29].value,
-					name_2_1_3 = document.getElementsByTagName("input")[30].value,
-					name_2_1_4 = document.getElementsByTagName("input")[31].value,
-					name_2_1_5 = document.getElementsByTagName("input")[32].value,
-					name_2_1_6 = document.getElementsByTagName("input")[33].value,
-					name_2_1_7 = document.getElementsByTagName("input")[34].value,
-					name_2_1_8 = document.getElementsByTagName("input")[35].value,
-					name_2_1_9 = document.getElementsByTagName("input")[36].value,
-					name_2_1_10 = document.getElementsByTagName("input")[37].value,
-					name_2_1_11 = document.getElementsByTagName("input")[38].value,
-					name_2_1_12 = document.getElementsByTagName("input")[39].value,
-					name_2_1_13 = document.getElementsByTagName("input")[40].value,
-					name_2_1_14 = document.getElementsByTagName("input")[41].value,
-					name_2_1_15 = document.getElementsByTagName("input")[42].value,
-					name_2_2_1 = document.getElementsByTagName("input")[43].value,
-					name_2_2_2 = document.getElementsByTagName("input")[44].value,
-					name_2_2_3 = document.getElementsByTagName("input")[45].value,
-					name_2_2_4 = document.getElementsByTagName("input")[46].value,
-					name_2_2_5 = document.getElementsByTagName("input")[47].value,
-					name_2_2_6 = document.getElementsByTagName("input")[48].value,
-					name_2_2_7 = document.getElementsByTagName("input")[49].value,
-					name_2_2_8 = document.getElementsByTagName("input")[50].value,
-					name_2_2_9 = document.getElementsByTagName("input")[51].value,
-					name_2_2_10 = document.getElementsByTagName("input")[52].value,
-					name_2_2_11 = document.getElementsByTagName("input")[53].value,
-					name_2_2_12 = document.getElementsByTagName("input")[54].value,
-					name_2_2_13 = document.getElementsByTagName("input")[55].value,
-					name_2_2_14 = document.getElementsByTagName("input")[56].value,
-					name_2_2_15 = document.getElementsByTagName("input")[57].value,
-					name_2_3_1 = document.getElementsByTagName("input")[58].value,
-					name_2_3_2 = document.getElementsByTagName("input")[59].value,
-					name_2_3_3 = document.getElementsByTagName("input")[60].value,
-					name_2_3_4 = document.getElementsByTagName("input")[61].value,
-					name_2_3_5 = document.getElementsByTagName("input")[62].value,
-					name_2_3_6 = document.getElementsByTagName("input")[63].value,
-					name_2_3_7 = document.getElementsByTagName("input")[64].value,
-					name_2_3_8 = document.getElementsByTagName("input")[65].value,
-					name_2_3_9 = document.getElementsByTagName("input")[66].value,
-					name_2_3_10 = document.getElementsByTagName("input")[67].value,
-					name_2_3_11 = document.getElementsByTagName("input")[68].value,
-					name_2_3_12 = document.getElementsByTagName("input")[69].value,
-					name_2_3_13 = document.getElementsByTagName("input")[70].value,
-					name_2_3_14 = document.getElementsByTagName("input")[71].value,
-					name_2_3_15 = document.getElementsByTagName("input")[72].value,
-					name_2_4_1 = document.getElementsByTagName("input")[73].value,
-					name_2_4_2 = document.getElementsByTagName("input")[74].value,
-					name_2_4_3 = document.getElementsByTagName("input")[75].value,
-					name_2_4_4 = document.getElementsByTagName("input")[76].value,
-					name_2_4_5 = document.getElementsByTagName("input")[77].value,
-					name_2_4_6 = document.getElementsByTagName("input")[78].value,
-					name_2_4_7 = document.getElementsByTagName("input")[79].value,
-					name_2_4_8 = document.getElementsByTagName("input")[80].value,
-					name_2_4_9 = document.getElementsByTagName("input")[81].value,
-					name_2_4_10 = document.getElementsByTagName("input")[82].value,
-					name_2_4_11 = document.getElementsByTagName("input")[83].value,
-					name_2_4_12 = document.getElementsByTagName("input")[84].value,
-					name_2_4_13 = document.getElementsByTagName("input")[85].value,
-					name_2_4_14 = document.getElementsByTagName("input")[86].value,
-					name_2_4_15 = document.getElementsByTagName("input")[87].value;
+			var name_2_1_1 = document.getElementsByTagName("input")[32].value,
+					name_2_1_2 = document.getElementsByTagName("input")[33].value,
+					name_2_1_3 = document.getElementsByTagName("input")[34].value,
+					name_2_1_4 = document.getElementsByTagName("input")[35].value,
+					name_2_1_5 = document.getElementsByTagName("input")[36].value,
+					name_2_1_6 = document.getElementsByTagName("input")[37].value,
+					name_2_1_7 = document.getElementsByTagName("input")[38].value,
+					name_2_1_8 = document.getElementsByTagName("input")[39].value,
+					name_2_1_9 = document.getElementsByTagName("input")[40].value,
+					name_2_1_10 = document.getElementsByTagName("input")[41].value,
+					name_2_1_11 = document.getElementsByTagName("input")[42].value,
+					name_2_1_12 = document.getElementsByTagName("input")[43].value,
+					name_2_1_13 = document.getElementsByTagName("input")[44].value,
+					name_2_1_14 = document.getElementsByTagName("input")[45].value,
+					name_2_1_15 = document.getElementsByTagName("input")[46].value,
+					name_2_2_1 = document.getElementsByTagName("input")[47].value,
+					name_2_2_2 = document.getElementsByTagName("input")[48].value,
+					name_2_2_3 = document.getElementsByTagName("input")[49].value,
+					name_2_2_4 = document.getElementsByTagName("input")[50].value,
+					name_2_2_5 = document.getElementsByTagName("input")[51].value,
+					name_2_2_6 = document.getElementsByTagName("input")[52].value,
+					name_2_2_7 = document.getElementsByTagName("input")[53].value,
+					name_2_2_8 = document.getElementsByTagName("input")[54].value,
+					name_2_2_9 = document.getElementsByTagName("input")[55].value,
+					name_2_2_10 = document.getElementsByTagName("input")[56].value,
+					name_2_2_11 = document.getElementsByTagName("input")[57].value,
+					name_2_2_12 = document.getElementsByTagName("input")[58].value,
+					name_2_2_13 = document.getElementsByTagName("input")[59].value,
+					name_2_2_14 = document.getElementsByTagName("input")[60].value,
+					name_2_2_15 = document.getElementsByTagName("input")[61].value,
+					name_2_3_1 = document.getElementsByTagName("input")[62].value,
+					name_2_3_2 = document.getElementsByTagName("input")[63].value,
+					name_2_3_3 = document.getElementsByTagName("input")[64].value,
+					name_2_3_4 = document.getElementsByTagName("input")[65].value,
+					name_2_3_5 = document.getElementsByTagName("input")[66].value,
+					name_2_3_6 = document.getElementsByTagName("input")[67].value,
+					name_2_3_7 = document.getElementsByTagName("input")[68].value,
+					name_2_3_8 = document.getElementsByTagName("input")[69].value,
+					name_2_3_9 = document.getElementsByTagName("input")[70].value,
+					name_2_3_10 = document.getElementsByTagName("input")[71].value,
+					name_2_3_11 = document.getElementsByTagName("input")[72].value,
+					name_2_3_12 = document.getElementsByTagName("input")[73].value,
+					name_2_3_13 = document.getElementsByTagName("input")[74].value,
+					name_2_3_14 = document.getElementsByTagName("input")[75].value,
+					name_2_3_15 = document.getElementsByTagName("input")[76].value,
+					name_2_4_1 = document.getElementsByTagName("input")[77].value,
+					name_2_4_2 = document.getElementsByTagName("input")[78].value,
+					name_2_4_3 = document.getElementsByTagName("input")[79].value,
+					name_2_4_4 = document.getElementsByTagName("input")[80].value,
+					name_2_4_5 = document.getElementsByTagName("input")[81].value,
+					name_2_4_6 = document.getElementsByTagName("input")[82].value,
+					name_2_4_7 = document.getElementsByTagName("input")[83].value,
+					name_2_4_8 = document.getElementsByTagName("input")[84].value,
+					name_2_4_9 = document.getElementsByTagName("input")[85].value,
+					name_2_4_10 = document.getElementsByTagName("input")[86].value,
+					name_2_4_11 = document.getElementsByTagName("input")[87].value,
+					name_2_4_12 = document.getElementsByTagName("input")[88].value,
+					name_2_4_13 = document.getElementsByTagName("input")[89].value,
+					name_2_4_14 = document.getElementsByTagName("input")[90].value,
+					name_2_4_15 = document.getElementsByTagName("input")[91].value;
 
 
 
@@ -1787,66 +1797,66 @@
 
 		function save_3	(){
 			document.getElementById('doc').innerHTML = '';
-			var name_2_1_1 = document.getElementsByTagName("input")[28].value,
-					name_2_1_2 = document.getElementsByTagName("input")[29].value,
-					name_2_1_3 = document.getElementsByTagName("input")[30].value,
-					name_2_1_4 = document.getElementsByTagName("input")[31].value,
-					name_2_1_5 = document.getElementsByTagName("input")[32].value,
-					name_2_1_6 = document.getElementsByTagName("input")[33].value,
-					name_2_1_7 = document.getElementsByTagName("input")[34].value,
-					name_2_1_8 = document.getElementsByTagName("input")[35].value,
-					name_2_1_9 = document.getElementsByTagName("input")[36].value,
-					name_2_1_10 = document.getElementsByTagName("input")[37].value,
-					name_2_1_11 = document.getElementsByTagName("input")[38].value,
-					name_2_1_12 = document.getElementsByTagName("input")[39].value,
-					name_2_1_13 = document.getElementsByTagName("input")[40].value,
-					name_2_1_14 = document.getElementsByTagName("input")[41].value,
-					name_2_1_15 = document.getElementsByTagName("input")[42].value,
-					name_2_2_1 = document.getElementsByTagName("input")[43].value,
-					name_2_2_2 = document.getElementsByTagName("input")[44].value,
-					name_2_2_3 = document.getElementsByTagName("input")[45].value,
-					name_2_2_4 = document.getElementsByTagName("input")[46].value,
-					name_2_2_5 = document.getElementsByTagName("input")[47].value,
-					name_2_2_6 = document.getElementsByTagName("input")[48].value,
-					name_2_2_7 = document.getElementsByTagName("input")[49].value,
-					name_2_2_8 = document.getElementsByTagName("input")[50].value,
-					name_2_2_9 = document.getElementsByTagName("input")[51].value,
-					name_2_2_10 = document.getElementsByTagName("input")[52].value,
-					name_2_2_11 = document.getElementsByTagName("input")[53].value,
-					name_2_2_12 = document.getElementsByTagName("input")[54].value,
-					name_2_2_13 = document.getElementsByTagName("input")[55].value,
-					name_2_2_14 = document.getElementsByTagName("input")[56].value,
-					name_2_2_15 = document.getElementsByTagName("input")[57].value,
-					name_2_3_1 = document.getElementsByTagName("input")[58].value,
-					name_2_3_2 = document.getElementsByTagName("input")[59].value,
-					name_2_3_3 = document.getElementsByTagName("input")[60].value,
-					name_2_3_4 = document.getElementsByTagName("input")[61].value,
-					name_2_3_5 = document.getElementsByTagName("input")[62].value,
-					name_2_3_6 = document.getElementsByTagName("input")[63].value,
-					name_2_3_7 = document.getElementsByTagName("input")[64].value,
-					name_2_3_8 = document.getElementsByTagName("input")[65].value,
-					name_2_3_9 = document.getElementsByTagName("input")[66].value,
-					name_2_3_10 = document.getElementsByTagName("input")[67].value,
-					name_2_3_11 = document.getElementsByTagName("input")[68].value,
-					name_2_3_12 = document.getElementsByTagName("input")[69].value,
-					name_2_3_13 = document.getElementsByTagName("input")[70].value,
-					name_2_3_14 = document.getElementsByTagName("input")[71].value,
-					name_2_3_15 = document.getElementsByTagName("input")[72].value,
-					name_2_4_1 = document.getElementsByTagName("input")[73].value,
-					name_2_4_2 = document.getElementsByTagName("input")[74].value,
-					name_2_4_3 = document.getElementsByTagName("input")[75].value,
-					name_2_4_4 = document.getElementsByTagName("input")[76].value,
-					name_2_4_5 = document.getElementsByTagName("input")[77].value,
-					name_2_4_6 = document.getElementsByTagName("input")[78].value,
-					name_2_4_7 = document.getElementsByTagName("input")[79].value,
-					name_2_4_8 = document.getElementsByTagName("input")[80].value,
-					name_2_4_9 = document.getElementsByTagName("input")[81].value,
-					name_2_4_10 = document.getElementsByTagName("input")[82].value,
-					name_2_4_11 = document.getElementsByTagName("input")[83].value,
-					name_2_4_12 = document.getElementsByTagName("input")[84].value,
-					name_2_4_13 = document.getElementsByTagName("input")[85].value,
-					name_2_4_14 = document.getElementsByTagName("input")[86].value,
-					name_2_4_15 = document.getElementsByTagName("input")[87].value;
+			var name_2_1_1 = document.getElementsByTagName("input")[32].value,
+					name_2_1_2 = document.getElementsByTagName("input")[33].value,
+					name_2_1_3 = document.getElementsByTagName("input")[34].value,
+					name_2_1_4 = document.getElementsByTagName("input")[35].value,
+					name_2_1_5 = document.getElementsByTagName("input")[36].value,
+					name_2_1_6 = document.getElementsByTagName("input")[37].value,
+					name_2_1_7 = document.getElementsByTagName("input")[38].value,
+					name_2_1_8 = document.getElementsByTagName("input")[39].value,
+					name_2_1_9 = document.getElementsByTagName("input")[40].value,
+					name_2_1_10 = document.getElementsByTagName("input")[41].value,
+					name_2_1_11 = document.getElementsByTagName("input")[42].value,
+					name_2_1_12 = document.getElementsByTagName("input")[43].value,
+					name_2_1_13 = document.getElementsByTagName("input")[44].value,
+					name_2_1_14 = document.getElementsByTagName("input")[45].value,
+					name_2_1_15 = document.getElementsByTagName("input")[46].value,
+					name_2_2_1 = document.getElementsByTagName("input")[47].value,
+					name_2_2_2 = document.getElementsByTagName("input")[48].value,
+					name_2_2_3 = document.getElementsByTagName("input")[49].value,
+					name_2_2_4 = document.getElementsByTagName("input")[50].value,
+					name_2_2_5 = document.getElementsByTagName("input")[51].value,
+					name_2_2_6 = document.getElementsByTagName("input")[52].value,
+					name_2_2_7 = document.getElementsByTagName("input")[53].value,
+					name_2_2_8 = document.getElementsByTagName("input")[54].value,
+					name_2_2_9 = document.getElementsByTagName("input")[55].value,
+					name_2_2_10 = document.getElementsByTagName("input")[56].value,
+					name_2_2_11 = document.getElementsByTagName("input")[57].value,
+					name_2_2_12 = document.getElementsByTagName("input")[58].value,
+					name_2_2_13 = document.getElementsByTagName("input")[59].value,
+					name_2_2_14 = document.getElementsByTagName("input")[60].value,
+					name_2_2_15 = document.getElementsByTagName("input")[61].value,
+					name_2_3_1 = document.getElementsByTagName("input")[62].value,
+					name_2_3_2 = document.getElementsByTagName("input")[63].value,
+					name_2_3_3 = document.getElementsByTagName("input")[64].value,
+					name_2_3_4 = document.getElementsByTagName("input")[65].value,
+					name_2_3_5 = document.getElementsByTagName("input")[66].value,
+					name_2_3_6 = document.getElementsByTagName("input")[67].value,
+					name_2_3_7 = document.getElementsByTagName("input")[68].value,
+					name_2_3_8 = document.getElementsByTagName("input")[69].value,
+					name_2_3_9 = document.getElementsByTagName("input")[70].value,
+					name_2_3_10 = document.getElementsByTagName("input")[71].value,
+					name_2_3_11 = document.getElementsByTagName("input")[72].value,
+					name_2_3_12 = document.getElementsByTagName("input")[73].value,
+					name_2_3_13 = document.getElementsByTagName("input")[74].value,
+					name_2_3_14 = document.getElementsByTagName("input")[75].value,
+					name_2_3_15 = document.getElementsByTagName("input")[76].value,
+					name_2_4_1 = document.getElementsByTagName("input")[77].value,
+					name_2_4_2 = document.getElementsByTagName("input")[78].value,
+					name_2_4_3 = document.getElementsByTagName("input")[79].value,
+					name_2_4_4 = document.getElementsByTagName("input")[80].value,
+					name_2_4_5 = document.getElementsByTagName("input")[81].value,
+					name_2_4_6 = document.getElementsByTagName("input")[82].value,
+					name_2_4_7 = document.getElementsByTagName("input")[83].value,
+					name_2_4_8 = document.getElementsByTagName("input")[84].value,
+					name_2_4_9 = document.getElementsByTagName("input")[85].value,
+					name_2_4_10 = document.getElementsByTagName("input")[86].value,
+					name_2_4_11 = document.getElementsByTagName("input")[87].value,
+					name_2_4_12 = document.getElementsByTagName("input")[88].value,
+					name_2_4_13 = document.getElementsByTagName("input")[89].value,
+					name_2_4_14 = document.getElementsByTagName("input")[90].value,
+					name_2_4_15 = document.getElementsByTagName("input")[91].value;
 
 
 
@@ -2245,69 +2255,69 @@
 
 		function save_4	(){
 			document.getElementById('doc').innerHTML = '';
-			var r_1 = document.getElementsByTagName("input")[88].value,
-					r_2 = document.getElementsByTagName("input")[89].value,
-					r_3 = document.getElementsByTagName("input")[90].value,
-					r_4 = document.getElementsByTagName("input")[91].value,
-					r_5 = document.getElementsByTagName("input")[92].value,
-					r_6 = document.getElementsByTagName("input")[93].value,
-					r_7 = document.getElementsByTagName("input")[94].value,
-					r_8 = document.getElementsByTagName("input")[95].value,
-					r_9 = document.getElementsByTagName("input")[96].value,
-					r_10 = document.getElementsByTagName("input")[97].value,
-					r_11 = document.getElementsByTagName("input")[98].value,
-					r_12 = document.getElementsByTagName("input")[99].value,
-					r_13 = document.getElementsByTagName("input")[100].value,
-					r_14 = document.getElementsByTagName("input")[101].value,
-					r_15 = document.getElementsByTagName("input")[102].value,
-					r_16 = document.getElementsByTagName("input")[103].value,
-					r_17 = document.getElementsByTagName("input")[104].value,
-					r_18 = document.getElementsByTagName("input")[105].value,
-					r_19 = document.getElementsByTagName("input")[106].value,
-					r_20 = document.getElementsByTagName("input")[107].value,
-					r_21 = document.getElementsByTagName("input")[108].value,
-					r_22 = document.getElementsByTagName("input")[109].value,
-					r_23 = document.getElementsByTagName("input")[110].value,
-					r_24 = document.getElementsByTagName("input")[111].value,
-					r_25 = document.getElementsByTagName("input")[112].value,
-					r_26 = document.getElementsByTagName("input")[113].value,
-					r_27 = document.getElementsByTagName("input")[114].value,
-					r_28 = document.getElementsByTagName("input")[115].value,
-					r_29 = document.getElementsByTagName("input")[116].value,
-					r_30 = document.getElementsByTagName("input")[117].value,
-					r_31 = document.getElementsByTagName("input")[118].value,
-					r_32 = document.getElementsByTagName("input")[119].value,
-					r_33 = document.getElementsByTagName("input")[120].value,
-					r_34 = document.getElementsByTagName("input")[121].value,
-					r_35 = document.getElementsByTagName("input")[122].value,
-					r_36 = document.getElementsByTagName("input")[123].value,
-					r_37 = document.getElementsByTagName("input")[124].value,
-					r_38 = document.getElementsByTagName("input")[125].value,
-					r_39 = document.getElementsByTagName("input")[126].value,
-					r_40 = document.getElementsByTagName("input")[127].value,
-					r_41 = document.getElementsByTagName("input")[128].value,
-					r_42 = document.getElementsByTagName("input")[129].value,
-					r_43 = document.getElementsByTagName("input")[130].value,
-					r_44 = document.getElementsByTagName("input")[131].value,
-					r_45 = document.getElementsByTagName("input")[132].value,
-					r_46 = document.getElementsByTagName("input")[133].value,
-					r_47 = document.getElementsByTagName("input")[134].value,
-					r_48 = document.getElementsByTagName("input")[135].value,
-					r_49 = document.getElementsByTagName("input")[136].value,
-					r_50 = document.getElementsByTagName("input")[137].value,
-					r_51 = document.getElementsByTagName("input")[138].value,
-					r_52 = document.getElementsByTagName("input")[139].value,
-					r_53 = document.getElementsByTagName("input")[140].value,
-					r_54 = document.getElementsByTagName("input")[141].value,
-					r_55 = document.getElementsByTagName("input")[142].value,
-					r_56 = document.getElementsByTagName("input")[143].value,
-					r_57 = document.getElementsByTagName("input")[144].value,
-					r_58 = document.getElementsByTagName("input")[145].value,
-					r_59 = document.getElementsByTagName("input")[146].value,
-					r_60 = document.getElementsByTagName("input")[147].value,
-					r_61 = document.getElementsByTagName("input")[148].value,
-					r_62 = document.getElementsByTagName("input")[149].value;
-					r_63 = document.getElementsByTagName("input")[150].value;
+			var r_1 = document.getElementsByTagName("input")[92].value,
+					r_2 = document.getElementsByTagName("input")[93].value,
+					r_3 = document.getElementsByTagName("input")[94].value,
+					r_4 = document.getElementsByTagName("input")[95].value,
+					r_5 = document.getElementsByTagName("input")[96].value,
+					r_6 = document.getElementsByTagName("input")[97].value,
+					r_7 = document.getElementsByTagName("input")[98].value,
+					r_8 = document.getElementsByTagName("input")[99].value,
+					r_9 = document.getElementsByTagName("input")[100].value,
+					r_10 = document.getElementsByTagName("input")[101].value,
+					r_11 = document.getElementsByTagName("input")[102].value,
+					r_12 = document.getElementsByTagName("input")[103].value,
+					r_13 = document.getElementsByTagName("input")[104].value,
+					r_14 = document.getElementsByTagName("input")[105].value,
+					r_15 = document.getElementsByTagName("input")[106].value,
+					r_16 = document.getElementsByTagName("input")[107].value,
+					r_17 = document.getElementsByTagName("input")[108].value,
+					r_18 = document.getElementsByTagName("input")[109].value,
+					r_19 = document.getElementsByTagName("input")[110].value,
+					r_20 = document.getElementsByTagName("input")[111].value,
+					r_21 = document.getElementsByTagName("input")[112].value,
+					r_22 = document.getElementsByTagName("input")[113].value,
+					r_23 = document.getElementsByTagName("input")[114].value,
+					r_24 = document.getElementsByTagName("input")[115].value,
+					r_25 = document.getElementsByTagName("input")[116].value,
+					r_26 = document.getElementsByTagName("input")[117].value,
+					r_27 = document.getElementsByTagName("input")[118].value,
+					r_28 = document.getElementsByTagName("input")[119].value,
+					r_29 = document.getElementsByTagName("input")[120].value,
+					r_30 = document.getElementsByTagName("input")[121].value,
+					r_31 = document.getElementsByTagName("input")[122].value,
+					r_32 = document.getElementsByTagName("input")[123].value,
+					r_33 = document.getElementsByTagName("input")[124].value,
+					r_34 = document.getElementsByTagName("input")[125].value,
+					r_35 = document.getElementsByTagName("input")[126].value,
+					r_36 = document.getElementsByTagName("input")[127].value,
+					r_37 = document.getElementsByTagName("input")[128].value,
+					r_38 = document.getElementsByTagName("input")[129].value,
+					r_39 = document.getElementsByTagName("input")[130].value,
+					r_40 = document.getElementsByTagName("input")[131].value,
+					r_41 = document.getElementsByTagName("input")[132].value,
+					r_42 = document.getElementsByTagName("input")[133].value,
+					r_43 = document.getElementsByTagName("input")[134].value,
+					r_44 = document.getElementsByTagName("input")[135].value,
+					r_45 = document.getElementsByTagName("input")[136].value,
+					r_46 = document.getElementsByTagName("input")[137].value,
+					r_47 = document.getElementsByTagName("input")[138].value,
+					r_48 = document.getElementsByTagName("input")[139].value,
+					r_49 = document.getElementsByTagName("input")[140].value,
+					r_50 = document.getElementsByTagName("input")[141].value,
+					r_51 = document.getElementsByTagName("input")[142].value,
+					r_52 = document.getElementsByTagName("input")[143].value,
+					r_53 = document.getElementsByTagName("input")[144].value,
+					r_54 = document.getElementsByTagName("input")[145].value,
+					r_55 = document.getElementsByTagName("input")[146].value,
+					r_56 = document.getElementsByTagName("input")[147].value,
+					r_57 = document.getElementsByTagName("input")[148].value,
+					r_58 = document.getElementsByTagName("input")[149].value,
+					r_59 = document.getElementsByTagName("input")[150].value,
+					r_60 = document.getElementsByTagName("input")[151].value,
+					r_61 = document.getElementsByTagName("input")[152].value,
+					r_62 = document.getElementsByTagName("input")[153].value;
+					r_63 = document.getElementsByTagName("input")[154].value;
 
 
 
