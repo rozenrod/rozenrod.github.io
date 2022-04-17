@@ -778,16 +778,16 @@
 		document.addEventListener("DOMContentLoaded", function() {
 			for (let id = 0; id < 151; id++) {
 				var input = document.getElementsByTagName("input")[id];
-				input.value = sessionStorage.getItem(id);
+				input.value = LocalStorage.getItem(id);
 				(function(id, input) {
 					input.addEventListener("change", function() {
-						sessionStorage.setItem(id, input.value);
+						LocalStorage.setItem(id, input.value);
 					});
 				})(id, input);
 
 				if(id != 0 && id != 7 && id != 14 && id != 21 && id != 28 && id != 43 && id != 58 &&
 					 id != 73 && id != 88 && id != 104 && id != 113 && id != 122 && id != 131 && id != 140 ){
-						input.value = sessionStorage.getItem(id);
+						input.value = LocalStorage.getItem(id);
 					 }
 			}
 		});
@@ -906,20 +906,20 @@
 		date_input_4_1.value = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();
 		date_input_4_2.value = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();
 
-    if(!sessionStorage.getItem(0)){sessionStorage.setItem(0, document.getElementsByTagName("input")[0].value);}
-    if(!sessionStorage.getItem(8)){sessionStorage.setItem(8, document.getElementsByTagName("input")[8].value);}
-    if(!sessionStorage.getItem(16)){sessionStorage.setItem(16, document.getElementsByTagName("input")[16].value);}
-    if(!sessionStorage.getItem(24)){sessionStorage.setItem(24, document.getElementsByTagName("input")[24].value);}
-    if(!sessionStorage.getItem(32)){sessionStorage.setItem(32, document.getElementsByTagName("input")[32].value);}
-    if(!sessionStorage.getItem(47)){sessionStorage.setItem(47, document.getElementsByTagName("input")[47].value);}
-    if(!sessionStorage.getItem(62)){sessionStorage.setItem(62, document.getElementsByTagName("input")[62].value);}
-    if(!sessionStorage.getItem(77)){sessionStorage.setItem(77, document.getElementsByTagName("input")[77].value);}
-    if(!sessionStorage.getItem(92)){sessionStorage.setItem(92, document.getElementsByTagName("input")[92].value);}
-    if(!sessionStorage.getItem(108)){sessionStorage.setItem(108, document.getElementsByTagName("input")[108].value);}
-    if(!sessionStorage.getItem(117)){sessionStorage.setItem(117, document.getElementsByTagName("input")[117].value);}
-    if(!sessionStorage.getItem(126)){sessionStorage.setItem(126, document.getElementsByTagName("input")[126].value);}
-    if(!sessionStorage.getItem(135)){sessionStorage.setItem(135, document.getElementsByTagName("input")[135].value);}
-    if(!sessionStorage.getItem(144)){sessionStorage.setItem(144, document.getElementsByTagName("input")[144].value);}
+    if(!LocalStorage.getItem(0)){LocalStorage.setItem(0, document.getElementsByTagName("input")[0].value);}
+    if(!LocalStorage.getItem(8)){LocalStorage.setItem(8, document.getElementsByTagName("input")[8].value);}
+    if(!LocalStorage.getItem(16)){LocalStorage.setItem(16, document.getElementsByTagName("input")[16].value);}
+    if(!LocalStorage.getItem(24)){LocalStorage.setItem(24, document.getElementsByTagName("input")[24].value);}
+    if(!LocalStorage.getItem(32)){LocalStorage.setItem(32, document.getElementsByTagName("input")[32].value);}
+    if(!LocalStorage.getItem(47)){LocalStorage.setItem(47, document.getElementsByTagName("input")[47].value);}
+    if(!LocalStorage.getItem(62)){LocalStorage.setItem(62, document.getElementsByTagName("input")[62].value);}
+    if(!LocalStorage.getItem(77)){LocalStorage.setItem(77, document.getElementsByTagName("input")[77].value);}
+    if(!LocalStorage.getItem(92)){LocalStorage.setItem(92, document.getElementsByTagName("input")[92].value);}
+    if(!LocalStorage.getItem(108)){LocalStorage.setItem(108, document.getElementsByTagName("input")[108].value);}
+    if(!LocalStorage.getItem(117)){LocalStorage.setItem(117, document.getElementsByTagName("input")[117].value);}
+    if(!LocalStorage.getItem(126)){LocalStorage.setItem(126, document.getElementsByTagName("input")[126].value);}
+    if(!LocalStorage.getItem(135)){LocalStorage.setItem(135, document.getElementsByTagName("input")[135].value);}
+    if(!LocalStorage.getItem(144)){LocalStorage.setItem(144, document.getElementsByTagName("input")[144].value);}
 
 		function save_1(){
 			document.getElementById('doc').innerHTML = '';
