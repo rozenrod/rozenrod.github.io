@@ -778,19 +778,19 @@
 		document.addEventListener("DOMContentLoaded", function() {
 			for (let id = 0; id < 151; id++) {
 				var input = document.getElementsByTagName("input")[id];
-				if(LocalStorage.getItem(id)){
-					input.value = LocalStorage.getItem(id);
+				if(localStorage.getItem(id)){
+					input.value = localStorage.getItem(id);
 				}
 				(function(id, input) {
 					input.addEventListener("change", function() {
-						LocalStorage.setItem(id, input.value);
+						localStorage.setItem(id, input.value);
 					});
 				})(id, input);
 
 				if(id != 0 && id != 7 && id != 14 && id != 21 && id != 28 && id != 43 && id != 58 &&
 					 id != 73 && id != 88 && id != 104 && id != 113 && id != 122 && id != 131 && id != 140 ){
-						if(LocalStorage.getItem(id)){
-							input.value = LocalStorage.getItem(id);
+						if(localStorage.getItem(id)){
+							input.value = localStorage.getItem(id);
 						}
 					 }
 			}
@@ -910,20 +910,20 @@
 		date_input_4_1.value = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();
 		date_input_4_2.value = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();
 
-    if(!LocalStorage.getItem("0")){LocalStorage.setItem(0, document.getElementsByTagName("input")[0].value);}
-    if(!LocalStorage.getItem("8")){LocalStorage.setItem(8, document.getElementsByTagName("input")[8].value);}
-    if(!LocalStorage.getItem("16")){LocalStorage.setItem(16, document.getElementsByTagName("input")[16].value);}
-    if(!LocalStorage.getItem("24")){LocalStorage.setItem(24, document.getElementsByTagName("input")[24].value);}
-    if(!LocalStorage.getItem("32")){LocalStorage.setItem(32, document.getElementsByTagName("input")[32].value);}
-    if(!LocalStorage.getItem("47")){LocalStorage.setItem(47, document.getElementsByTagName("input")[47].value);}
-    if(!LocalStorage.getItem("62")){LocalStorage.setItem(62, document.getElementsByTagName("input")[62].value);}
-    if(!LocalStorage.getItem("77")){LocalStorage.setItem(77, document.getElementsByTagName("input")[77].value);}
-    if(!LocalStorage.getItem("92")){LocalStorage.setItem(92, document.getElementsByTagName("input")[92].value);}
-    if(!LocalStorage.getItem("108")){LocalStorage.setItem(108, document.getElementsByTagName("input")[108].value);}
-    if(!LocalStorage.getItem("117")){LocalStorage.setItem(117, document.getElementsByTagName("input")[117].value);}
-    if(!LocalStorage.getItem("126")){LocalStorage.setItem(126, document.getElementsByTagName("input")[126].value);}
-    if(!LocalStorage.getItem("135")){LocalStorage.setItem(135, document.getElementsByTagName("input")[135].value);}
-    if(!LocalStorage.getItem("144")){LocalStorage.setItem(144, document.getElementsByTagName("input")[144].value);}
+    if(!localStorage.getItem("0")){localStorage.setItem(0, document.getElementsByTagName("input")[0].value);}
+    if(!localStorage.getItem("8")){localStorage.setItem(8, document.getElementsByTagName("input")[8].value);}
+    if(!localStorage.getItem("16")){localStorage.setItem(16, document.getElementsByTagName("input")[16].value);}
+    if(!localStorage.getItem("24")){localStorage.setItem(24, document.getElementsByTagName("input")[24].value);}
+    if(!localStorage.getItem("32")){localStorage.setItem(32, document.getElementsByTagName("input")[32].value);}
+    if(!localStorage.getItem("47")){localStorage.setItem(47, document.getElementsByTagName("input")[47].value);}
+    if(!localStorage.getItem("62")){localStorage.setItem(62, document.getElementsByTagName("input")[62].value);}
+    if(!localStorage.getItem("77")){localStorage.setItem(77, document.getElementsByTagName("input")[77].value);}
+    if(!localStorage.getItem("92")){localStorage.setItem(92, document.getElementsByTagName("input")[92].value);}
+    if(!localStorage.getItem("108")){localStorage.setItem(108, document.getElementsByTagName("input")[108].value);}
+    if(!localStorage.getItem("117")){localStorage.setItem(117, document.getElementsByTagName("input")[117].value);}
+    if(!localStorage.getItem("126")){localStorage.setItem(126, document.getElementsByTagName("input")[126].value);}
+    if(!localStorage.getItem("135")){localStorage.setItem(135, document.getElementsByTagName("input")[135].value);}
+    if(!localStorage.getItem("144")){localStorage.setItem(144, document.getElementsByTagName("input")[144].value);}
 
 		function save_1(){
 			document.getElementById('doc').innerHTML = '';
