@@ -48,6 +48,10 @@
 				src: url(woff/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_ROW4.woff2) format('woff2');
 				unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 			}
+			input[type="submit"] {
+				-webkit-appearance: none;
+				text-align: center;
+			}
 			.logo{
 				font-size: 24px;
 				color: #323232;
@@ -114,7 +118,7 @@
       .line {
         background: #fff;
         padding: 5px;
-        border-radius: 10px;
+        border-radius: 12px;
         margin: 10px 0;
 				text-align: left;
       }
@@ -229,6 +233,15 @@
 				font-size: 14px;
    		 	opacity: 0.9;
 			}
+			.but_clear{
+				margin: 0px;
+				width: 100%;
+				background: #bb4444;
+			}
+			.but_save{
+				margin: 0px;
+				width: 100%;
+			}
     </style>
   </head>
   <body>
@@ -239,6 +252,11 @@
 		<details id="det_1" style="text-align: center;">
 			<summary>Воскресная встреча</summary>
 			<center>
+				<div class="line" title="Управление" style="width: 665px;">
+					<button class="but_clear" onclick="clear_1()">Очистить поля</button>
+				</div>
+				<br>
+
 				<div class="block_week">
 					<input id="date_1_1" class="i0" type="text" value="20.03.2022" placeholder="Дата">
 					<div class="line" title="Ведущий и песня">
@@ -346,13 +364,19 @@
 						<input class="i1" type="text" value="" placeholder="Имя Фа." list="list_name" maxlength="13">
 					</div>
 				</div>
-				<button onclick="save_1()">Сохранить</button>
+				<div class="line" title="Управление" style="width: 665px;">
+					<button onclick="save_1()" class="but_save">Сохранить</button>
+				</div>
 			</center>
 		</details>
 
 		<details id="det_2" style="text-align: center;">
 			<summary>Будняя встреча</summary>
 			<center>
+				<div class="line" title="Управление" style="width: 665px;">
+					<button class="but_clear" onclick="clear_2()">Очистить поля</button>
+				</div>
+				<br>
 
 				<div class="block_week">
 					<input id="date_2_1" class="i0" type="text" value="20.03.2022" placeholder="Дата">
@@ -570,9 +594,11 @@
 					</div>
 				</div>
 
+				<div class="line" title="Управление" style="width: 665px;">
+					<button onclick="save_2()" class="but_save">Сохранить в столбец</button>
+				</div>
 
-				<button onclick="save_2()">Сохранить в столбец</button>
-				<button onclick="save_3()">Сохранить в линию</button>
+				<!-- <button onclick="save_3()">Сохранить в линию</button> -->
 			</center>
 		</details>
 
@@ -765,8 +791,9 @@
 					</div>
 				</div>
 
-
-				<button onclick="save_4()">Сохранить</button>
+				<div class="line" title="Управление" style="width: 665px;">
+					<button onclick="save_4()" class="but_save">Сохранить</button>
+				</div>
 			</center>
 		</details>
 
@@ -816,12 +843,20 @@
 			<p>Сохранение имен подсказок</p>
 			<p class="bloch_FAQ_PS">*Они будут предложены при вводе имени.</p>
 			<br>
-			<input id="save_name_i" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name">
-			<input class="block_save_i2 c4" type="submit" value="Добавить" onclick="save_name()">
-			<!-- <br><br> -->
-			<input class="block_save_i2 c6" type="submit" value="Добавить стандартные имена" onclick="reset_name()">
+			<div class="line" title="Управление" style="width: 250px;">
+				<center>
+					<input id="save_name_i" class="i1" type="text" value="" placeholder="Имя Фа." list="list_name" style="width: calc(100% - 105px);">
+					<input class="block_save_i2 c4" type="submit" value="Добавить" onclick="save_name()" style="width: 75px;">
+					<p style="margin: 5px;">или</p>
+					<input class="block_save_i2 c6" type="submit" value="Добавить стандартные имена" onclick="reset_name()" style="width: 100%;text-align: center;">
+				</center>
+			</div>
 
-			<input class="block_save_i2 c5" type="submit" value="Сброс имён" onclick="dell_name()">
+			<div class="line" title="Управление" style="width: 250px;">
+				<center>
+					<input class="block_save_i2 c5" type="submit" value="Сброс имён" onclick="dell_name()" style="width: 100%;text-align: center;">
+				</center>
+			</div>
 		</div>
 		<br><br>
 	</center>
@@ -919,18 +954,21 @@
 			if (details_1.open) {
 				details_2.open = false;
 				details_3.open = false;
+				window.scrollTo(0, 0);
 			}
 		});
 		details_2.addEventListener('toggle', event => {
 			if (details_2.open) {
 				details_1.open = false;
 				details_3.open = false;
+				window.scrollTo(0, 0);
 			}
 		});
 		details_3.addEventListener('toggle', event => {
 			if (details_3.open) {
 				details_1.open = false;
 				details_2.open = false;
+				window.scrollTo(0, 0);
 			}
 		});
 
@@ -2645,6 +2683,98 @@
 			document.getElementById('text_end').setAttribute("style", 'display: block;');
 		}
 
+
+
+		function clear_1(){
+			document.getElementsByTagName("input")[1].value = '',
+			document.getElementsByTagName("input")[2].value = '',
+			document.getElementsByTagName("input")[3].value = '',
+			document.getElementsByTagName("input")[4].value = '',
+			document.getElementsByTagName("input")[5].value = '',
+			document.getElementsByTagName("input")[6].value = '',
+			document.getElementsByTagName("input")[7].value = '',
+			document.getElementsByTagName("input")[9].value = '',
+			document.getElementsByTagName("input")[10].value = '',
+			document.getElementsByTagName("input")[11].value = '',
+			document.getElementsByTagName("input")[12].value = '',
+			document.getElementsByTagName("input")[13].value = '',
+			document.getElementsByTagName("input")[14].value = '',
+			document.getElementsByTagName("input")[15].value = '',
+			document.getElementsByTagName("input")[17].value = '',
+			document.getElementsByTagName("input")[18].value = '',
+			document.getElementsByTagName("input")[19].value = '',
+			document.getElementsByTagName("input")[20].value = '',
+			document.getElementsByTagName("input")[21].value = '',
+			document.getElementsByTagName("input")[22].value = '',
+			document.getElementsByTagName("input")[23].value = '',
+			document.getElementsByTagName("input")[25].value = '',
+			document.getElementsByTagName("input")[26].value = '',
+			document.getElementsByTagName("input")[27].value = '',
+			document.getElementsByTagName("input")[28].value = '',
+			document.getElementsByTagName("input")[29].value = '',
+			document.getElementsByTagName("input")[30].value = '',
+			document.getElementsByTagName("input")[31].value = '';
+		}
+
+		function clear_2(){
+			document.getElementsByTagName("input")[33].value = '',
+			document.getElementsByTagName("input")[34].value = '',
+			document.getElementsByTagName("input")[35].value = '',
+			document.getElementsByTagName("input")[36].value = '',
+			document.getElementsByTagName("input")[37].value = '',
+			document.getElementsByTagName("input")[38].value = '',
+			document.getElementsByTagName("input")[39].value = '',
+			document.getElementsByTagName("input")[40].value = '',
+			document.getElementsByTagName("input")[41].value = '',
+			document.getElementsByTagName("input")[42].value = '',
+			document.getElementsByTagName("input")[43].value = '',
+			document.getElementsByTagName("input")[44].value = '',
+			document.getElementsByTagName("input")[45].value = '',
+			document.getElementsByTagName("input")[46].value = '',
+			document.getElementsByTagName("input")[48].value = '',
+			document.getElementsByTagName("input")[49].value = '',
+			document.getElementsByTagName("input")[50].value = '',
+			document.getElementsByTagName("input")[51].value = '',
+			document.getElementsByTagName("input")[52].value = '',
+			document.getElementsByTagName("input")[53].value = '',
+			document.getElementsByTagName("input")[54].value = '',
+			document.getElementsByTagName("input")[55].value = '',
+			document.getElementsByTagName("input")[56].value = '',
+			document.getElementsByTagName("input")[57].value = '',
+			document.getElementsByTagName("input")[58].value = '',
+			document.getElementsByTagName("input")[59].value = '',
+			document.getElementsByTagName("input")[60].value = '',
+			document.getElementsByTagName("input")[61].value = '',
+			document.getElementsByTagName("input")[63].value = '',
+			document.getElementsByTagName("input")[64].value = '',
+			document.getElementsByTagName("input")[65].value = '',
+			document.getElementsByTagName("input")[66].value = '',
+			document.getElementsByTagName("input")[67].value = '',
+			document.getElementsByTagName("input")[68].value = '',
+			document.getElementsByTagName("input")[69].value = '',
+			document.getElementsByTagName("input")[70].value = '',
+			document.getElementsByTagName("input")[71].value = '',
+			document.getElementsByTagName("input")[72].value = '',
+			document.getElementsByTagName("input")[73].value = '',
+			document.getElementsByTagName("input")[74].value = '',
+			document.getElementsByTagName("input")[75].value = '',
+			document.getElementsByTagName("input")[76].value = '',
+			document.getElementsByTagName("input")[78].value = '',
+			document.getElementsByTagName("input")[79].value = '',
+			document.getElementsByTagName("input")[80].value = '',
+			document.getElementsByTagName("input")[81].value = '',
+			document.getElementsByTagName("input")[82].value = '',
+			document.getElementsByTagName("input")[83].value = '',
+			document.getElementsByTagName("input")[84].value = '',
+			document.getElementsByTagName("input")[85].value = '',
+			document.getElementsByTagName("input")[86].value = '',
+			document.getElementsByTagName("input")[87].value = '',
+			document.getElementsByTagName("input")[88].value = '',
+			document.getElementsByTagName("input")[89].value = '',
+			document.getElementsByTagName("input")[90].value = '',
+			document.getElementsByTagName("input")[91].value = '';
+		}
+		
 	</script>
 
 
