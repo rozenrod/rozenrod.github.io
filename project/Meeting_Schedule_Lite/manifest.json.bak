@@ -3,9 +3,9 @@
   "name": "Meeting Schedule",
   "short_name": "Meeting Schedule",
   "display": "standalone",
-  "id":"https://rozenrod.com/project/Meeting_Schedule_Lite/index.html",
-  "start_url": "https://rozenrod.com/project/Meeting_Schedule_Lite/index.html",
-  "scope": "https://rozenrod.com/project/Meeting_Schedule_Lite/index.html",
+  "id":"https://rozenrod.github.io/project/Meeting_Schedule_Lite/index.html",
+  "start_url": "https://rozenrod.github.io/project/Meeting_Schedule_Lite/index.html",
+  "scope": "https://rozenrod.github.io/project/Meeting_Schedule_Lite/index.html",
   "background_color": "#779953",
   "theme_color": "#779953",
   "icons": [
