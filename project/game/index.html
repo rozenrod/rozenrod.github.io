@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rozenrod GAME</title>
+</head>
+<body>
+<style>
+	:root{
+    --ColorThemes0: #a5b1b5;
+    --ColorThemes1: #eeeeee;
+    --Player1: #f1d893;
+    --Player2: #bbe1b0;
+    --Player3: #7ca0c5;
+    --Player4: #747474;
+	}
+
+	body{
+		display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 820px;
+    margin-top: -410px;
+    margin-left: -300px;
+    background-position: center !important;
+    background-size: cover !important;
+	}
+
+	#app{
+		width: 600px;
+    height: 820px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	}
+
+	#Game{
+		width: 600px;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 15px;
+	}
+	
+	.Grid{
+			display: flex;
+	}
+	.BlockGrid{
+		width: 60px;
+		height: 60px;
+		margin: 0px;
+		background: var(--ColorThemes1);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		cursor: pointer;
+	}
+	
+	.p1{background: var(--Player1);}
+	.p2{background: var(--Player2);}
+	.p3{background: var(--Player3);}
+	.p4{background: var(--Player4);}
+	
+	.cilcule{width: 30px;height: 30px;border-radius: 30px;position: absolute;border: 10px solid var(--ColorThemes0);}
+	
+	.StartCilcule{width: 40px;height: 40px;background: var(--ColorThemes0);border-radius: 30px;position: absolute;}
+	
+	.StartR{width: 30px;height: 15px;background: var(--ColorThemes0);margin: 0 30px 0 0;}
+	
+	.StartL{width: 30px;height: 15px;background: var(--ColorThemes0);margin: 0 0 0 30px;}
+	
+	.StartT{width: 15px;height: 30px;background: var(--ColorThemes0);margin: 0 0 30px 0;}
+	
+	.StartB{width: 15px;height: 30px;background: var(--ColorThemes0);margin: 30px 0 0 0;}
+	
+	.lineH{width: 60px;height: 15px;background: var(--ColorThemes0);}
+	
+	.lineV{width: 15px;height: 60px;background: var(--ColorThemes0);}
+	
+	.TR{border-radius: 20px;border-left: 15px solid var(--ColorThemes0);border-bottom: 15px solid var(--ColorThemes0);margin-bottom: 40px;margin-left: 40px;padding: 20px;}
+	
+	.TL{border-radius: 20px;border-right: 15px solid var(--ColorThemes0);border-bottom: 15px solid var(--ColorThemes0);margin-bottom: 40px;margin-right: 40px;padding: 20px;}
+	
+	.BR{border-radius: 20px;border-left: 15px solid var(--ColorThemes0);border-top: 15px solid var(--ColorThemes0);margin-top: 40px;margin-left: 40px;padding: 20px;}
+	
+	.BL{border-radius: 20px;border-right: 15px solid var(--ColorThemes0);border-top: 15px solid var(--ColorThemes0);margin-top: 40px;margin-right: 40px;padding: 20px;}
+	
+</style>
+	
+	<!-- <div class="Grid">
+		<div class="BlockGrid"> <div class="StartCilcule"></div> <div class="StartR"></div> </div>7
+		<div class="BlockGrid"> <div class="StartCilcule"></div> <div class="StartL"></div> </div>8
+		<div class="BlockGrid"> <div class="StartCilcule"></div> <div class="StartT"></div> </div>9
+		<div class="BlockGrid"> <div class="StartCilcule"></div> <div class="StartB"></div> </div>10
+
+
+		<div class="BlockGrid"> <div class="TR"></div> </div>5
+		<div class="BlockGrid"> <div class="BR"></div> </div>4
+		<div class="BlockGrid"> <div class="TL"></div> </div>3
+		<div class="BlockGrid"> <div class="BL"></div> </div>2
+
+		<div class="BlockGrid"> <div class="lineH"></div> </div>1
+		<div class="BlockGrid"> <div class="lineV"></div> </div>6
+
+		<div class="BlockGrid"> </div>0
+	</div> -->
+	<div id="app">
+		<div id="Game"></div>
+
+		<br>
+
+		<div class="Grid">
+			<div class="BlockGrid" onclick="valuePlayer(1)"> <div class="cilcule p1"></div> </div> <!-- Player 1 -->
+			<div class="BlockGrid" onclick="valuePlayer(2)"> <div class="cilcule p2"></div> </div> <!-- Player 2 -->
+			<div class="BlockGrid" onclick="valuePlayer(3)"> <div class="cilcule p3"></div> </div> <!-- Player 3 -->
+			<div class="BlockGrid" onclick="valuePlayer(4)"> <div class="cilcule p4"></div> </div> <!-- Player 4 -->
+		</div>
+
+		<br>
+
+		<div class="Grid">
+			<div class="BlockGrid" onclick="prev()"> < </div> <!-- < -->
+			<div class="BlockGrid"> </div> <!-- > -->
+			<div class="BlockGrid" onclick="next()"> > </div> <!-- > -->
+		</div>
+
+		<br>
+
+		<button onclick="clearData()">Сбросить</button>
+		<button onclick="downloadFile()">Скачать</button>
+	</div>
+
+	<a id="downloadAnchorElem" style="display:none"></a>
+
+
+<script>
+	let pole = [
+		[8, 2, 4, 2, 4, 2, 4, 2, 4, 2],
+		[0, 5, 3, 5, 3, 5, 3, 5, 3, 6],
+		[4, 2, 4, 2, 4, 2, 4, 2, 4, 3],
+		[6, 5, 3, 5, 3, 5, 3, 5, 3, 0],
+		[5, 2, 4, 2, 4, 2, 4, 2, 4, 2],
+		[0, 5, 3, 5, 3, 5, 3, 5, 3, 6],
+		[4, 2, 4, 2, 4, 2, 4, 2, 4, 3],
+		[6, 5, 3, 5, 3, 5, 3, 5, 3, 0],
+		[5, 2, 4, 2, 4, 2, 4, 2, 4, 2],
+		[0, 5, 3, 5, 3, 5, 3, 5, 3, 9]
+	]
+
+	let poleMap = [
+		[1, 2, 5, 6, 9, 10, 13, 14, 17, 18],
+		[0, 3, 4, 7, 8, 11, 12, 15, 16, 19],
+
+		[37, 36, 33, 32, 29, 28, 25, 24, 21, 20],
+		[38, 35, 34, 31, 30, 27, 26, 23, 22, 0],
+
+		[39, 40, 43, 44, 47, 48, 51, 52, 55, 56],
+		[0, 41, 42, 45, 46, 49, 50, 53, 54, 57],
+
+		[75, 74, 71, 70, 67, 66, 63, 62, 59, 58],
+		[76, 73, 72, 69, 68, 65, 64, 61, 60, 0],
+
+		[77, 78, 81, 82, 85, 86, 89, 90, 93, 94],
+		[0,  79, 80, 83, 84, 87, 88, 91, 92, 95]
+	]
+
+	let poleLine = [19,38,57,76]
+
+	let StartEnd = [1,95]
+
+	var p1 = 0, p2 = 0, p3 = 0, p4 = 0;
+
+	var Player = 1;
+
+	GetData()
+
+
+	function generateMaps(){
+		saveData()
+		document.getElementById('Game').innerHTML = "";
+		num = 0
+		for (let i = 0; pole.length > i; i++) {
+			var div = document.createElement('div');
+			document.getElementById('Game').appendChild(div);
+			div.className = 'Grid';
+			for (let q = 0; pole[i].length > q; q++) {
+				num++
+				if(pole[i][q] == 1) div.innerHTML +=      `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 2);check(${poleMap[i][q]})"><div id="Border${poleMap[i][q]}" class="lineH"></div></div>`;
+				else if(pole[i][q] == 2) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 3);check(${poleMap[i][q]})"><div id="Border${poleMap[i][q]}" class="BL"></div></div>`;
+				else if(pole[i][q] == 3) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 4);check(${poleMap[i][q]})"><div id="Border${poleMap[i][q]}" class="TL"></div></div>`;
+				else if(pole[i][q] == 4) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 5);check(${poleMap[i][q]})"><div id="Border${poleMap[i][q]}" class="BR"></div></div>`;
+				else if(pole[i][q] == 5) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 6);check(${poleMap[i][q]})"><div id="Border${poleMap[i][q]}" class="TR"></div></div>`;
+				else if(pole[i][q] == 6) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 7);check(${poleMap[i][q]})"><div id="Border${poleMap[i][q]}" class="lineV"></div></div>`;
+				else if(pole[i][q] == 7) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 8);check(${poleMap[i][q]})"><div id="StartCilcule${poleMap[i][q]}" class="StartCilcule"></div><div class="StartR" id="Start${poleMap[i][q]}"></div></div>`;
+				else if(pole[i][q] == 8) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 9);check(${poleMap[i][q]})"><div id="StartCilcule${poleMap[i][q]}" class="StartCilcule"></div> <div class="StartL" id="Start${poleMap[i][q]}"></div></div>`;
+				else if(pole[i][q] == 9) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 10);check(${poleMap[i][q]})"><div id="StartCilcule${poleMap[i][q]}" class="StartCilcule"></div> <div class="StartT" id="Start${poleMap[i][q]}"></div></div>`;
+				else if(pole[i][q] == 10) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 0);check(${poleMap[i][q]})"><div id="StartCilcule${poleMap[i][q]}" class="StartCilcule"></div> <div class="StartB" id="Start${poleMap[i][q]}"></div></div>`;
+				else if(pole[i][q] == 0) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 1);check(${poleMap[i][q]})"></div>`;
+			}
+		}
+
+		
+		if(p1 != 0) document.getElementById('BlockGrid'+p1).innerHTML += `<div class="cilcule p1"></div>`
+		if(p2 != 0) document.getElementById('BlockGrid'+p2).innerHTML += `<div class="cilcule p2"></div>`
+		if(p3 != 0) document.getElementById('BlockGrid'+p3).innerHTML += `<div class="cilcule p3"></div>`
+		if(p4 != 0) document.getElementById('BlockGrid'+p4).innerHTML += `<div class="cilcule p4"></div>`
+
+		editColor(Math.max(p1,p2,p3,p4))
+	}
+
+	function edit(i,q, p){
+		pole[i][q] = p;
+		generateMaps()
+	}
+
+	function check(num){
+		// if(Player == 1) {p1 = num;}
+		// if(Player == 2) {p2 = num;}
+		// if(Player == 3) {p3 = num;}
+		// if(Player == 4) {p4 = num;}
+		// generateMaps()
+	}
+
+	function editColor(n){
+		if(p1 > p2 && p1 > p3 && p1 > p4) BorderColor = "var(--Player1)"
+		if(p2 > p1 && p2 > p3 && p2 > p4) BorderColor = "var(--Player2)"
+		if(p3 > p1 && p3 > p2 && p3 > p4) BorderColor = "var(--Player3)"
+		if(p4 > p1 && p4 > p2 && p4 > p3) BorderColor = "var(--Player4)"
+
+		if(n == 0) return
+		for (let i = 1; n > i; i++) {
+			if(StartEnd.includes(i) == false && poleLine.includes(i)) document.getElementById('Border'+i).style.background = BorderColor;
+			if(StartEnd.includes(i) == false && poleLine.includes(i) == false) document.getElementById('Border'+i).style.borderColor = BorderColor;
+
+			if(StartEnd.includes(i)){ 
+				document.getElementById('Start'+i).style.background = BorderColor;
+				document.getElementById('StartCilcule'+i).style.background = BorderColor;
+			}
+		}
+	}
+
+	function valuePlayer(n){
+		Player = n;
+	}
+
+	function prev(){
+		if(Player == 1 && p1 > 0) p1--
+		else if(Player == 2 && p2 > 0) p2--
+		else if(Player == 3 && p3 > 0) p3--
+		else if(Player == 4 && p4 > 0) p4--
+		generateMaps()
+	}
+
+	function next(){
+		if(Player == 1) p1++
+		else if(Player == 2) p2++
+		else if(Player == 3) p3++
+		else if(Player == 4) p4++
+		generateMaps()
+	}
+
+	function GetData(){
+		if(localStorage.getItem("Player") == null) clear()
+		
+		pole = JSON.parse(localStorage.getItem("pole"))
+		poleMap = JSON.parse(localStorage.getItem("poleMap"))
+		poleLine = JSON.parse(localStorage.getItem("poleLine"))
+		StartEnd = JSON.parse(localStorage.getItem("StartEnd"))
+		p1 = Number(localStorage.getItem("p1"))
+		p2 = Number(localStorage.getItem("p2"))
+		p3 = Number(localStorage.getItem("p3"))
+		p4 = Number(localStorage.getItem("p4"))
+		Player = Number(localStorage.getItem("Player"))
+		generateMaps()
+	}
+
+	function saveData(){
+		localStorage.setItem("pole", JSON.stringify(pole))
+		localStorage.setItem("poleMap", JSON.stringify(poleMap))
+		localStorage.setItem("poleLine", JSON.stringify(poleLine))
+		localStorage.setItem("StartEnd", JSON.stringify(StartEnd))
+		localStorage.setItem("p1", p1)
+		localStorage.setItem("p2", p2)
+		localStorage.setItem("p3", p3)
+		localStorage.setItem("p4", p4)
+		localStorage.setItem("Player", Player)
+	}
+
+	function clearData(){
+		pole = [
+			[8, 2, 4, 2, 4, 2, 4, 2, 4, 2],
+			[0, 5, 3, 5, 3, 5, 3, 5, 3, 6],
+			[4, 2, 4, 2, 4, 2, 4, 2, 4, 3],
+			[6, 5, 3, 5, 3, 5, 3, 5, 3, 0],
+			[5, 2, 4, 2, 4, 2, 4, 2, 4, 2],
+			[0, 5, 3, 5, 3, 5, 3, 5, 3, 6],
+			[4, 2, 4, 2, 4, 2, 4, 2, 4, 3],
+			[6, 5, 3, 5, 3, 5, 3, 5, 3, 0],
+			[5, 2, 4, 2, 4, 2, 4, 2, 4, 2],
+			[0, 5, 3, 5, 3, 5, 3, 5, 3, 9]
+		]
+
+		poleMap = [
+			[1, 2, 5, 6, 9, 10, 13, 14, 17, 18],
+			[0, 3, 4, 7, 8, 11, 12, 15, 16, 19],
+
+			[37, 36, 33, 32, 29, 28, 25, 24, 21, 20],
+			[38, 35, 34, 31, 30, 27, 26, 23, 22, 0],
+
+			[39, 40, 43, 44, 47, 48, 51, 52, 55, 56],
+			[0, 41, 42, 45, 46, 49, 50, 53, 54, 57],
+
+			[75, 74, 71, 70, 67, 66, 63, 62, 59, 58],
+			[76, 73, 72, 69, 68, 65, 64, 61, 60, 0],
+
+			[77, 78, 81, 82, 85, 86, 89, 90, 93, 94],
+			[0,  79, 80, 83, 84, 87, 88, 91, 92, 95]
+		]
+
+		poleLine = [19,38,57,76]
+
+		StartEnd = [1,95]
+
+		p1 = 0, p2 = 0, p3 = 0, p4 = 0;
+
+		Player = 1;
+
+		saveData()
+		generateMaps()
+	}
+
+	function downloadFile() {
+		var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(pole));
+		var dlAnchorElem = document.getElementById('downloadAnchorElem');
+		dlAnchorElem.setAttribute("href",     dataStr     );
+		dlAnchorElem.setAttribute("download", "pole.txt");
+		dlAnchorElem.click();
+	}
+
+</script>
+</body>
+</html>
+
