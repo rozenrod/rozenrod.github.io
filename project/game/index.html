@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="initial-scale=0.5">
 	<title>Rozenrod GAME</title>
 </head>
 <body>
@@ -265,7 +265,7 @@
 	}
 
 	function GetData(){
-		if(localStorage.getItem("Player") == null) clear()
+		if(localStorage.getItem("Player") == null) clearData()
 		
 		pole = JSON.parse(localStorage.getItem("pole"))
 		poleMap = JSON.parse(localStorage.getItem("poleMap"))
@@ -345,4 +345,3 @@
 </script>
 </body>
 </html>
-
