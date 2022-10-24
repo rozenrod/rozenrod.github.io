@@ -1,0 +1,11 @@
+{
+  "author": "rozenrod.github.io",
+  "name": "Rozenrod Game",
+  "short_name": "Rozenrod Game",
+  "display": "standalone",
+  "id":"https://rozenrod.com/project/game/index.html",
+  "start_url": "https://rozenrod.com/project/game/index.html",
+  "scope": "https://rozenrod.com/project/game/index.html",
+  "background_color": "#779953",
+  "theme_color": "#ffffff"
+}
