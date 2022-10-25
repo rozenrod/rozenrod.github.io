@@ -10,6 +10,7 @@
 <body>
 <style>
 	:root{
+		/* Theme 1 */
     --ColorThemes0: #a5b1b5;
     --ColorThemes1: #f7f7f7;
     --Player1: #f1d893;
@@ -17,30 +18,46 @@
     --Player3: #7ca0c5;
     --Player4: #747474;
 		
-    --ColorThemes0: #ffffff;
+		/* Theme 2 */
+    /* --ColorThemes0: #ffffff;
     --ColorThemes1: #90b6f3;
     --Player1: #fbfa90;
     --Player2: #b8f9a5;
     --Player3: #ecbaff;
-    --Player4: #9b9b9b;
+    --Player4: #838383; */
+
+		/* Theme 3 */
+		/* --ColorThemes0: #ffffff;
+    --ColorThemes1: #3c3c3c;
+    --Player1: #fbfa90;
+    --Player2: #b8f9a5;
+    --Player3: #7ca0c5;
+    --Player4: #838383; */
 	}
 
 	body{
 		display: block;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 600px;
-    height: 820px;
-    margin-top: -410px;
-    margin-left: -300px;
-    background-position: center !important;
-    background-size: cover !important;
+	}
+
+	.control{
+		display: flex;
+		margin-top: 10px;
+	}
+	button{
+		text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    height: 30px;
+    color: var(--ColorThemes0);
+    padding: 2px 10px;
+    background: var(--ColorThemes1);
+    border-radius: 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: 0;
 	}
 
 	#app{
-		width: 600px;
-    height: 820px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,14 +65,12 @@
 	}
 
 	#Game{
-		width: 600px;
-    height: 600px;
     overflow: hidden;
     border-radius: 15px;
 	}
 	
 	.Grid{
-			display: flex;
+		display: flex;
 	}
 	.BlockGrid{
 		width: 60px;
@@ -68,6 +83,19 @@
 		overflow: hidden;
 		cursor: pointer;
 	}
+
+	.textMap{
+		position: absolute;
+    z-index: 9999;
+		background: #28b7a2;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+	}
 	
 	.p1{background: var(--Player1);}
 	.p2{background: var(--Player2);}
@@ -77,29 +105,7 @@
 	.cilcule{width: 30px;height: 30px;border-radius: 30px;position: absolute;border: 10px solid var(--ColorThemes0);}
 	
 	.StartCilcule{width: 40px;height: 40px;background: var(--ColorThemes0);border-radius: 30px;position: absolute;}
-	
-	.StartR{width: 30px;height: 15px;background: var(--ColorThemes0);margin: 0 30px 0 0;}
-	
-	.StartL{width: 30px;height: 15px;background: var(--ColorThemes0);margin: 0 0 0 30px;}
-	
-	.StartT{width: 15px;height: 30px;background: var(--ColorThemes0);margin: 0 0 30px 0;}
-	
-	.StartB{width: 15px;height: 30px;background: var(--ColorThemes0);margin: 30px 0 0 0;}
-	
-	.lineH{width: 60px;height: 15px;background: var(--ColorThemes0);}
-	
-	.lineV{width: 15px;height: 60px;background: var(--ColorThemes0);}
-	
-	.TR{border-radius: 20px;border-left: 15px solid var(--ColorThemes0);border-bottom: 15px solid var(--ColorThemes0);margin-bottom: 40px;margin-left: 40px;padding: 20px;}
-	
-	.TL{border-radius: 20px;border-right: 15px solid var(--ColorThemes0);border-bottom: 15px solid var(--ColorThemes0);margin-bottom: 40px;margin-right: 40px;padding: 20px;}
-	
-	.BR{border-radius: 20px;border-left: 15px solid var(--ColorThemes0);border-top: 15px solid var(--ColorThemes0);margin-top: 40px;margin-left: 40px;padding: 20px;}
-	
-	.BL{border-radius: 20px;border-right: 15px solid var(--ColorThemes0);border-top: 15px solid var(--ColorThemes0);margin-top: 40px;margin-right: 40px;padding: 20px;}
-	
-	
-	
+
 	.StartR{width: 30px;height: 8px;background: var(--ColorThemes0);margin: 0 30px 0 0;}
 	
 	.StartL{width: 30px;height: 8px;background: var(--ColorThemes0);margin: 0 0 0 30px;}
@@ -112,160 +118,178 @@
 	
 	.lineV{width: 8px;height: 60px;background: var(--ColorThemes0);}
 	
-	.TR{border-radius: 20px;border-left: 8px solid var(--ColorThemes0);border-bottom: 8px solid var(--ColorThemes0);margin-bottom: 50px;margin-left: 50px;padding: 25px;}
+	.TL{border-radius: 20px;border-left: 8px solid var(--ColorThemes0);border-bottom: 8px solid var(--ColorThemes0);margin-bottom: 50px;margin-left: 50px;padding: 25px;}
 	
-	.TL{border-radius: 20px;border-right: 8px solid var(--ColorThemes0);border-bottom: 8px solid var(--ColorThemes0);margin-bottom: 50px;margin-right: 50px;padding: 25px;}
+	.TR{border-radius: 20px;border-right: 8px solid var(--ColorThemes0);border-bottom: 8px solid var(--ColorThemes0);margin-bottom: 50px;margin-right: 50px;padding: 25px;}
 	
-	.BR{border-radius: 20px;border-left: 8px solid var(--ColorThemes0);border-top: 8px solid var(--ColorThemes0);margin-top: 50px;margin-left: 50px;padding: 25px;}
+	.BL{border-radius: 20px;border-left: 8px solid var(--ColorThemes0);border-top: 8px solid var(--ColorThemes0);margin-top: 50px;margin-left: 50px;padding: 25px;}
 	
-	.BL{border-radius: 20px;border-right: 8px solid var(--ColorThemes0);border-top: 8px solid var(--ColorThemes0);margin-top: 50px;margin-right: 50px;padding: 25px;}
+	.BR{border-radius: 20px;border-right: 8px solid var(--ColorThemes0);border-top: 8px solid var(--ColorThemes0);margin-top: 50px;margin-right: 50px;padding: 25px;}
 	
 </style>
-	
-	<!-- <div class="Grid">
-		<div class="BlockGrid"> <div class="StartCilcule"></div> <div class="StartR"></div> </div>7
-		<div class="BlockGrid"> <div class="StartCilcule"></div> <div class="StartL"></div> </div>8
-		<div class="BlockGrid"> <div class="StartCilcule"></div> <div class="StartT"></div> </div>9
-		<div class="BlockGrid"> <div class="StartCilcule"></div> <div class="StartB"></div> </div>10
-
-
-		<div class="BlockGrid"> <div class="TR"></div> </div>5
-		<div class="BlockGrid"> <div class="BR"></div> </div>4
-		<div class="BlockGrid"> <div class="TL"></div> </div>3
-		<div class="BlockGrid"> <div class="BL"></div> </div>2
-
-		<div class="BlockGrid"> <div class="lineH"></div> </div>1
-		<div class="BlockGrid"> <div class="lineV"></div> </div>6
-
-		<div class="BlockGrid"> </div>0
-	</div> -->
 	<div id="app">
 		<div id="Game"></div>
 
 		<br>
 
-		<div class="Grid">
+		<div class="Grid" id="controlGrid">
 			<div class="BlockGrid" onclick="valuePlayer(1)"> <div class="cilcule p1"></div> </div> <!-- Player 1 -->
 			<div class="BlockGrid" onclick="valuePlayer(2)"> <div class="cilcule p2"></div> </div> <!-- Player 2 -->
 			<div class="BlockGrid" onclick="valuePlayer(3)"> <div class="cilcule p3"></div> </div> <!-- Player 3 -->
 			<div class="BlockGrid" onclick="valuePlayer(4)"> <div class="cilcule p4"></div> </div> <!-- Player 4 -->
-		</div>
-
-		<br>
-
-		<div class="Grid">
+			<div class="BlockGrid"> </div> <!-- > -->
 			<div class="BlockGrid" onclick="prev()"> < </div> <!-- < -->
 			<div class="BlockGrid"> </div> <!-- > -->
 			<div class="BlockGrid" onclick="next()"> > </div> <!-- > -->
 		</div>
 
-		<br>
 
-		<button onclick="clearData()">Сбросить</button>
-		<button onclick="downloadFile()">Скачать</button>
+		<div class="control" id="controlPrevMap" style="display: none;">
+			<button onclick="prevMap()">Назад</button>
+		</div>
+
+		<div class="control">
+			<button onclick="p1 = 0; p2 = 0; p3 = 0; p4 = 0;generateMaps()">Играть сначала</button>
+			<button onclick="testData()">Тестовая игра</button>
+			<button onclick="editMap()">Настроить порядок</button>
+			<button onclick="clearData()">Сбросить</button>
+			<button onclick="downloadFile()">Скачать</button>
+		</div>
 	</div>
 
 	<a id="downloadAnchorElem" style="display:none"></a>
 
 
 <script>
+	let poleDef = [
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null]
+	];
+
 	let pole = [
-		[8, 2, 4, 2, 4, 2, 4, 2, 4, 2],
-		[0, 5, 3, 5, 3, 5, 3, 5, 3, 6],
-		[4, 2, 4, 2, 4, 2, 4, 2, 4, 3],
-		[6, 5, 3, 5, 3, 5, 3, 5, 3, 0],
-		[5, 2, 4, 2, 4, 2, 4, 2, 4, 2],
-		[0, 5, 3, 5, 3, 5, 3, 5, 3, 6],
-		[4, 2, 4, 2, 4, 2, 4, 2, 4, 3],
-		[6, 5, 3, 5, 3, 5, 3, 5, 3, 0],
-		[5, 2, 4, 2, 4, 2, 4, 2, 4, 2],
-		[0, 5, 3, 5, 3, 5, 3, 5, 3, 9]
-	]
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null]
+	];
 
 	let poleMap = [
-		[1, 2, 5, 6, 9, 10, 13, 14, 17, 18],
-		[0, 3, 4, 7, 8, 11, 12, 15, 16, 19],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null]
+	];
 
-		[37, 36, 33, 32, 29, 28, 25, 24, 21, 20],
-		[38, 35, 34, 31, 30, 27, 26, 23, 22, 0],
+	let poleLine = [];
 
-		[39, 40, 43, 44, 47, 48, 51, 52, 55, 56],
-		[0, 41, 42, 45, 46, 49, 50, 53, 54, 57],
-
-		[75, 74, 71, 70, 67, 66, 63, 62, 59, 58],
-		[76, 73, 72, 69, 68, 65, 64, 61, 60, 0],
-
-		[77, 78, 81, 82, 85, 86, 89, 90, 93, 94],
-		[0,  79, 80, 83, 84, 87, 88, 91, 92, 95]
-	]
-
-	let poleLine = [19,38,57,76]
-
-	let StartEnd = [1,95]
+	let StartEnd = [];
 
 	var p1 = 0, p2 = 0, p3 = 0, p4 = 0;
 
 	var Player = 1;
 
-	GetData()
+	var nMap = 0;
+	var edMap = 0;
+
+	GetData();
 
 
 	function generateMaps(){
-		saveData()
+		saveData();
 		document.getElementById('Game').innerHTML = "";
-		num = 0
+		num = 0;
 		for (let i = 0; pole.length > i; i++) {
 			var div = document.createElement('div');
 			document.getElementById('Game').appendChild(div);
 			div.className = 'Grid';
 			for (let q = 0; pole[i].length > q; q++) {
-				num++
-				if(pole[i][q] == 1) div.innerHTML +=      `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 2);check(${poleMap[i][q]})"><div id="Border${poleMap[i][q]}" class="lineH"></div></div>`;
-				else if(pole[i][q] == 2) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 3);check(${poleMap[i][q]})"><div id="Border${poleMap[i][q]}" class="BL"></div></div>`;
-				else if(pole[i][q] == 3) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 4);check(${poleMap[i][q]})"><div id="Border${poleMap[i][q]}" class="TL"></div></div>`;
-				else if(pole[i][q] == 4) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 5);check(${poleMap[i][q]})"><div id="Border${poleMap[i][q]}" class="BR"></div></div>`;
-				else if(pole[i][q] == 5) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 6);check(${poleMap[i][q]})"><div id="Border${poleMap[i][q]}" class="TR"></div></div>`;
-				else if(pole[i][q] == 6) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 7);check(${poleMap[i][q]})"><div id="Border${poleMap[i][q]}" class="lineV"></div></div>`;
-				else if(pole[i][q] == 7) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 8);check(${poleMap[i][q]})"><div id="StartCilcule${poleMap[i][q]}" class="StartCilcule"></div><div class="StartR" id="Start${poleMap[i][q]}"></div></div>`;
-				else if(pole[i][q] == 8) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 9);check(${poleMap[i][q]})"><div id="StartCilcule${poleMap[i][q]}" class="StartCilcule"></div> <div class="StartL" id="Start${poleMap[i][q]}"></div></div>`;
-				else if(pole[i][q] == 9) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 10);check(${poleMap[i][q]})"><div id="StartCilcule${poleMap[i][q]}" class="StartCilcule"></div> <div class="StartT" id="Start${poleMap[i][q]}"></div></div>`;
-				else if(pole[i][q] == 10) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 0);check(${poleMap[i][q]})"><div id="StartCilcule${poleMap[i][q]}" class="StartCilcule"></div> <div class="StartB" id="Start${poleMap[i][q]}"></div></div>`;
-				else if(pole[i][q] == 0) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 1);check(${poleMap[i][q]})"></div>`;
+				num++;
+				if(pole[i][q] == 1) div.innerHTML +=      `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 2)"><span style="display: ${edMap == 0 ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="Border${poleMap[i][q]}" class="lineH"></div></div>`;
+				else if(pole[i][q] == 2) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 3)"><span style="display: ${edMap == 0 ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="Border${poleMap[i][q]}" class="lineV"></div></div>`;
+				else if(pole[i][q] == 3) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 4)"><span style="display: ${edMap == 0 ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="Border${poleMap[i][q]}" class="TL"></div></div>`;
+				else if(pole[i][q] == 4) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 5)"><span style="display: ${edMap == 0 ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="Border${poleMap[i][q]}" class="BL"></div></div>`;
+				else if(pole[i][q] == 5) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 6)"><span style="display: ${edMap == 0 ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="Border${poleMap[i][q]}" class="BR"></div></div>`;
+				else if(pole[i][q] == 6) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 7)"><span style="display: ${edMap == 0 ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="Border${poleMap[i][q]}" class="TR"></div></div>`;
+				else if(pole[i][q] == 7) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 8)"><span style="display: ${edMap == 0 ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="StartCilcule${poleMap[i][q]}" class="StartCilcule"></div> <div class="StartT" id="Start${poleMap[i][q]}"></div></div>`;
+				else if(pole[i][q] == 8) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 9)"><span style="display: ${edMap == 0 ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="StartCilcule${poleMap[i][q]}" class="StartCilcule"></div> <div class="StartL" id="Start${poleMap[i][q]}"></div></div>`;
+				else if(pole[i][q] == 9) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 10)"><span style="display: ${edMap == 0 ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="StartCilcule${poleMap[i][q]}" class="StartCilcule"></div> <div class="StartB" id="Start${poleMap[i][q]}"></div></div>`;
+				else if(pole[i][q] == 10) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 0)"><span style="display: ${edMap == 0 ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="StartCilcule${poleMap[i][q]}" class="StartCilcule"></div><div class="StartR" id="Start${poleMap[i][q]}"></div></div>`;
+				else div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 1)"></div>`;
 			}
 		}
 
 		
-		if(p1 != 0) document.getElementById('BlockGrid'+p1).innerHTML += `<div class="cilcule p1"></div>`
-		if(p2 != 0) document.getElementById('BlockGrid'+p2).innerHTML += `<div class="cilcule p2"></div>`
-		if(p3 != 0) document.getElementById('BlockGrid'+p3).innerHTML += `<div class="cilcule p3"></div>`
-		if(p4 != 0) document.getElementById('BlockGrid'+p4).innerHTML += `<div class="cilcule p4"></div>`
+		if(p1 != 0) document.getElementById('BlockGrid'+p1).innerHTML += `<div class="cilcule p1" style="z-index: ${Player==1 ? '999' : '1'}"></div>`;
+		if(p2 != 0) document.getElementById('BlockGrid'+p2).innerHTML += `<div class="cilcule p2" style="z-index: ${Player==2 ? '999' : '1'}"></div>`;
+		if(p3 != 0) document.getElementById('BlockGrid'+p3).innerHTML += `<div class="cilcule p3" style="z-index: ${Player==3 ? '999' : '1'}"></div>`;
+		if(p4 != 0) document.getElementById('BlockGrid'+p4).innerHTML += `<div class="cilcule p4" style="z-index: ${Player==4 ? '999' : '1'}"></div>`;
 
-		editColor(Math.max(p1,p2,p3,p4))
+		editColor(Math.max(p1,p2,p3,p4));
 	}
 
 	function edit(i,q, p){
-		pole[i][q] = p;
-		generateMaps()
+		if(edMap==0){
+			if(JSON.stringify(pole) == JSON.stringify(poleDef)){
+				if(p == 1) pole[i][q] = 7;
+			} else {
+				pole[i][q] = p;
+			}
+		} else {
+			nMap++;
+			if(p == 2 || p == 3) poleLine.push(nMap);
+			console.log(p);
+			if(p == 8 || p == 9 || p == 10 || p == 0) StartEnd.push(nMap);
+			poleMap[i][q] = nMap;
+		}
+
+		generateMaps();
 	}
 
-	function check(num){
-		// if(Player == 1) {p1 = num;}
-		// if(Player == 2) {p2 = num;}
-		// if(Player == 3) {p3 = num;}
-		// if(Player == 4) {p4 = num;}
-		// generateMaps()
+	function editMap(){
+		if(edMap==0){
+			edMap=1;
+			document.getElementById('controlPrevMap').style.display = 'flex';
+			document.getElementById('controlGrid').style.display = 'none';
+		} else {
+			edMap=0;
+			document.getElementById('controlPrevMap').style.display = 'none';
+			document.getElementById('controlGrid').style.display = 'flex';
+		}
+		generateMaps();
 	}
+
+
 
 	function editColor(n){
-		if(p1 > p2 && p1 > p3 && p1 > p4) BorderColor = "var(--Player1)"
-		if(p2 > p1 && p2 > p3 && p2 > p4) BorderColor = "var(--Player2)"
-		if(p3 > p1 && p3 > p2 && p3 > p4) BorderColor = "var(--Player3)"
-		if(p4 > p1 && p4 > p2 && p4 > p3) BorderColor = "var(--Player4)"
+		if(p1 > p2 && p1 > p3 && p1 > p4) BorderColor = "var(--Player1)";
+		if(p2 > p1 && p2 > p3 && p2 > p4) BorderColor = "var(--Player2)";
+		if(p3 > p1 && p3 > p2 && p3 > p4) BorderColor = "var(--Player3)";
+		if(p4 > p1 && p4 > p2 && p4 > p3) BorderColor = "var(--Player4)";
 
-		if(n == 0) return
+		if(n == 0) return;
 		for (let i = 1; n > i; i++) {
-			if(StartEnd.includes(i) == false && poleLine.includes(i)) document.getElementById('Border'+i).style.background = BorderColor;
-			if(StartEnd.includes(i) == false && poleLine.includes(i) == false) document.getElementById('Border'+i).style.borderColor = BorderColor;
+			if(!StartEnd.includes(i) && !poleLine.includes(i)) document.getElementById('Border'+i).style.borderColor = BorderColor;
+			if(poleLine.includes(i)) document.getElementById('Border'+i).style.background = BorderColor;
 
 			if(StartEnd.includes(i)){ 
 				document.getElementById('Start'+i).style.background = BorderColor;
@@ -278,96 +302,146 @@
 		Player = n;
 	}
 
+	function prevMap(){
+		if(nMap > 0) nMap--;
+		generateMaps();
+	}
+
 	function prev(){
-		if(Player == 1 && p1 > 0) p1--
-		else if(Player == 2 && p2 > 0) p2--
-		else if(Player == 3 && p3 > 0) p3--
-		else if(Player == 4 && p4 > 0) p4--
-		generateMaps()
+		if(Player == 1 && p1 > 0) p1--;
+		else if(Player == 2 && p2 > 0) p2--;
+		else if(Player == 3 && p3 > 0) p3--;
+		else if(Player == 4 && p4 > 0) p4--;
+		generateMaps();
 	}
 
 	function next(){
-		if(Player == 1) p1++
-		else if(Player == 2) p2++
-		else if(Player == 3) p3++
-		else if(Player == 4) p4++
-		generateMaps()
+		if(Player == 1) p1++;
+		else if(Player == 2) p2++;
+		else if(Player == 3) p3++;
+		else if(Player == 4) p4++;
+		if(p1 == StartEnd[1]){
+			alert("Выиграл Игрок 1");
+			p1 = 0, p2 = 0, p3 = 0, p4 = 0;
+		} else if(p2 == StartEnd[1]) {
+			alert("Выиграл Игрок 2");
+			p1 = 0, p2 = 0, p3 = 0, p4 = 0;
+		} else if(p3 == StartEnd[1]) {
+			alert("Выиграл Игрок 3");
+			p1 = 0, p2 = 0, p3 = 0, p4 = 0;
+		} else if(p4 == StartEnd[1]) {
+			alert("Выиграл Игрок 4");
+			p1 = 0, p2 = 0, p3 = 0, p4 = 0;
+		}
+
+		generateMaps();
 	}
 
 	function GetData(){
-		if(localStorage.getItem("Player") == null) clearData()
+		if(localStorage.getItem("Player") == null) clearData();
 		
-		pole = JSON.parse(localStorage.getItem("pole"))
-		poleMap = JSON.parse(localStorage.getItem("poleMap"))
-		poleLine = JSON.parse(localStorage.getItem("poleLine"))
-		StartEnd = JSON.parse(localStorage.getItem("StartEnd"))
-		p1 = Number(localStorage.getItem("p1"))
-		p2 = Number(localStorage.getItem("p2"))
-		p3 = Number(localStorage.getItem("p3"))
-		p4 = Number(localStorage.getItem("p4"))
-		Player = Number(localStorage.getItem("Player"))
-		generateMaps()
+		pole = JSON.parse(localStorage.getItem("pole"));
+		poleMap = JSON.parse(localStorage.getItem("poleMap"));
+		poleLine = JSON.parse(localStorage.getItem("poleLine"));
+		StartEnd = JSON.parse(localStorage.getItem("StartEnd"));
+		p1 = Number(localStorage.getItem("p1"));
+		p2 = Number(localStorage.getItem("p2"));
+		p3 = Number(localStorage.getItem("p3"));
+		p4 = Number(localStorage.getItem("p4"));
+		Player = Number(localStorage.getItem("Player"));
+		nMap = Number(localStorage.getItem("nMap"));
+		generateMaps();
 	}
 
 	function saveData(){
-		localStorage.setItem("pole", JSON.stringify(pole))
-		localStorage.setItem("poleMap", JSON.stringify(poleMap))
-		localStorage.setItem("poleLine", JSON.stringify(poleLine))
-		localStorage.setItem("StartEnd", JSON.stringify(StartEnd))
-		localStorage.setItem("p1", p1)
-		localStorage.setItem("p2", p2)
-		localStorage.setItem("p3", p3)
-		localStorage.setItem("p4", p4)
-		localStorage.setItem("Player", Player)
+		localStorage.setItem("pole", JSON.stringify(pole));
+		localStorage.setItem("poleMap", JSON.stringify(poleMap));
+		localStorage.setItem("poleLine", JSON.stringify(poleLine));
+		localStorage.setItem("StartEnd", JSON.stringify(StartEnd));
+		localStorage.setItem("p1", p1);
+		localStorage.setItem("p2", p2);
+		localStorage.setItem("p3", p3);
+		localStorage.setItem("p4", p4);
+		localStorage.setItem("Player", Player);
+		localStorage.setItem("nMap", nMap);
 	}
 
 	function clearData(){
 		pole = [
-			[8, 2, 4, 2, 4, 2, 4, 2, 4, 2],
-			[0, 5, 3, 5, 3, 5, 3, 5, 3, 6],
-			[4, 2, 4, 2, 4, 2, 4, 2, 4, 3],
-			[6, 5, 3, 5, 3, 5, 3, 5, 3, 0],
-			[5, 2, 4, 2, 4, 2, 4, 2, 4, 2],
-			[0, 5, 3, 5, 3, 5, 3, 5, 3, 6],
-			[4, 2, 4, 2, 4, 2, 4, 2, 4, 3],
-			[6, 5, 3, 5, 3, 5, 3, 5, 3, 0],
-			[5, 2, 4, 2, 4, 2, 4, 2, 4, 2],
-			[0, 5, 3, 5, 3, 5, 3, 5, 3, 9]
-		]
-
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		];
 		poleMap = [
-			[1, 2, 5, 6, 9, 10, 13, 14, 17, 18],
-			[0, 3, 4, 7, 8, 11, 12, 15, 16, 19],
-
-			[37, 36, 33, 32, 29, 28, 25, 24, 21, 20],
-			[38, 35, 34, 31, 30, 27, 26, 23, 22, 0],
-
-			[39, 40, 43, 44, 47, 48, 51, 52, 55, 56],
-			[0, 41, 42, 45, 46, 49, 50, 53, 54, 57],
-
-			[75, 74, 71, 70, 67, 66, 63, 62, 59, 58],
-			[76, 73, 72, 69, 68, 65, 64, 61, 60, 0],
-
-			[77, 78, 81, 82, 85, 86, 89, 90, 93, 94],
-			[0,  79, 80, 83, 84, 87, 88, 91, 92, 95]
-		]
-
-		poleLine = [19,38,57,76]
-
-		StartEnd = [1,95]
-
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		];
+		poleDef = [
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		[null, null, null, null, null, null, null, null, null, null, null, null, null],
+		];
+		poleLine = [];
+		StartEnd = [];
 		p1 = 0, p2 = 0, p3 = 0, p4 = 0;
-
 		Player = 1;
+		nMap = 0;
+		saveData();
+		generateMaps();
+	}
 
-		saveData()
-		generateMaps()
+	function testData(){
+		pole = [[4,1,1,1,1,1,1,1,1,5],[2,4,1,1,1,5,9,4,5,2],[2,2,4,1,5,2,2,2,2,2],[2,2,2,null,3,6,2,2,2,2],[2,2,2,4,1,1,6,2,2,2],[2,2,2,2,null,null,null,2,2,2],[2,2,2,3,1,1,5,2,2,2],[2,2,3,1,1,1,6,2,2,2],[2,3,1,1,1,1,1,6,2,2],[3,1,1,1,1,1,1,1,6,7]];
+		poleMap = [[19,18,17,16,15,14,13,12,11,10],[20,65,66,67,68,69,96,45,44,9],[21,64,75,74,73,70,95,46,43,8],[22,63,76,null,72,71,94,47,42,7],[23,62,77,90,91,92,93,48,41,6],[24,61,78,89,null,null,null,49,40,5],[25,60,79,88,87,86,85,50,39,4],[26,59,80,81,82,83,84,51,38,3],[27,58,57,56,55,54,53,52,37,2],[28,29,30,31,32,33,34,35,36,1]];
+		poleLine = [2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,20,21,22,23,24,25,26,27,29,30,31,32,33,34,35,37,38,39,40,41,42,43,46,47,48,49,50,51,53,54,55,56,57,59,60,61,62,63,64,66,67,68,70,74,76,77,78,79,81,82,83,86,87,89,91,92,94,95];
+		StartEnd = [1,96];
+		p1 = 0, p2 = 0, p3 = 0, p4 = 0;
+		Player = 1;
+		nMap = 0;
+		saveData();
+		generateMaps();
 	}
 
 	function downloadFile() {
-		var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(pole));
+		var dataStr = "data:text/json;charset=utf-8," +
+									'pole ' + encodeURIComponent(JSON.stringify(pole)) + '\n\n' +
+									'poleMap ' + encodeURIComponent(JSON.stringify(poleMap)) + '\n\n' +
+									'poleLine ' + encodeURIComponent(JSON.stringify(poleLine)) + '\n\n' +
+									'StartEnd ' + encodeURIComponent(JSON.stringify(StartEnd));
+
 		var dlAnchorElem = document.getElementById('downloadAnchorElem');
-		dlAnchorElem.setAttribute("href",     dataStr     );
+		dlAnchorElem.setAttribute("href",dataStr);
 		dlAnchorElem.setAttribute("download", "pole.txt");
 		dlAnchorElem.click();
 	}
