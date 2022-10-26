@@ -300,10 +300,14 @@
 
 	function valuePlayer(n){
 		Player = n;
+		 generateMaps();
 	}
 
 	function prevMap(){
-		if(nMap > 0) nMap--;
+		if(nMap > 0) {
+			poleLine.splice(nMap,1);
+			nMap--;
+		}
 		generateMaps();
 	}
 
