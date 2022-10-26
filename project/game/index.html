@@ -145,14 +145,14 @@
 
 
 		<div class="control" id="controlPrevMap" style="display: none;">
-			<button onclick="prevMap()">Назад</button>
+			<button onclick="clearData()">Очистить поле</button>
+			<button onclick="prevMap()" id="backButt">Назад</button>
 			<button onclick="clearMap()">Удалить номера</button>
 		</div>
 
 		<div class="control">
 			<button onclick="p1 = 0; p2 = 0; p3 = 0; p4 = 0;generateMaps()">Играть сначала</button>
 			<button onclick="editMap()">Настроить порядок</button>
-			<button onclick="clearData()">Сбросить</button>
 			<button onclick="downloadFile()">Скачать</button>
 		</div>
 
@@ -226,7 +226,10 @@
 
 	function generateMaps(){
 		saveData();
+		if(edMap == 1)document.getElementById('backButt').innerHTML = `(${nMap+1}) Назад`;
+
 		document.getElementById('Game').innerHTML = "";
+
 		num = 0;
 		for (let i = 0; pole.length > i; i++) {
 			var div = document.createElement('div');
