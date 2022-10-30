@@ -15,26 +15,34 @@
 		/* Theme 1 */
     --ColorThemes0: #a5b1b5;
     --ColorThemes1: #f7f7f7;
+		--ColorThemes2: #fff;
     --Player1: #f1d893;
     --Player2: #bbe1b0;
     --Player3: #7ca0c5;
     --Player4: #747474;
 		
 		/* Theme 2 */
-    /* --ColorThemes0: #ffffff;
-    --ColorThemes1: #90b6f3;
+    --ColorThemes0: #ffffff;
+    --ColorThemes1: #6a9ef1;
+		--ColorThemes2: #3f7ee5;
     --Player1: #fbfa90;
     --Player2: #b8f9a5;
     --Player3: #ecbaff;
-    --Player4: #838383; */
+    --Player4: #838383;
 
 		/* Theme 3 */
 		/* --ColorThemes0: #ffffff;
     --ColorThemes1: #3c3c3c;
+		--ColorThemes2: #5c5c5c;
     --Player1: #fbfa90;
     --Player2: #b8f9a5;
     --Player3: #7ca0c5;
     --Player4: #838383; */
+
+		--radius: 34px;
+    --border: 8px solid var(--ColorThemes0);
+    --margin: 58px;
+    --padding: 25px;
 	}
 
 	*{
@@ -42,6 +50,7 @@
 		margin: 0;
 		padding: 0;
 		font-family: 'Roboto', sans-serif;
+		color: var(--ColorThemes0);
 	}
 
 	body{
@@ -136,7 +145,7 @@
 		display: flex;
     width: 80px;
     height: 80px;
-    background: #fff;
+    background: var(--ColorThemes2);
     border-radius: 15px;
     align-items: center;
     justify-content: center;
@@ -233,13 +242,18 @@
 	
 	.lineV{width: 8px;height: 60px;background: var(--ColorThemes0);}
 	
-	.TL{border-radius: 20px;border-left: 8px solid var(--ColorThemes0);border-bottom: 8px solid var(--ColorThemes0);margin-bottom: 50px;margin-left: 50px;padding: 25px;}
+	/* .TL{border-radius: 20px;border-left: 8px solid var(--ColorThemes0);border-bottom: 8px solid var(--ColorThemes0);margin-bottom: 50px;margin-left: 50px;padding: 25px;}
 	
 	.TR{border-radius: 20px;border-right: 8px solid var(--ColorThemes0);border-bottom: 8px solid var(--ColorThemes0);margin-bottom: 50px;margin-right: 50px;padding: 25px;}
 	
 	.BL{border-radius: 20px;border-left: 8px solid var(--ColorThemes0);border-top: 8px solid var(--ColorThemes0);margin-top: 50px;margin-left: 50px;padding: 25px;}
 	
-	.BR{border-radius: 20px;border-right: 8px solid var(--ColorThemes0);border-top: 8px solid var(--ColorThemes0);margin-top: 50px;margin-right: 50px;padding: 25px;}
+	.BR{border-radius: 20px;border-right: 8px solid var(--ColorThemes0);border-top: 8px solid var(--ColorThemes0);margin-top: 50px;margin-right: 50px;padding: 25px;} */
+
+	.TL{border-radius: var(--radius);border: var(--border);margin-bottom: var(--margin);margin-left: var(--margin);padding: var(--padding);}
+	.TR{border-radius: var(--radius);border: var(--border);margin-bottom: var(--margin);margin-right: var(--margin);padding: var(--padding);}
+	.BL{border-radius: var(--radius);border: var(--border);margin-top: var(--margin);margin-left: var(--margin);padding: var(--padding);}
+	.BR{border-radius: var(--radius);border: var(--border);margin-top: var(--margin);margin-right: var(--margin);padding: var(--padding);}
 	
 </style>
 	<div class="control">
