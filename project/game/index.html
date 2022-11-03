@@ -31,13 +31,22 @@
     --Player4: #838383;
 
 		/* Theme 3 */
-		/* --ColorThemes0: #ffffff;
+		--ColorThemes0: #ffffff;
     --ColorThemes1: #3c3c3c;
 		--ColorThemes2: #5c5c5c;
     --Player1: #fbfa90;
     --Player2: #b8f9a5;
     --Player3: #7ca0c5;
-    --Player4: #838383; */
+    --Player4: #838383;
+
+		/* Theme 4 */
+		--ColorThemes0: #ffffff;
+    --ColorThemes1: linear-gradient(#d75f74, #d24a43);;
+		--ColorThemes2: #cd4134;
+    --Player1: #f1d893;
+    --Player2: #76b199;
+    --Player3: #255ca7;
+    --Player4: #464646;
 
 		--radius: 34px;
     --border: 8px solid var(--ColorThemes0);
@@ -89,6 +98,7 @@
 	#Game{
     overflow: hidden;
     border-radius: 15px;
+		background: var(--ColorThemes1);
 	}
 
 	.Game_Controll{
@@ -121,6 +131,7 @@
     align-content: center;
     border-radius: 15px;
     overflow: hidden;
+		background: var(--ColorThemes1);
 	}
 	#timer{
     display: flex;
@@ -198,7 +209,7 @@
 		width: 60px;
 		height: 60px;
 		margin: 0px;
-		background: var(--ColorThemes1);
+		/* background: var(--ColorThemes1); */
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -211,7 +222,7 @@
 	.textMap{
 		position: absolute;
     z-index: 9999;
-		background: #28b7a2;
+		background: #2a28b7;
     color: #fff;
     width: 30px;
     height: 30px;
@@ -372,7 +383,9 @@
 	var blockBut = 1;
 
 	let timerId;
+	let timeoutId;
 	var timeTimer = 60000;
+	var timerN = 0;
 	
 
 	GetData();
@@ -385,6 +398,7 @@
 			timeTimer = timeTimerPrompt * 1000
 		}
 		clearInterval(timerId);
+		clearTimeout(timeoutId);
 		document.getElementById('time').innerHTML = `00:00`;
 		document.getElementById('playB').style.opacity = 1;
 		document.getElementById('button_control').style.opacity = 0.5;
@@ -400,14 +414,14 @@
 			blockBut = 0;
 
 			// повторить с интервалом 1 секунды
-			var timerN = 0;
+			timerN = 0;
 			timerId = setInterval(function (){
 				timerN++;
 				document.getElementById('time').innerHTML = timerN < 10 ? `00:0${timerN}` : `00:${timerN}`;
 			}, 1000);
 
 			// остановить вывод через 60 секунд
-			setTimeout(function (){
+			timeoutId = setTimeout(function (){
 				clearInterval(timerId);
 				document.getElementById('time').innerHTML = `00:00`;
 				document.getElementById('playB').style.opacity = 1;
@@ -417,10 +431,12 @@
 				if(Player==5){
 					Player = 1;
 				}
+				timerN = 0;
 				generateMaps()
 			}, timeTimer);
 		} else {
 			clearInterval(timerId);
+			clearTimeout(timeoutId);
 			document.getElementById('time').innerHTML = `00:00`;
 
 			document.getElementById('playB').style.opacity = 1;
@@ -683,7 +699,7 @@
 		StartEnd = [1,96];
 		p1 = 0, p2 = 0, p3 = 0, p4 = 0;
 		Player = 1;
-		nMap = 0;
+		nMap = 96;
 		saveData();
 		generateMaps();
 	}
@@ -695,7 +711,7 @@
 		StartEnd = [1,101];
 		p1 = 0, p2 = 0, p3 = 0, p4 = 0;
 		Player = 1;
-		nMap = 0;
+		nMap = 101;
 		saveData();
 		generateMaps();
 	}
@@ -707,7 +723,7 @@
 		StartEnd = [1,161];
 		p1 = 0, p2 = 0, p3 = 0, p4 = 0;
 		Player = 1;
-		nMap = 0;
+		nMap = 161;
 		saveData();
 		generateMaps();
 	}
@@ -719,7 +735,7 @@
 		StartEnd = [1,169];
 		p1 = 0, p2 = 0, p3 = 0, p4 = 0;
 		Player = 1;
-		nMap = 0;
+		nMap = 169;
 		saveData();
 		generateMaps();
 	}
@@ -731,7 +747,7 @@
 		StartEnd = [1,169];
 		p1 = 0, p2 = 0, p3 = 0, p4 = 0;
 		Player = 1;
-		nMap = 0;
+		nMap = 169;
 		saveData();
 		generateMaps();
 	}
@@ -743,7 +759,7 @@
 		StartEnd = [1,169];
 		p1 = 0, p2 = 0, p3 = 0, p4 = 0;
 		Player = 1;
-		nMap = 0;
+		nMap = 169;
 		saveData();
 		generateMaps();
 	}
@@ -755,7 +771,7 @@
 		StartEnd = [1,157];
 		p1 = 0, p2 = 0, p3 = 0, p4 = 0;
 		Player = 1;
-		nMap = 0;
+		nMap = 157;
 		saveData();
 		generateMaps();
 	}
