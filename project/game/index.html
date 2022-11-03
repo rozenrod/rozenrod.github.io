@@ -16,6 +16,7 @@
     --ColorThemes0: #a5b1b5;
     --ColorThemes1: #f7f7f7;
 		--ColorThemes2: #fff;
+		--ColorThemes3: #4979e3;
     --Player1: #f1d893;
     --Player2: #bbe1b0;
     --Player3: #7ca0c5;
@@ -25,6 +26,7 @@
     --ColorThemes0: #ffffff;
     --ColorThemes1: #6a9ef1;
 		--ColorThemes2: #3f7ee5;
+		--ColorThemes3: #4979e3;
     --Player1: #f1d893;
     --Player2: #b8f9a5;
     --Player3: #ecbaff;
@@ -34,6 +36,7 @@
 		--ColorThemes0: #ffffff;
     --ColorThemes1: #3c3c3c;
 		--ColorThemes2: #5c5c5c;
+		--ColorThemes3: #4979e3;
     --Player1: #fbfa90;
     --Player2: #b8f9a5;
     --Player3: #7ca0c5;
@@ -41,8 +44,9 @@
 
 		/* Theme 4 */
 		--ColorThemes0: #ffffff;
-    --ColorThemes1: linear-gradient(#d75f74, #d24a43);;
+    --ColorThemes1: linear-gradient(#fb657e, #f3665f);
 		--ColorThemes2: #cd4134;
+		--ColorThemes3: #4979e3;
     --Player1: #f1d893;
     --Player2: #76b199;
     --Player3: #255ca7;
@@ -222,7 +226,7 @@
 	.textMap{
 		position: absolute;
     z-index: 9999;
-		background: #2a28b7;
+		background: var(--ColorThemes3);
     color: #fff;
     width: 30px;
     height: 30px;
@@ -475,16 +479,16 @@
 			div.className = 'Grid';
 			for (let q = 0; pole[i].length > q; q++) {
 				num++;
-				if(pole[i][q] == 1) div.innerHTML +=      `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 2)"><span style="display: ${edMap == 0 ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="Border${poleMap[i][q]}" class="lineH"></div></div>`;
-				else if(pole[i][q] == 2) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 3)"><span style="display: ${edMap == 0 ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="Border${poleMap[i][q]}" class="lineV"></div></div>`;
-				else if(pole[i][q] == 3) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 4)"><span style="display: ${edMap == 0 ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="Border${poleMap[i][q]}" class="TL"></div></div>`;
-				else if(pole[i][q] == 4) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 5)"><span style="display: ${edMap == 0 ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="Border${poleMap[i][q]}" class="BL"></div></div>`;
-				else if(pole[i][q] == 5) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 6)"><span style="display: ${edMap == 0 ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="Border${poleMap[i][q]}" class="BR"></div></div>`;
-				else if(pole[i][q] == 6) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 7)"><span style="display: ${edMap == 0 ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="Border${poleMap[i][q]}" class="TR"></div></div>`;
-				else if(pole[i][q] == 7) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 8)"><span style="display: ${edMap == 0 ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="StartCilcule${poleMap[i][q]}" class="StartCilcule"></div> <div class="StartT" id="Start${poleMap[i][q]}"></div></div>`;
-				else if(pole[i][q] == 8) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 9)"><span style="display: ${edMap == 0 ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="StartCilcule${poleMap[i][q]}" class="StartCilcule"></div> <div class="StartL" id="Start${poleMap[i][q]}"></div></div>`;
-				else if(pole[i][q] == 9) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 10)"><span style="display: ${edMap == 0 ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="StartCilcule${poleMap[i][q]}" class="StartCilcule"></div> <div class="StartB" id="Start${poleMap[i][q]}"></div></div>`;
-				else if(pole[i][q] == 10) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 0)"><span style="display: ${edMap == 0 ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="StartCilcule${poleMap[i][q]}" class="StartCilcule"></div><div class="StartR" id="Start${poleMap[i][q]}"></div></div>`;
+				if(pole[i][q] == 1) div.innerHTML +=      `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 2)"><span style="display: ${edMap == 0 || poleMap[i][q] == null ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="Border${poleMap[i][q]}" class="lineH"></div></div>`;
+				else if(pole[i][q] == 2) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 3)"><span style="display: ${edMap == 0 || poleMap[i][q] == null ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="Border${poleMap[i][q]}" class="lineV"></div></div>`;
+				else if(pole[i][q] == 3) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 4)"><span style="display: ${edMap == 0 || poleMap[i][q] == null ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="Border${poleMap[i][q]}" class="TL"></div></div>`;
+				else if(pole[i][q] == 4) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 5)"><span style="display: ${edMap == 0 || poleMap[i][q] == null ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="Border${poleMap[i][q]}" class="BL"></div></div>`;
+				else if(pole[i][q] == 5) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 6)"><span style="display: ${edMap == 0 || poleMap[i][q] == null ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="Border${poleMap[i][q]}" class="BR"></div></div>`;
+				else if(pole[i][q] == 6) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 7)"><span style="display: ${edMap == 0 || poleMap[i][q] == null ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="Border${poleMap[i][q]}" class="TR"></div></div>`;
+				else if(pole[i][q] == 7) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 8)"><span style="display: ${edMap == 0 || poleMap[i][q] == null ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="StartCilcule${poleMap[i][q]}" class="StartCilcule"></div> <div class="StartT" id="Start${poleMap[i][q]}"></div></div>`;
+				else if(pole[i][q] == 8) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 9)"><span style="display: ${edMap == 0 || poleMap[i][q] == null ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="StartCilcule${poleMap[i][q]}" class="StartCilcule"></div> <div class="StartL" id="Start${poleMap[i][q]}"></div></div>`;
+				else if(pole[i][q] == 9) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 10)"><span style="display: ${edMap == 0 || poleMap[i][q] == null ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="StartCilcule${poleMap[i][q]}" class="StartCilcule"></div> <div class="StartB" id="Start${poleMap[i][q]}"></div></div>`;
+				else if(pole[i][q] == 10) div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 0)"><span style="display: ${edMap == 0 || poleMap[i][q] == null ? 'none' : 'flex'}" class="textMap">${poleMap[i][q] == null ? '' : poleMap[i][q]}</span> <div id="StartCilcule${poleMap[i][q]}" class="StartCilcule"></div><div class="StartR" id="Start${poleMap[i][q]}"></div></div>`;
 				else div.innerHTML += `<div class="BlockGrid" id="BlockGrid${poleMap[i][q]}" onclick="edit(${i}, ${q}, 1)"></div>`;
 			}
 		}
