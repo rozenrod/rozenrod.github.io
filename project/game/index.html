@@ -423,6 +423,7 @@
 	}
 
 	function setTimer(){
+		soundStop()
 		qPlayer = prompt("Количество команд (играков)", 2);
 		if (qPlayer == null || qPlayer == "") {
 			Players = 4;
@@ -446,6 +447,7 @@
 		}
 		clearInterval(timerId);
 		clearTimeout(timeoutId);
+		clearTimeout(timeoutEnd);
 		document.getElementById('time').innerHTML = `00:00`;
 		document.getElementById('playB').style.opacity = 1;
 		document.getElementById('button_control').style.opacity = 0.5;
