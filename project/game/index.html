@@ -57,10 +57,10 @@
     --ColorThemes1: #f7f7f7;
 		--ColorThemes2: #fff;
 		--ColorThemes3: #4979e3;
-    --Player1: #f1d893;
-    --Player2: #bbe1b0;
-    --Player3: #7ca0c5;
-    --Player4: #f35547;
+    --Player1: #7ca0c5;
+    --Player2: #f35547;
+    --Player3: #f1d893;
+    --Player4: #bbe1b0;
 
 		--radius: 34px;
     --border: 8px solid var(--ColorThemes0);
@@ -314,10 +314,10 @@
 	<div class="Game_Controll" id="controlGrid">
 		<div class="Game_Controll_L">
 			<div id="player">
-				<div class="BlockGrid" onclick="valuePlayer(1)"> <div class="cilcule p1" id="Player1" style="opacity: 0.5;"></div> <span id="PlayerPoint1">0</span></div>
-				<div class="BlockGrid" onclick="valuePlayer(2)"> <div class="cilcule p2" id="Player2" style="opacity: 0.5;"></div> <span id="PlayerPoint2">0</span></div>
-				<div class="BlockGrid" onclick="valuePlayer(3)"> <div class="cilcule p3" id="Player3" style="opacity: 0.5;"></div> <span id="PlayerPoint3">0</span></div>
-				<div class="BlockGrid" onclick="valuePlayer(4)"> <div class="cilcule p4" id="Player4" style="opacity: 0.5;"></div> <span id="PlayerPoint4">0</span></div>
+				<div class="BlockGrid" onclick="valuePlayer(1)" id="Player1" style="opacity: 0.5;"> <div class="cilcule p1"></div> <span id="PlayerPoint1">0</span></div>
+				<div class="BlockGrid" onclick="valuePlayer(2)" id="Player2" style="opacity: 0.5;"> <div class="cilcule p2"></div> <span id="PlayerPoint2">0</span></div>
+				<div class="BlockGrid" onclick="valuePlayer(3)" id="Player3" style="opacity: 0.5;"> <div class="cilcule p3"></div> <span id="PlayerPoint3">0</span></div>
+				<div class="BlockGrid" onclick="valuePlayer(4)" id="Player4" style="opacity: 0.5;"> <div class="cilcule p4"></div> <span id="PlayerPoint4">0</span></div>
 			</div>
 
 			<div id="timer">
@@ -388,6 +388,7 @@
 
 	var p1 = 0, p2 = 0, p3 = 0, p4 = 0;
 
+	var Players = 4;
 	var Player = 1;
 
 	var nMap = 0;
@@ -400,11 +401,44 @@
 	let timeoutId;
 	var timeTimer = 60000;
 	var timerN = 0;
-	
+
+	var audio1 = new Audio();
 
 	GetData();
 
+	function soundClick(sound) {
+		if(sound == 1){
+			audio1.src = 'music/timer.mp3';
+			audio1.autoplay = true;
+			audio1.loop = true;
+		} else {
+			audio1.pause();
+			audio1.currentTime = 0
+			audio1.src = 'music/end.mp3';
+			audio1.loop = false;
+		}
+	}
+	function soundStop() {
+		audio1.pause();
+		audio1.currentTime = 0
+	}
+
 	function setTimer(){
+		qPlayer = prompt("Количество команд (играков)", 2);
+		if (qPlayer == null || qPlayer == "") {
+			Players = 4;
+		} else {
+			if(qPlayer > 4){
+				alert("Команд (играков) не может быть больше 4");
+				Players = 4;
+			} else if(qPlayer < 2){
+				alert("Команд (играков) не может быть меньше 2");
+				Players = 2;
+			} else {
+				Players = qPlayer;
+			}
+		}
+
 		timeTimerPrompt = prompt("Задать таймер (сек)", 60);
 		if (timeTimerPrompt == null || timeTimerPrompt == "") {
 			timeTimer = 60000;
@@ -423,6 +457,7 @@
 
 	function timer(){
 		if(blockBut == 1){
+			soundClick(1);
 			document.getElementById('playB').style.opacity = 0.5;
 			document.getElementById('button_control').style.opacity = 1;
 			blockBut = 0;
@@ -436,19 +471,21 @@
 
 			// остановить вывод через 60 секунд
 			timeoutId = setTimeout(function (){
+				soundClick(0);
 				clearInterval(timerId);
 				document.getElementById('time').innerHTML = `00:00`;
 				document.getElementById('playB').style.opacity = 1;
 				document.getElementById('button_control').style.opacity = 0.5;
 				blockBut = 1;
 				Player++;
-				if(Player==5){
-					Player = 1;
-				}
+				if(Player==3 && Players==2) Player = 1;
+				if(Player==4 && Players==3) Player = 1;
+				if(Player==5 && Players==4) Player = 1;
 				timerN = 0;
 				generateMaps()
 			}, timeTimer);
 		} else {
+			soundClick(0);
 			clearInterval(timerId);
 			clearTimeout(timeoutId);
 			document.getElementById('time').innerHTML = `00:00`;
@@ -459,14 +496,25 @@
 			blockBut = 1;
 
 			Player++;
-			if(Player==5){
-				Player = 1;
-			}
+			if(Player==3 && Players==2) Player = 1;
+			if(Player==4 && Players==3) Player = 1;
+			if(Player==5 && Players	==4) Player = 1;
 			generateMaps()
 		}
 	}
 
 	function generateMaps(){
+		if(Players==2) {
+			document.getElementById('Player3').style.display = "none";
+			document.getElementById('Player4').style.display = "none";
+		} else if (Players==3) {
+			document.getElementById('Player3').style.display = "flex";
+			document.getElementById('Player4').style.display = "none";
+		} else {
+			document.getElementById('Player3').style.display = "flex";
+			document.getElementById('Player4').style.display = "flex";
+		}
+
 		if(Player==1) document.getElementById('Player1').style.opacity = 1; else document.getElementById('Player1').style.opacity = 0.5;
 		if(Player==2) document.getElementById('Player2').style.opacity = 1; else document.getElementById('Player2').style.opacity = 0.5;
 		if(Player==3) document.getElementById('Player3').style.opacity = 1; else document.getElementById('Player3').style.opacity = 0.5;
@@ -618,6 +666,7 @@
 			else if(Player == 2) p2++;
 			else if(Player == 3) p3++;
 			else if(Player == 4) p4++;
+
 			if(p1 == StartEnd[1]){
 				alert("Выиграл Игрок 1");
 				p1 = 0, p2 = 0, p3 = 0, p4 = 0;
@@ -676,6 +725,9 @@
 		p4 = Number(localStorage.getItem("p4"));
 		Player = Number(localStorage.getItem("Player"));
 		nMap = Number(localStorage.getItem("nMap"));
+		BorderColor = localStorage.getItem("BorderColor");
+		timeTimer = Number(localStorage.getItem("timeTimer"));
+		Players = Number(localStorage.getItem("Players"));
 		generateMaps();
 	}
 
@@ -690,6 +742,9 @@
 		localStorage.setItem("p4", p4);
 		localStorage.setItem("Player", Player);
 		localStorage.setItem("nMap", nMap);
+		localStorage.setItem("BorderColor", BorderColor);
+		localStorage.setItem("timeTimer", timeTimer);
+		localStorage.setItem("Players", Players);
 	}
 
 	function clearData(){
