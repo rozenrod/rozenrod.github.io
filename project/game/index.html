@@ -399,6 +399,7 @@
 
 	let timerId;
 	let timeoutId;
+	let timeoutEnd;
 	var timeTimer = 60000;
 	var timerN = 0;
 
@@ -412,8 +413,6 @@
 			audio1.autoplay = true;
 			audio1.loop = true;
 		} else {
-			audio1.pause();
-			audio1.currentTime = 0
 			audio1.src = 'music/end.mp3';
 			audio1.loop = false;
 		}
@@ -471,7 +470,6 @@
 
 			// остановить вывод через 60 секунд
 			timeoutId = setTimeout(function (){
-				soundClick(0);
 				clearInterval(timerId);
 				document.getElementById('time').innerHTML = `00:00`;
 				document.getElementById('playB').style.opacity = 1;
@@ -484,10 +482,14 @@
 				timerN = 0;
 				generateMaps()
 			}, timeTimer);
+			timeoutEnd = setTimeout(function (){
+				soundClick(0);
+			}, timeTimer-300);
 		} else {
 			soundClick(0);
 			clearInterval(timerId);
 			clearTimeout(timeoutId);
+			clearTimeout(timeoutEnd);
 			document.getElementById('time').innerHTML = `00:00`;
 
 			document.getElementById('playB').style.opacity = 1;
