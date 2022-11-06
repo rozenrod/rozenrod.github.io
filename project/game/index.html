@@ -403,23 +403,24 @@
 	var timeTimer = 60000;
 	var timerN = 0;
 
-	var audio1 = new Audio();
+	let audio = new Audio();
 
 	GetData();
 
 	function soundClick(sound) {
 		if(sound == 1){
-			audio1.src = 'music/timer.mp3';
-			audio1.autoplay = true;
-			audio1.loop = true;
+			audio.src = 'music/timer.mp3';;
+			audio.autoplay = true;
+			audio.loop = true;
 		} else {
-			audio1.src = 'music/end.mp3';
-			audio1.loop = false;
+			audio.src = 'music/end.mp3';
+			audio.autoplay = true;
+			audio.loop = false;
 		}
 	}
 	function soundStop() {
-		audio1.pause();
-		audio1.currentTime = 0
+		audio.pause();
+		audio.currentTime = 0
 	}
 
 	function setTimer(){
