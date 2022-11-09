@@ -841,7 +841,7 @@
 	}
 
 	function GetData(){
-		if(localStorage.getItem("Player") == null) clearData();
+		if(localStorage.getItem("Player") == null) saveData();
 		
 		pole = JSON.parse(localStorage.getItem("pole"));
 		poleMap = JSON.parse(localStorage.getItem("poleMap"));
