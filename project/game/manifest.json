@@ -6,7 +6,7 @@
   "id":"https://rozenrod.com/project/game/index.html",
   "start_url": "https://rozenrod.com/project/game/index.html",
   "scope": "https://rozenrod.com/project/game/index.html",
-  "background_color": "#779953",
+  "background_color": "#f7f7f7",
   "theme_color": "#ffffff",
 	"icons": [
 		{ "src": "/img/web/favicon.ico", "type": "image/x-icon", "sizes": "16x16 32x32" },
