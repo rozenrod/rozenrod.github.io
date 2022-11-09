@@ -2,7 +2,7 @@ var CACHE_PREFIX = 'A';
 
 var CACHE_VERSION_MAJOR = 0;
 var CACHE_VERSION_MINOR = 1;
-var CACHE_VERSION_PATCH = 1;
+var CACHE_VERSION_PATCH = 2;
 
 var CACHE_VERSION = CACHE_VERSION_MAJOR+'.'+CACHE_VERSION_MINOR+'.'+CACHE_VERSION_PATCH;
 
@@ -20,6 +20,13 @@ const assetUrls = [
 	'/audio/error.mp3',
 	'/audio/start.mp3',
 	'/audio/timer.mp3',
+
+	'/img/web/favicon.ico',
+	'/img/web/apple-touch-icon.png',
+	'/img/web/icon-192.png',
+	'/img/web/icon-512.png',
+	'/img/web/icon-192-maskable.png',
+	'/img/web/icon-512-maskable.png'
 ]
 
 self.addEventListener('install', async event => {

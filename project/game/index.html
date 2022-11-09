@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Rozenrod GAME</title>
 	<link rel="manifest" href="manifest.json">
+	<link rel="icon" href="img/web/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="img/web/apple-touch-icon.png">
 </head>
 <body>
 <style>
@@ -68,183 +70,47 @@
     --padding: 25px;
 	}
 
-	*{
-		border: 0;
-		margin: 0;
-		padding: 0;
-		font-family: 'Roboto', sans-serif;
-		color: var(--ColorThemes0);
-	}
+	*{border: 0;margin: 0;padding: 0;font-family: 'Roboto', sans-serif;color: var(--ColorThemes0);}
 
-	body{
-		display: block;
-	}
+	body{display: block;}
 
-	.control{
-    display: flex;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    align-items: center;
-    justify-content: space-around;
-
-	}
-	button{
-		text-decoration: none;
-    font-size: 15px;
-    font-weight: 400;
-    height: 30px;
-    color: var(--ColorThemes0);
-    padding: 2px 10px;
-    background: var(--ColorThemes1);
-    border-radius: 0px;
-    margin-left: 10px;
-    cursor: pointer;
-    border: 0;
-	}
-
-	#app{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-	}
-
-	#Game{
-    overflow: hidden;
-    border-radius: 0px;
-		background: var(--ColorThemes1);
-	}
-
-	.Game_Controll{
-    width: calc(100% - 10px);
-    min-height: 100px;
-    border-radius: 0px;
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    align-content: space-around;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 0 10px;
-	}
-
-	.Game_Controll_L{
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 180px;
-	}
-	#player{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    border-radius: 0px;
-    overflow: hidden;
-		background: var(--ColorThemes1);
-	}
-	#timer{
-    display: flex;
-    height: 100px;
-    background: var(--ColorThemes1);
-    flex-direction: row;
-    width: 240px;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 0px;
-	}
-	#time{
-		display: flex;
-    width: 80px;
-    height: 80px;
-    border-radius: 0px;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-	}
-	#playB{
-		display: flex;
-    width: 80px;
-    height: 80px;
-    background: var(--ColorThemes2);
-    border-radius: 0px;
-    align-items: center;
-    justify-content: center;
-	}
-	#playB svg {
-		width: 50px;
-		fill: var(--ColorThemes0);
-	}
-
-
-
-
-	.Game_Controll_R{
-    width: 70%;
-		margin: 5px;
-		display: flex;
-	}
-	#prev{
-		width: 30%;
-    background: var(--ColorThemes1);
-		height: 180px;
-		display: flex;
-    justify-content: center;
-    align-items: center;
-		cursor: pointer;
-		border-radius: 0px;
-    margin: 5px;
-	}
-	#next{
-    width: 70%;
-    background: var(--ColorThemes1);
-    height: 180px;
-		display: flex;
-    justify-content: center;
-    align-items: center;
-		cursor: pointer;
-		border-radius: 0px;
-    margin: 5px;
-	}
-
-	#prev svg, #next svg{
-		width: 130px;
-		fill: var(--ColorThemes0);
-	}
+	.control{display: flex;margin-top: 10px;margin-bottom: 10px;align-items: center;justify-content: space-around;}
 	
-	.Grid{
-		display: flex;
-	}
-	.BlockGrid{
-		width: 60px;
-		height: 60px;
-		margin: 0px;
-		/* background: var(--ColorThemes1); */
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		overflow: hidden;
-		cursor: pointer;
-	}
+	button{text-decoration: none;font-size: 15px;font-weight: 400;height: 30px;color: var(--ColorThemes0);padding: 2px 10px;background: var(--ColorThemes1);border-radius: 0px;margin-left: 10px;cursor: pointer;border: 0;}
+
+	#app{display: flex;flex-direction: column;align-items: center;justify-content: center;}
+
+	#Game{overflow: hidden;border-radius: 0px;background: var(--ColorThemes1);}
+
+	.Game_Controll{width: calc(100% - 10px);min-height: 100px;border-radius: 0px;display: flex;position: relative;flex-direction: row;align-content: space-around;justify-content: space-evenly;align-items: center;margin: 0 10px;}
+
+	.Game_Controll_L{margin: 5px;display: flex;flex-direction: column;justify-content: space-between;align-items: center;height: 180px;}
+
+	#player{display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: center;align-items: center;align-content: center;border-radius: 0px;overflow: hidden;background: var(--ColorThemes1);}
+
+	#timer{display: flex;height: 100px;background: var(--ColorThemes1);flex-direction: row;width: 240px;justify-content: space-around;align-items: center;border-radius: 0px;}
+
+	#time{display: flex;width: 80px;height: 80px;border-radius: 0px;align-items: center;justify-content: center;font-size: 25px;}
+
+	#playB{display: flex;width: 80px;height: 80px;background: var(--ColorThemes2);border-radius: 0px;align-items: center;justify-content: center;}
+
+	#playB svg {width: 50px;fill: var(--ColorThemes0);}
+
+	.Game_Controll_R{width: 70%;margin: 5px;display: flex;}
+
+	#prev{width: 30%;background: var(--ColorThemes1);height: 180px;display: flex;justify-content: center;align-items: center;cursor: pointer;border-radius: 0px;margin: 5px;}
+
+	#next{width: 70%;background: var(--ColorThemes1);height: 180px;display: flex;justify-content: center;align-items: center;cursor: pointer;border-radius: 0px;margin: 5px;}
+
+	#prev svg, #next svg{width: 130px;fill: var(--ColorThemes0);}
+
+	.Grid{display: flex;}
+
+	.BlockGrid{width: 60px;height: 60px;margin: 0px;display: flex;align-items: center;justify-content: center;overflow: hidden;cursor: pointer;}
 
 	.BlockGrid span {z-index: 9999;}
 
-	.textMap{
-		position: absolute;
-    z-index: 9999;
-		background: var(--ColorThemes3);
-    color: #fff;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    border-radius: 0px;
-    align-items: center;
-    justify-content: center;
-	}
+	.textMap{position: absolute;z-index: 9999;background: var(--ColorThemes3);color: #fff;width: 30px;height: 30px;display: flex;border-radius: 0px;align-items: center;justify-content: center;}
 	
 	.p1{background: var(--Player1);}
 	.p2{background: var(--Player2);}
@@ -254,17 +120,11 @@
 	.cilcule{width: 30px;height: 30px;border-radius: var(--radius);position: absolute;border: 10px solid var(--ColorThemes0);}
 	
 	.StartCilcule{width: 40px;height: 40px;background: var(--ColorThemes0);border-radius: var(--radius);position: absolute;}
-
 	.StartR{width: 30px;height: 8px;background: var(--ColorThemes0);margin: 0 30px 0 0;}
-	
 	.StartL{width: 30px;height: 8px;background: var(--ColorThemes0);margin: 0 0 0 30px;}
-	
 	.StartT{width: 8px;height: 30px;background: var(--ColorThemes0);margin: 0 0 30px 0;}
-	
 	.StartB{width: 8px;height: 30px;background: var(--ColorThemes0);margin: 30px 0 0 0;}
-	
 	.lineH{width: 60px;height: 8px;background: var(--ColorThemes0);}
-	
 	.lineV{width: 8px;height: 60px;background: var(--ColorThemes0);}
 	
 	/* .TL{border-radius: 20px;border-left: 8px solid var(--ColorThemes0);border-bottom: 8px solid var(--ColorThemes0);margin-bottom: 50px;margin-left: 50px;padding: 25px;}
@@ -280,51 +140,14 @@
 	.BL{border-radius: var(--radius);border: var(--border);margin-top: var(--margin);margin-left: var(--margin);padding: var(--padding);}
 	.BR{border-radius: var(--radius);border: var(--border);margin-top: var(--margin);margin-right: var(--margin);padding: var(--padding);}
 
-
-
-#update-banner-1 {
-	height: 55px;
-	transition: .3s ease;
-}
-#update-banner-1 .content {
-	margin: 0 auto;
-	max-width: 300px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-#update-banner-1 .headline{
-	font-weight: 800;
-	font-size: 15px;
-	color: #fff;
-}
-#update-banner-1 .subhead {
-	font-size: 13px;
-	text-align: center;
-	color: #fff;
-}
-#update-banner-1[data-state="noupdate"]{
-	display: none;
-}
-#update-banner-1[data-state="updateavailable"]{
-	display: block;
-	cursor: pointer;
-	background: #26AE60;
-	color: #fff;
-	transition: .3s ease;
-	opacity: 0.95;
-	z-index: 9999;
-}
-#update-banner-1-icon{
-	display: none;
-}
-#update-banner-1-icon svg{
-	padding: 0px 50px;
-	width: 25px;
-	margin: -4px;
-	fill: #fff;
-}
+	#update-banner-1 {height: 55px;transition: .3s ease;}
+	#update-banner-1 .content {margin: 0 auto;max-width: 300px;display: flex;flex-direction: column;justify-content: center;align-items: center;}
+	#update-banner-1 .headline{font-weight: 800;font-size: 15px;color: #fff;}
+	#update-banner-1 .subhead {font-size: 13px;text-align: center;color: #fff;}
+	#update-banner-1[data-state="noupdate"]{display: none;}
+	#update-banner-1[data-state="updateavailable"]{display: block;cursor: pointer;background: #26AE60;color: #fff;transition: .3s ease;opacity: 0.95;z-index: 9999;}
+	#update-banner-1-icon{display: none;}
+	#update-banner-1-icon svg{padding: 0px 50px;width: 25px;margin: -4px;fill: #fff;}
 	
 </style>
 
@@ -408,7 +231,6 @@
 	var Player = 1;
 	var nMap = 96;
 
-
 	var Players = 4;
 
 	var edMap = 0;
@@ -416,14 +238,14 @@
 
 	var blockBut = 1;
 
+	var BorderColor = "var(--Player1)";
+
 	let timerId;
 	let timeoutId;
 	var timeTimer = 60000;
 	var timerN = 0;
 
 	var audio = null,CardWords = {};
-
-	GetData();
 
 	CardWords.Audio = function(game) {
     
@@ -522,7 +344,7 @@
 			["error", "audio/error." + extension]
 	];
 
-	load(audio_files, function() {  });
+	load(audio_files, function() { GetData() });
 
 	function load(arr, callback) { 
         
@@ -792,57 +614,39 @@
 			else if(Player == 4) p4++;
 
 			if(p1 == StartEnd[1]){
-				audio.play("end");
-				alert("Выиграла команда (игрок) 1");
-				p1 = 0, p2 = 0, p3 = 0, p4 = 0;
-				clearInterval(timerId);
-				document.getElementById('time').innerHTML = `00:00`;
-				document.getElementById('playB').style.opacity = 1;
-				document.getElementById('button_control').style.opacity = 0.5;
-				blockBut = 1;
-				Player=1;
-				generateMaps()
+				GameEnd(1)
 			} else if(p2 == StartEnd[1]) {
-				audio.play("end");
-				alert("Выиграла команда (игрок) 2");
-				p1 = 0, p2 = 0, p3 = 0, p4 = 0;
-				clearInterval(timerId);
-				document.getElementById('time').innerHTML = `00:00`;
-				document.getElementById('playB').style.opacity = 1;
-				document.getElementById('button_control').style.opacity = 0.5;
-				blockBut = 1;
-				Player=1;
-				generateMaps()
+				GameEnd(2)
 			} else if(p3 == StartEnd[1]) {
-				audio.play("end");
-				alert("Выиграла команда (игрок) 3");
-				p1 = 0, p2 = 0, p3 = 0, p4 = 0;
-				clearInterval(timerId);
-				document.getElementById('time').innerHTML = `00:00`;
-				document.getElementById('playB').style.opacity = 1;
-				document.getElementById('button_control').style.opacity = 0.5;
-				blockBut = 1;
-				Player=1;
-				generateMaps()
+				GameEnd(3)
 			} else if(p4 == StartEnd[1]) {
-				audio.play("end");
-				alert("Выиграла команда (игрок) 4");
-				p1 = 0, p2 = 0, p3 = 0, p4 = 0;
-				clearInterval(timerId);
-				document.getElementById('time').innerHTML = `00:00`;
-				document.getElementById('playB').style.opacity = 1;
-				document.getElementById('button_control').style.opacity = 0.5;
-				blockBut = 1;
-				Player=1;
-				generateMaps()
+				GameEnd(4)
 			}
 			generateMaps();
 		}
 	}
 
+	function GameEnd(p){
+		audio.play("end");
+		alert("Выиграла команда (игрок) "+p);
+		clearInterval(timerId);
+		clearTimeout(timeoutId);
+
+		p1 = 0, p2 = 0, p3 = 0, p4 = 0;
+		document.getElementById('time').innerHTML = `00:00`;
+		document.getElementById('playB').style.opacity = 1;
+		document.getElementById('button_control').style.opacity = 0.5;
+		blockBut = 1;
+		Player=1;
+		generateMaps()
+	}
+
 	function GetData(){
-		if(localStorage.getItem("Player") == null) saveData();
-		
+		if(localStorage.getItem("Player") == null) {
+			saveData();
+			generateMaps();
+		}
+
 		pole = JSON.parse(localStorage.getItem("pole"));
 		poleMap = JSON.parse(localStorage.getItem("poleMap"));
 		poleLine = JSON.parse(localStorage.getItem("poleLine"));
