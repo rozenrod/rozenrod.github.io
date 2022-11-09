@@ -62,7 +62,7 @@
     --Player3: #f1d893;
     --Player4: #bbe1b0;
 
-		--radius: 34px;
+		--radius: 0px;
     --border: 8px solid var(--ColorThemes0);
     --margin: 58px;
     --padding: 25px;
@@ -96,7 +96,7 @@
     color: var(--ColorThemes0);
     padding: 2px 10px;
     background: var(--ColorThemes1);
-    border-radius: 15px;
+    border-radius: 0px;
     margin-left: 10px;
     cursor: pointer;
     border: 0;
@@ -111,14 +111,14 @@
 
 	#Game{
     overflow: hidden;
-    border-radius: 15px;
+    border-radius: 0px;
 		background: var(--ColorThemes1);
 	}
 
 	.Game_Controll{
     width: calc(100% - 10px);
     min-height: 100px;
-    border-radius: 15px;
+    border-radius: 0px;
     display: flex;
     position: relative;
     flex-direction: row;
@@ -143,7 +143,7 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    border-radius: 15px;
+    border-radius: 0px;
     overflow: hidden;
 		background: var(--ColorThemes1);
 	}
@@ -155,13 +155,13 @@
     width: 240px;
     justify-content: space-around;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 0px;
 	}
 	#time{
 		display: flex;
     width: 80px;
     height: 80px;
-    border-radius: 15px;
+    border-radius: 0px;
     align-items: center;
     justify-content: center;
     font-size: 25px;
@@ -171,7 +171,7 @@
     width: 80px;
     height: 80px;
     background: var(--ColorThemes2);
-    border-radius: 15px;
+    border-radius: 0px;
     align-items: center;
     justify-content: center;
 	}
@@ -196,7 +196,7 @@
     justify-content: center;
     align-items: center;
 		cursor: pointer;
-		border-radius: 15px;
+		border-radius: 0px;
     margin: 5px;
 	}
 	#next{
@@ -207,7 +207,7 @@
     justify-content: center;
     align-items: center;
 		cursor: pointer;
-		border-radius: 15px;
+		border-radius: 0px;
     margin: 5px;
 	}
 
@@ -241,7 +241,7 @@
     width: 30px;
     height: 30px;
     display: flex;
-    border-radius: 15px;
+    border-radius: 0px;
     align-items: center;
     justify-content: center;
 	}
@@ -251,9 +251,9 @@
 	.p3{background: var(--Player3);}
 	.p4{background: var(--Player4);}
 	
-	.cilcule{width: 30px;height: 30px;border-radius: 30px;position: absolute;border: 10px solid var(--ColorThemes0);}
+	.cilcule{width: 30px;height: 30px;border-radius: var(--radius);position: absolute;border: 10px solid var(--ColorThemes0);}
 	
-	.StartCilcule{width: 40px;height: 40px;background: var(--ColorThemes0);border-radius: 30px;position: absolute;}
+	.StartCilcule{width: 40px;height: 40px;background: var(--ColorThemes0);border-radius: var(--radius);position: absolute;}
 
 	.StartR{width: 30px;height: 8px;background: var(--ColorThemes0);margin: 0 30px 0 0;}
 	
@@ -279,8 +279,65 @@
 	.TR{border-radius: var(--radius);border: var(--border);margin-bottom: var(--margin);margin-right: var(--margin);padding: var(--padding);}
 	.BL{border-radius: var(--radius);border: var(--border);margin-top: var(--margin);margin-left: var(--margin);padding: var(--padding);}
 	.BR{border-radius: var(--radius);border: var(--border);margin-top: var(--margin);margin-right: var(--margin);padding: var(--padding);}
+
+
+
+#update-banner-1 {
+	height: 55px;
+	transition: .3s ease;
+}
+#update-banner-1 .content {
+	margin: 0 auto;
+	max-width: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#update-banner-1 .headline{
+	font-weight: 800;
+	font-size: 15px;
+	color: #fff;
+}
+#update-banner-1 .subhead {
+	font-size: 13px;
+	text-align: center;
+	color: #fff;
+}
+#update-banner-1[data-state="noupdate"]{
+	display: none;
+}
+#update-banner-1[data-state="updateavailable"]{
+	display: block;
+	cursor: pointer;
+	background: #26AE60;
+	color: #fff;
+	transition: .3s ease;
+	opacity: 0.95;
+	z-index: 9999;
+}
+#update-banner-1-icon{
+	display: none;
+}
+#update-banner-1-icon svg{
+	padding: 0px 50px;
+	width: 25px;
+	margin: -4px;
+	fill: #fff;
+}
 	
 </style>
+
+	<div id="update-banner-1" data-state="noupdate">
+		<div class="content">
+				<div class="headline"></div>
+				<div class="subhead"></div>
+				<div id="update-banner-1-icon">
+					<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="64px" height="64px" viewBox="0 0 128 128" xml:space="preserve"><g><path d="M64 9.75A54.25 54.25 0 0 0 9.75 64H0a64 64 0 0 1 128 0h-9.75A54.25 54.25 0 0 0 64 9.75z" fill="#ffffff"/><animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="1400ms" repeatCount="indefinite"></animateTransform></g></svg>
+				</div>
+		</div>
+	</div>
+
 	<div class="control">
 		<div>
 			<button onclick="setData0()">0</button>
@@ -343,55 +400,17 @@
 
 
 <script>
-	let poleDef = [
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null]
-	];
-
-	let pole = [
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null]
-	];
-
-	let poleMap = [
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null],
-		[null, null, null, null, null, null, null, null, null, null]
-	];
-
-	let poleLine = [];
-
-	let StartEnd = [];
-
+	let pole = [[4,1,1,1,1,1,1,1,1,5],[2,4,1,1,1,5,9,4,5,2],[2,2,4,1,5,2,2,2,2,2],[2,2,2,null,3,6,2,2,2,2],[2,2,2,4,1,1,6,2,2,2],[2,2,2,2,8,1,10,2,2,2],[2,2,2,3,1,1,5,2,2,2],[2,2,3,1,1,1,6,2,2,2],[2,3,1,1,1,1,1,6,2,2],[3,1,1,1,1,1,1,1,6,7]];
+	let poleMap = [[19,18,17,16,15,14,13,12,11,10],[20,65,66,67,68,69,96,45,44,9],[21,64,75,74,73,70,95,46,43,8],[22,63,76,null,72,71,94,47,42,7],[23,62,77,90,91,92,93,48,41,6],[24,61,78,89,null,null,null,49,40,5],[25,60,79,88,87,86,85,50,39,4],[26,59,80,81,82,83,84,51,38,3],[27,58,57,56,55,54,53,52,37,2],[28,29,30,31,32,33,34,35,36,1]];
+	let poleLine = [2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,20,21,22,23,24,25,26,27,29,30,31,32,33,34,35,37,38,39,40,41,42,43,46,47,48,49,50,51,53,54,55,56,57,59,60,61,62,63,64,66,67,68,70,74,76,77,78,79,81,82,83,86,87,89,91,92,94,95];
+	let StartEnd = [1,96];
 	var p1 = 0, p2 = 0, p3 = 0, p4 = 0;
+	var Player = 1;
+	var nMap = 96;
+
 
 	var Players = 4;
-	var Player = 1;
 
-	var nMap = 0;
 	var edMap = 0;
 	var edPole = 0;
 
@@ -399,40 +418,142 @@
 
 	let timerId;
 	let timeoutId;
-	let timeoutEnd;
 	var timeTimer = 60000;
 	var timerN = 0;
 
-	let audio = new Audio();
+	var audio = null,CardWords = {};
 
 	GetData();
 
+	CardWords.Audio = function(game) {
+    
+    var files          = [], 
+        endEvents      = [],
+        progressEvents = [],
+        playing        = [];
+    
+    function load(name, path, cb) { 
+
+        var f = files[name] = document.createElement("audio");
+
+        progressEvents[name] = function(event) { progress(event, name, cb); };
+        
+        f.addEventListener("canplaythrough", progressEvents[name], true);
+        f.setAttribute("preload", "true");
+        f.setAttribute("autobuffer", "true");
+        f.setAttribute("src", path);
+        f.pause();        
+    };
+
+    function progress(event, name, callback) { 
+        if (event.loaded === event.total && typeof callback === "function") {
+            callback();
+            files[name].removeEventListener("canplaythrough", 
+                                            progressEvents[name], true);
+        }
+    };
+
+    function disableSound() {
+        for (var i = 0; i < playing.length; i++) {
+            files[playing[i]].pause();
+            files[playing[i]].currentTime = 0;
+        }
+        playing = [];
+    };
+
+    function ended(name) { 
+
+        var i, tmp = [], found = false;
+
+        files[name].removeEventListener("ended", endEvents[name], true);
+
+        for (i = 0; i < playing.length; i++) {
+            if (!found && playing[i]) { 
+                found = true;
+            } else { 
+                tmp.push(playing[i]);
+            }
+        }
+        playing = tmp;
+    };
+
+    function play(name) { 
+        if (!game.soundDisabled()) {
+            endEvents[name] = function() { ended(name); };
+            playing.push(name);
+            files[name].addEventListener("ended", endEvents[name], true);
+            files[name].play();
+        }
+    };
+
+    function pause() { 
+        for (var i = 0; i < playing.length; i++) {
+            files[playing[i]].pause();
+        }
+    };
+    
+    function resume() { 
+        for (var i = 0; i < playing.length; i++) {
+            files[playing[i]].play();
+        }        
+    };
+    
+    return {
+        "disableSound" : disableSound,
+        "load"         : load,
+        "play"         : play,
+        "pause"        : pause,
+        "resume"       : resume
+    };
+};
+
+	function soundDisabled() {
+		return localStorage["soundDisabled"] === "true";
+	};
+
+	audio = new CardWords.Audio({"soundDisabled":soundDisabled});
+
+	var extension = 'mp3';
+	var audio_files = [
+			["start", "audio/start." + extension],
+			["timer", "audio/timer." + extension],
+			["click", "audio/click." + extension],
+			["end", "audio/end." + extension],
+			["error", "audio/error." + extension]
+	];
+
+	load(audio_files, function() {  });
+
+	function load(arr, callback) { 
+        
+        if (arr.length === 0) { 
+            callback();
+        } else { 
+            var x = arr.pop();
+            audio.load(x[0], x[1], function() { load(arr, callback); });
+        }
+    };
+
 	function soundClick(sound) {
 		if(sound == 1){
-			audio.src = 'music/timer.mp3';;
-			audio.autoplay = true;
-			audio.loop = true;
+			audio.play("start");
 		} else {
-			audio.src = 'music/end.mp3';
-			audio.autoplay = true;
-			audio.loop = false;
+			audio.play("timer");
 		}
-	}
-	function soundStop() {
-		audio.pause();
-		audio.currentTime = 0
 	}
 
 	function setTimer(){
-		soundStop()
+		audio.pause()
 		qPlayer = prompt("Количество команд (играков)", 2);
 		if (qPlayer == null || qPlayer == "") {
 			Players = 4;
 		} else {
 			if(qPlayer > 4){
+				audio.play("error");
 				alert("Команд (играков) не может быть больше 4");
 				Players = 4;
 			} else if(qPlayer < 2){
+				audio.play("error");
 				alert("Команд (играков) не может быть меньше 2");
 				Players = 2;
 			} else {
@@ -448,7 +569,6 @@
 		}
 		clearInterval(timerId);
 		clearTimeout(timeoutId);
-		clearTimeout(timeoutEnd);
 		document.getElementById('time').innerHTML = `00:00`;
 		document.getElementById('playB').style.opacity = 1;
 		document.getElementById('button_control').style.opacity = 0.5;
@@ -484,15 +604,12 @@
 				if(Player==5 && Players==4) Player = 1;
 				timerN = 0;
 				generateMaps()
-			}, timeTimer);
-			timeoutEnd = setTimeout(function (){
 				soundClick(0);
-			}, timeTimer-300);
+			}, timeTimer);
 		} else {
 			soundClick(0);
 			clearInterval(timerId);
 			clearTimeout(timeoutId);
-			clearTimeout(timeoutEnd);
 			document.getElementById('time').innerHTML = `00:00`;
 
 			document.getElementById('playB').style.opacity = 1;
@@ -657,6 +774,7 @@
 
 	function prev(){
 		if(blockBut == 0){
+			audio.play("click");
 			if(Player == 1 && p1 > 0) p1--;
 			else if(Player == 2 && p2 > 0) p2--;
 			else if(Player == 3 && p3 > 0) p3--;
@@ -667,13 +785,15 @@
 
 	function next(){
 		if(blockBut == 0){
+			audio.play("click");
 			if(Player == 1) p1++;
 			else if(Player == 2) p2++;
 			else if(Player == 3) p3++;
 			else if(Player == 4) p4++;
 
 			if(p1 == StartEnd[1]){
-				alert("Выиграл Игрок 1");
+				audio.play("end");
+				alert("Выиграла команда (игрок) 1");
 				p1 = 0, p2 = 0, p3 = 0, p4 = 0;
 				clearInterval(timerId);
 				document.getElementById('time').innerHTML = `00:00`;
@@ -683,7 +803,8 @@
 				Player=1;
 				generateMaps()
 			} else if(p2 == StartEnd[1]) {
-				alert("Выиграл Игрок 2");
+				audio.play("end");
+				alert("Выиграла команда (игрок) 2");
 				p1 = 0, p2 = 0, p3 = 0, p4 = 0;
 				clearInterval(timerId);
 				document.getElementById('time').innerHTML = `00:00`;
@@ -693,7 +814,8 @@
 				Player=1;
 				generateMaps()
 			} else if(p3 == StartEnd[1]) {
-				alert("Выиграл Игрок 3");
+				audio.play("end");
+				alert("Выиграла команда (игрок) 3");
 				p1 = 0, p2 = 0, p3 = 0, p4 = 0;
 				clearInterval(timerId);
 				document.getElementById('time').innerHTML = `00:00`;
@@ -703,7 +825,8 @@
 				Player=1;
 				generateMaps()
 			} else if(p4 == StartEnd[1]) {
-				alert("Выиграл Игрок 4");
+				audio.play("end");
+				alert("Выиграла команда (игрок) 4");
 				p1 = 0, p2 = 0, p3 = 0, p4 = 0;
 				clearInterval(timerId);
 				document.getElementById('time').innerHTML = `00:00`;
@@ -863,15 +986,60 @@
 		dlAnchorElem.click();
 	}
 
-		// Проверка того, что наш браузер поддерживает Service Worker API.
-	if ('serviceWorker' in navigator) {
-		// Весь код регистрации у нас асинхронный.
-		navigator.serviceWorker.register('./sw.js')
-		.then(() => navigator.serviceWorker.ready.then((worker) => {
-			worker.sync.register('syncdata');
-		}))
-		.catch((err) => console.log(err));
+// Проверка того, что наш браузер поддерживает Service Worker API.
+if ('serviceWorker' in navigator) {
+	// Отображать уведомление, когда доступно новое обновление
+	var presentUpdateAvailable = serviceWorker => {
+		document.getElementById('update-banner-1').dataset.state = 'updateavailable';
+		document.querySelector('#update-banner-1 .headline').innerHTML = 'Доступно обновление';
+		document.querySelector('#update-banner-1 .subhead').innerHTML = 'Нажмите, чтобы обновить приложение до последней версии!';
+		document.getElementById('update-banner-1').addEventListener('click', clickEvent => {
+			document.getElementById('update-banner-1-icon').style.display = "block";
+			document.querySelector('#update-banner-1 .headline').innerHTML = '';
+			document.querySelector('#update-banner-1 .subhead').innerHTML = '';
+			serviceWorker.postMessage('skipWaiting');
+		});
 	}
+
+	// Регистрация Service Worker
+	navigator.serviceWorker.register('./sw.js')
+	.then(registration => {
+
+		// Отображение уведомления, если обновление ожидает установки
+		if (registration.waiting) presentUpdateAvailable(registration.waiting);
+
+		// Мы ждем UpdateFoundEvent, который запускается каждый раз, когда приобретается новый Service Worker.
+		registration.onupdatefound = updatefoundevent => {
+			// Игнорировать событие, если это наш первый Service Worker и, следовательно, не обновление.
+			if (!registration.active) return;
+
+			// Слушаем любые изменения состояния нового воркера.
+			registration.installing.addEventListener('statechange', statechangeevent => {
+					if (statechangeevent.target.state !== 'installed') return;
+					presentUpdateAvailable(registration.waiting);
+			});
+		};
+
+		// Мы ждем ControllerEvent, который запускается, когда документ получает новый Service Worker.
+		navigator.serviceWorker.addEventListener('controllerchange', controllerchangeevent => {
+
+				// Ждём новый Service Worker
+				controllerchangeevent.target.ready.then(registration => {
+						// Перезагружаем страницу
+						if (!window.isReloading) {
+								window.isReloading = true;
+								window.location.reload();
+						}
+						
+				});
+		});
+
+		// Сообщение об обновлении версии приложения
+		navigator.serviceWorker.addEventListener('message', (event) => {
+			localStorage.setItem('mess_update_SW', event.data.msg)
+		});
+	});
+}
 
 </script>
 
