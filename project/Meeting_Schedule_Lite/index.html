@@ -52,6 +52,12 @@
 				-webkit-appearance: none;
 				text-align: center;
 			}
+			header{
+				max-width: 800px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
 			.logo{
 				font-size: 24px;
 				color: #323232;
@@ -125,7 +131,7 @@
       .s1 {
         background: #779953;
         color: #f6f6f6;
-        width: 100px;
+        width: 110px;
         height: 30px;
         position: relative;
         display: inline-block;
@@ -150,13 +156,13 @@
         margin: 1.5px;
       }
       .i1{
-				width: 195px;
+				width: 185px;
       }
       .i2{
-        width: 445px;
+        width: 435px;
       }
 			.i3{
-        width: 522px;
+        width: 512px;
       }
 			.i4{
         width: 80px;
@@ -164,6 +170,9 @@
 			.i5{
 				width: 485px;
       }
+			select{
+				font-size: 16px;
+			}
       button{
 				background: #779953;
 				color: #f6f6f6;
@@ -177,6 +186,9 @@
 				font-size: 16px;
 			}
 
+			.c0 {
+				background: #8859c5;
+			}
 			.c1{
 				background: #7c7c7c;
 			}
@@ -266,7 +278,14 @@
 
 		<center>
 		<br>
-		<a href="https://rozenrod.github.io/project/Meeting_Schedule_Lite/index.html" class="logo">Meeting Schedule Lite</a>
+		<header>
+			<a href="https://rozenrod.github.io/project/Meeting_Schedule_Lite/index.html" class="logo">Meeting Schedule Lite</a>
+			<select class="s1">
+				<option value="0" selected="">UA</option>
+				<option value="1">RU</option>
+			</select>
+		</header>
+		
 		<br><br>
 		<details id="det_1" style="text-align: center;">
 			<summary>Вивчення "Вартової башти"</summary>
@@ -409,11 +428,11 @@
 					<input id="date_2_1" class="i0" type="text" value="20.03.2022" placeholder="Дата">
 
 					<div class="line">
-						<div class="s1 c1"><span>Ведучий</span></div>
-						<input class="i1" type="text" value="" placeholder="Ім'я та прізвище" list="list_name" maxlength="13" style="width: 195px;">
+						<div class="s1 c0"><span>Ведучий</span></div>
+						<input class="i1" type="text" value="" placeholder="Ім'я та прізвище" list="list_name" maxlength="13">
 
-						<div class="s1 c1"><span>Молитва</span></div>
-						<input class="i1" type="text" value="" placeholder="Ім'я та прізвище" list="list_name" maxlength="13" style="width: 195px;">
+						<div class="s1 c0"><span>Молитва</span></div>
+						<input class="i1" type="text" value="" placeholder="Ім'я та прізвище" list="list_name" maxlength="13">
 					</div>
 
 					<div class="line">
@@ -433,16 +452,49 @@
 					<div class="line">
 						<div class="s1 c2" style="width: 645px;"><span style="margin-left: 3px;">Вдосконалюймо своє служіння</span></div>
 
-						<div class="s1 c2"><span style="margin-left: 3px;">Розмова 1</span></div>
+						<select class="s1 c2">
+							<option value="0" selected=""></option>
+							<option value="1">Відео</option>
+							<option value="2">Розмова 1</option>
+							<option value="3">Розмова 2</option>
+							<option value="4">Розмова 3</option>
+							<option value="5">Вивчення</option>
+							<option value="6">Промова</option>
+						</select>
+				
 						<input class="i3" type="text" value="" placeholder="Ім'я та прізвище / Ім'я та прізвище" list="list_name" maxlength="70">
 
-						<div class="s1 c2"><span style="margin-left: 3px;">Розмова 2</span></div>
+						<select class="s1 c2">
+							<option value="0" selected=""></option>
+							<option value="1">Відео</option>
+							<option value="2">Розмова 1</option>
+							<option value="3">Розмова 2</option>
+							<option value="4">Розмова 3</option>
+							<option value="5">Вивчення</option>
+							<option value="6">Промова</option>
+						</select>
 						<input class="i3" type="text" value="" placeholder="Ім'я та прізвище / Ім'я та прізвище" list="list_name" maxlength="70">
 
-						<div class="s1 c2"><span style="margin-left: 3px;">Розмова 3</span></div>
+						<select class="s1 c2">
+							<option value="0" selected=""></option>
+							<option value="1">Відео</option>
+							<option value="2">Розмова 1</option>
+							<option value="3">Розмова 2</option>
+							<option value="4">Розмова 3</option>
+							<option value="5">Вивчення</option>
+							<option value="6">Промова</option>
+						</select>
 						<input class="i3" type="text" value="" placeholder="Ім'я та прізвище / Ім'я та прізвище" list="list_name" maxlength="70">
 
-						<div class="s1 c2"><span style="margin-left: 3px;">Промова</span></div>
+						<select class="s1 c2">
+							<option value="0" selected=""></option>
+							<option value="1">Відео</option>
+							<option value="2">Розмова 1</option>
+							<option value="3">Розмова 2</option>
+							<option value="4">Розмова 3</option>
+							<option value="5">Вивчення</option>
+							<option value="6">Промова</option>
+						</select>
 						<input class="i3" type="text" value="" placeholder="Ім'я та прізвище" list="list_name" maxlength="70">
 					</div>
 
@@ -472,11 +524,11 @@
 					<input id="date_2_2" class="i0" type="text" value="20.03.2022" placeholder="Дата">
 
 					<div class="line">
-						<div class="s1 c1"><span>Ведучий</span></div>
-						<input class="i1" type="text" value="" placeholder="Ім'я та прізвище" list="list_name" maxlength="13" style="width: 195px;">
+						<div class="s1 c0"><span>Ведучий</span></div>
+						<input class="i1" type="text" value="" placeholder="Ім'я та прізвище" list="list_name" maxlength="13">
 
-						<div class="s1 c1"><span>Молитва</span></div>
-						<input class="i1" type="text" value="" placeholder="Ім'я та прізвище" list="list_name" maxlength="13" style="width: 195px;">
+						<div class="s1 c0"><span>Молитва</span></div>
+						<input class="i1" type="text" value="" placeholder="Ім'я та прізвище" list="list_name" maxlength="13">
 					</div>
 
 					<div class="line">
@@ -496,16 +548,48 @@
 					<div class="line">
 						<div class="s1 c2" style="width: 645px;"><span style="margin-left: 3px;">Вдосконалюймо своє служіння</span></div>
 
-						<div class="s1 c2"><span style="margin-left: 3px;">Розмова 1</span></div>
+						<select class="s1 c2">
+							<option value="0" selected=""></option>
+							<option value="1">Відео</option>
+							<option value="2">Розмова 1</option>
+							<option value="3">Розмова 2</option>
+							<option value="4">Розмова 3</option>
+							<option value="5">Вивчення</option>
+							<option value="6">Промова</option>
+						</select>
 						<input class="i3" type="text" value="" placeholder="Ім'я та прізвище / Ім'я та прізвище" list="list_name" maxlength="70">
 
-						<div class="s1 c2"><span style="margin-left: 3px;">Розмова 2</span></div>
+						<select class="s1 c2">
+							<option value="0" selected=""></option>
+							<option value="1">Відео</option>
+							<option value="2">Розмова 1</option>
+							<option value="3">Розмова 2</option>
+							<option value="4">Розмова 3</option>
+							<option value="5">Вивчення</option>
+							<option value="6">Промова</option>
+						</select>
 						<input class="i3" type="text" value="" placeholder="Ім'я та прізвище / Ім'я та прізвище" list="list_name" maxlength="70">
 
-						<div class="s1 c2"><span style="margin-left: 3px;">Розмова 3</span></div>
+						<select class="s1 c2">
+							<option value="0" selected=""></option>
+							<option value="1">Відео</option>
+							<option value="2">Розмова 1</option>
+							<option value="3">Розмова 2</option>
+							<option value="4">Розмова 3</option>
+							<option value="5">Вивчення</option>
+							<option value="6">Промова</option>
+						</select>
 						<input class="i3" type="text" value="" placeholder="Ім'я та прізвище / Ім'я та прізвище" list="list_name" maxlength="70">
 
-						<div class="s1 c2"><span style="margin-left: 3px;">Промова</span></div>
+						<select class="s1 c2">
+							<option value="0" selected=""></option>
+							<option value="1">Відео</option>
+							<option value="2">Розмова 1</option>
+							<option value="3">Розмова 2</option>
+							<option value="4">Розмова 3</option>
+							<option value="5">Вивчення</option>
+							<option value="6">Промова</option>
+						</select>
 						<input class="i3" type="text" value="" placeholder="Ім'я та прізвище" list="list_name" maxlength="70">
 					</div>
 
@@ -535,11 +619,11 @@
 					<input id="date_2_3" class="i0" type="text" value="20.03.2022" placeholder="Дата">
 
 					<div class="line">
-						<div class="s1 c1"><span>Ведучий</span></div>
-						<input class="i1" type="text" value="" placeholder="Ім'я та прізвище" list="list_name" maxlength="13" style="width: 195px;">
+						<div class="s1 c0"><span>Ведучий</span></div>
+						<input class="i1" type="text" value="" placeholder="Ім'я та прізвище" list="list_name" maxlength="13">
 
-						<div class="s1 c1"><span>Молитва</span></div>
-						<input class="i1" type="text" value="" placeholder="Ім'я та прізвище" list="list_name" maxlength="13" style="width: 195px;">
+						<div class="s1 c0"><span>Молитва</span></div>
+						<input class="i1" type="text" value="" placeholder="Ім'я та прізвище" list="list_name" maxlength="13">
 					</div>
 
 					<div class="line">
@@ -559,16 +643,48 @@
 					<div class="line">
 						<div class="s1 c2" style="width: 645px;"><span style="margin-left: 3px;">Вдосконалюймо своє служіння</span></div>
 
-						<div class="s1 c2"><span style="margin-left: 3px;">Розмова 1</span></div>
+						<select class="s1 c2">
+							<option value="0" selected=""></option>
+							<option value="1">Відео</option>
+							<option value="2">Розмова 1</option>
+							<option value="3">Розмова 2</option>
+							<option value="4">Розмова 3</option>
+							<option value="5">Вивчення</option>
+							<option value="6">Промова</option>
+						</select>
 						<input class="i3" type="text" value="" placeholder="Ім'я та прізвище / Ім'я та прізвище" list="list_name" maxlength="70">
 
-						<div class="s1 c2"><span style="margin-left: 3px;">Розмова 2</span></div>
+						<select class="s1 c2">
+							<option value="0" selected=""></option>
+							<option value="1">Відео</option>
+							<option value="2">Розмова 1</option>
+							<option value="3">Розмова 2</option>
+							<option value="4">Розмова 3</option>
+							<option value="5">Вивчення</option>
+							<option value="6">Промова</option>
+						</select>
 						<input class="i3" type="text" value="" placeholder="Ім'я та прізвище / Ім'я та прізвище" list="list_name" maxlength="70">
 
-						<div class="s1 c2"><span style="margin-left: 3px;">Розмова 3</span></div>
+						<select class="s1 c2">
+							<option value="0" selected=""></option>
+							<option value="1">Відео</option>
+							<option value="2">Розмова 1</option>
+							<option value="3">Розмова 2</option>
+							<option value="4">Розмова 3</option>
+							<option value="5">Вивчення</option>
+							<option value="6">Промова</option>
+						</select>
 						<input class="i3" type="text" value="" placeholder="Ім'я та прізвище / Ім'я та прізвище" list="list_name" maxlength="70">
 
-						<div class="s1 c2"><span style="margin-left: 3px;">Промова</span></div>
+						<select class="s1 c2">
+							<option value="0" selected=""></option>
+							<option value="1">Відео</option>
+							<option value="2">Розмова 1</option>
+							<option value="3">Розмова 2</option>
+							<option value="4">Розмова 3</option>
+							<option value="5">Вивчення</option>
+							<option value="6">Промова</option>
+						</select>
 						<input class="i3" type="text" value="" placeholder="Ім'я та прізвище" list="list_name" maxlength="70">
 					</div>
 
@@ -598,11 +714,11 @@
 					<input id="date_2_4" class="i0" type="text" value="20.03.2022" placeholder="Дата">
 
 					<div class="line">
-						<div class="s1 c1"><span>Ведучий</span></div>
-						<input class="i1" type="text" value="" placeholder="Ім'я та прізвище" list="list_name" maxlength="13" style="width: 195px;">
+						<div class="s1 c0"><span>Ведучий</span></div>
+						<input class="i1" type="text" value="" placeholder="Ім'я та прізвище" list="list_name" maxlength="13">
 
-						<div class="s1 c1"><span>Молитва</span></div>
-						<input class="i1" type="text" value="" placeholder="Ім'я та прізвище" list="list_name" maxlength="13" style="width: 195px;">
+						<div class="s1 c0"><span>Молитва</span></div>
+						<input class="i1" type="text" value="" placeholder="Ім'я та прізвище" list="list_name" maxlength="13">
 					</div>
 
 					<div class="line">
@@ -622,16 +738,48 @@
 					<div class="line">
 						<div class="s1 c2" style="width: 645px;"><span style="margin-left: 3px;">Вдосконалюймо своє служіння</span></div>
 
-						<div class="s1 c2"><span style="margin-left: 3px;">Розмова 1</span></div>
+						<select class="s1 c2">
+							<option value="0" selected=""></option>
+							<option value="1">Відео</option>
+							<option value="2">Розмова 1</option>
+							<option value="3">Розмова 2</option>
+							<option value="4">Розмова 3</option>
+							<option value="5">Вивчення</option>
+							<option value="6">Промова</option>
+						</select>
 						<input class="i3" type="text" value="" placeholder="Ім'я та прізвище / Ім'я та прізвище" list="list_name" maxlength="70">
 
-						<div class="s1 c2"><span style="margin-left: 3px;">Розмова 2</span></div>
+						<select class="s1 c2">
+							<option value="0" selected=""></option>
+							<option value="1">Відео</option>
+							<option value="2">Розмова 1</option>
+							<option value="3">Розмова 2</option>
+							<option value="4">Розмова 3</option>
+							<option value="5">Вивчення</option>
+							<option value="6">Промова</option>
+						</select>
 						<input class="i3" type="text" value="" placeholder="Ім'я та прізвище / Ім'я та прізвище" list="list_name" maxlength="70">
 
-						<div class="s1 c2"><span style="margin-left: 3px;">Розмова 3</span></div>
+						<select class="s1 c2">
+							<option value="0" selected=""></option>
+							<option value="1">Відео</option>
+							<option value="2">Розмова 1</option>
+							<option value="3">Розмова 2</option>
+							<option value="4">Розмова 3</option>
+							<option value="5">Вивчення</option>
+							<option value="6">Промова</option>
+						</select>
 						<input class="i3" type="text" value="" placeholder="Ім'я та прізвище / Ім'я та прізвище" list="list_name" maxlength="70">
 
-						<div class="s1 c2"><span style="margin-left: 3px;">Промова</span></div>
+						<select class="s1 c2">
+							<option value="0" selected=""></option>
+							<option value="1">Відео</option>
+							<option value="2">Розмова 1</option>
+							<option value="3">Розмова 2</option>
+							<option value="4">Розмова 3</option>
+							<option value="5">Вивчення</option>
+							<option value="6">Промова</option>
+						</select>
 						<input class="i3" type="text" value="" placeholder="Ім'я та прізвище" list="list_name" maxlength="70">
 					</div>
 
@@ -932,6 +1080,18 @@
 							input.value = localStorage.getItem(id);
 						}
 					 }
+			}
+
+			for (let id2 = 0; id2 <= 16; id2++) {
+				var select = document.getElementsByTagName("select")[id2];
+				if(localStorage.getItem("HV"+id2)){
+					select.value = localStorage.getItem("HV"+id2);
+				}
+				(function(id2, select) {
+					select.addEventListener("change", function() {
+						localStorage.setItem("HV"+id2, select.value);
+					});
+				})(id2, select);
 			}
 		});
 	</script>
@@ -1394,6 +1554,33 @@
 					H_4_14 = document.getElementsByTagName("input")[94].value,
 					H_4_15 = document.getElementsByTagName("input")[95].value;
 
+			var HV_1_1 = document.getElementsByTagName("select")[1].value,
+					HV_1_2 = document.getElementsByTagName("select")[2].value,
+					HV_1_3 = document.getElementsByTagName("select")[3].value,
+					HV_1_4 = document.getElementsByTagName("select")[4].value,
+					HV_2_1 = document.getElementsByTagName("select")[5].value,
+					HV_2_2 = document.getElementsByTagName("select")[6].value,
+					HV_2_3 = document.getElementsByTagName("select")[7].value,
+					HV_2_4 = document.getElementsByTagName("select")[8].value,
+					HV_3_1 = document.getElementsByTagName("select")[9].value,
+					HV_3_2 = document.getElementsByTagName("select")[10].value,
+					HV_3_3 = document.getElementsByTagName("select")[11].value,
+					HV_3_4 = document.getElementsByTagName("select")[12].value,
+					HV_4_1 = document.getElementsByTagName("select")[13].value,
+					HV_4_2 = document.getElementsByTagName("select")[14].value,
+					HV_4_3 = document.getElementsByTagName("select")[15].value,
+					HV_4_4 = document.getElementsByTagName("select")[16].value;
+
+			let HV = [
+				["", 36.5, 732],
+				["Відео", 56.5, 743.5],
+				["Розмова 1", 36.5, 724.5],
+				["Розмова 2", 36.5, 724.5],
+				["Розмова 3", 36.5, 724.5],
+				["Вивчення", 41, 728],
+				["Промова", 44, 732]
+			]
+
 
 
 
@@ -1405,9 +1592,9 @@
 					<g>
 						<rect fill="#ffffff" x="20" y="67" width="655" height="40" id="svg_28" rx="10"/>
 						<rect fill="#f6f6f6" stroke="null" stroke-width="0" x="136" y="72" width="197" height="30" id="svg_31" rx="10"/>
-						<rect fill="#779953" stroke-width="0" x="26" y="72" width="100" height="30" id="svg_34" stroke="null" rx="10"/>
+						<rect fill="#8859c5" stroke-width="0" x="26" y="72" width="100" height="30" id="svg_34" stroke="null" rx="10"/>
 						<rect fill="#f6f6f6" stroke="null" stroke-width="0" x="469" y="72" width="197" height="30" id="svg_35" rx="10"/>
-						<rect fill="#779953" stroke-width="0" x="359" y="72" width="100" height="30" id="svg_36" stroke="null" rx="10"/>
+						<rect fill="#8859c5" stroke-width="0" x="359" y="72" width="100" height="30" id="svg_36" stroke="null" rx="10"/>
 					</g>
 					<g>
 						<rect fill="#ffffff" x="20" y="111" width="655" height="40" id="svg_38" rx="10"/>
@@ -1471,13 +1658,13 @@
 					<g>
 						<text stroke="null" fill="#f6f6f6" x="217" y="302" id="svg_138" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Вдосконалюймо своє служіння</text>
 						<g>
-						<text fill="#f6f6f6" x="36.5" y="346" id="svg_139" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Розмова 1</text>
+						<text fill="#f6f6f6" x="${HV[HV_1_1][1]}" y="346" id="svg_139" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${HV[HV_1_1][0]}</text>
 						<text fill="#323232" x="144.5" y="346" id="svg_141" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${H_1_6}</text>
-						<text fill="#f6f6f6" x="36.5" y="382" id="svg_142" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Розмова 2</text>
+						<text fill="#f6f6f6" x="${HV[HV_1_2][1]}" y="382" id="svg_142" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${HV[HV_1_2][0]}</text>
 						<text fill="#323232" x="144.5" y="382" id="svg_147" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${H_1_7}</text>
-						<text fill="#f6f6f6" x="36.5" y="419" id="svg_153" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Розмова 3</text>
+						<text fill="#f6f6f6" x="${HV[HV_1_3][1]}" y="419" id="svg_153" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${HV[HV_1_3][0]}</text>
 						<text fill="#323232" x="144.5" y="418" id="svg_154" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${H_1_8}</text>
-						<text fill="#f6f6f6" x="44" y="453" id="svg_155" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Промова</text>
+						<text fill="#f6f6f6" x="${HV[HV_1_4][1]}" y="453" id="svg_155" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${HV[HV_1_4][0]}</text>
 						<text fill="#323232" x="144.5" y="453" id="svg_156" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${H_1_9}</text>
 						</g>
 					</g>
@@ -1507,9 +1694,9 @@
 					<g>
 						<rect fill="#ffffff" x="708" y="66" width="655" height="40" id="svg_443" rx="10"/>
 						<rect fill="#f6f6f6" stroke="null" stroke-width="0" x="824" y="71" width="197" height="30" id="svg_444" rx="10"/>
-						<rect fill="#779953" stroke-width="0" x="714" y="71" width="100" height="30" id="svg_445" stroke="null" rx="10"/>
+						<rect fill="#8859c5" stroke-width="0" x="714" y="71" width="100" height="30" id="svg_445" stroke="null" rx="10"/>
 						<rect fill="#f6f6f6" stroke="null" stroke-width="0" x="1157" y="71" width="197" height="30" id="svg_446" rx="10"/>
-						<rect fill="#779953" stroke-width="0" x="1047" y="71" width="100" height="30" id="svg_447" stroke="null" rx="10"/>
+						<rect fill="#8859c5" stroke-width="0" x="1047" y="71" width="100" height="30" id="svg_447" stroke="null" rx="10"/>
 					</g>
 					<g>
 						<rect fill="#ffffff" x="708" y="110" width="655" height="40" id="svg_449" rx="10"/>
@@ -1573,13 +1760,13 @@
 					<g>
 						<text stroke="null" fill="#f6f6f6" x="905" y="301" id="svg_502" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Вдосконалюймо своє служіння</text>
 						<g>
-						<text fill="#f6f6f6" x="724.5" y="345" id="svg_503" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Розмова 1</text>
+						<text fill="#f6f6f6" x="${HV[HV_2_1][2]}" y="345" id="svg_503" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${HV[HV_2_1][0]}</text>
 						<text fill="#323232" x="832.5" y="345" id="svg_504" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${H_2_6}</text>
-						<text fill="#f6f6f6" x="724.5" y="381" id="svg_505" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Розмова 2</text>
+						<text fill="#f6f6f6" x="${HV[HV_2_2][2]}" y="381" id="svg_505" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${HV[HV_2_2][0]}</text>
 						<text fill="#323232" x="832.5" y="381" id="svg_506" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${H_2_7}</text>
-						<text fill="#f6f6f6" x="724.5" y="418" id="svg_507" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Розмова 3</text>
+						<text fill="#f6f6f6" x="${HV[HV_2_3][2]}" y="418" id="svg_507" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${HV[HV_2_3][0]}</text>
 						<text fill="#323232" x="832.5" y="417" id="svg_508" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${H_2_8}</text>
-						<text fill="#f6f6f6" x="732" y="452" id="svg_509" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Промова</text>
+						<text fill="#f6f6f6" x="${HV[HV_2_4][2]}" y="452" id="svg_509" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${HV[HV_2_4][0]}</text>
 						<text fill="#323232" x="832.5" y="452" id="svg_510" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${H_2_9}</text>
 						</g>
 					</g>
@@ -1609,9 +1796,9 @@
 					<g>
 						<rect fill="#ffffff" x="20" y="783" width="655" height="40" id="svg_78" rx="10"/>
 						<rect fill="#f6f6f6" stroke="null" stroke-width="0" x="136" y="788" width="197" height="30" id="svg_133" rx="10"/>
-						<rect fill="#779953" stroke-width="0" x="26" y="788" width="100" height="30" id="svg_131" stroke="null" rx="10"/>
+						<rect fill="#8859c5" stroke-width="0" x="26" y="788" width="100" height="30" id="svg_131" stroke="null" rx="10"/>
 						<rect fill="#f6f6f6" stroke="null" stroke-width="0" x="469" y="788" width="197" height="30" id="svg_126" rx="10"/>
-						<rect fill="#779953" stroke-width="0" x="359" y="788" width="100" height="30" id="svg_123" stroke="null" rx="10"/>
+						<rect fill="#8859c5" stroke-width="0" x="359" y="788" width="100" height="30" id="svg_123" stroke="null" rx="10"/>
 					</g>
 					<g>
 						<rect fill="#ffffff" x="20" y="827" width="655" height="40" id="svg_136" rx="10"/>
@@ -1675,13 +1862,13 @@
 					<g>
 						<text stroke="null" fill="#f6f6f6" x="217" y="1018" id="svg_120" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Вдосконалюймо своє служіння</text>
 						<g>
-						<text fill="#f6f6f6" x="36.5" y="1062" id="svg_109" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Розмова 1</text>
+						<text fill="#f6f6f6" x="${HV[HV_3_1][1]}" y="1062" id="svg_109" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${HV[HV_3_1][0]}</text>
 						<text fill="#323232" x="144.5" y="1062" id="svg_112" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${H_3_6}</text>
-						<text fill="#f6f6f6" x="36.5" y="1098" id="svg_102" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Розмова 2</text>
+						<text fill="#f6f6f6" x="${HV[HV_3_2][1]}" y="1098" id="svg_102" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${HV[HV_3_2][0]}</text>
 						<text fill="#323232" x="144.5" y="1098" id="svg_105" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${H_3_7}</text>
-						<text fill="#f6f6f6" x="36.5" y="1135" id="svg_94" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Розмова 3</text>
+						<text fill="#f6f6f6" x="${HV[HV_3_3][1]}" y="1135" id="svg_94" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${HV[HV_3_3][0]}</text>
 						<text fill="#323232" x="144.5" y="1134" id="svg_97" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${H_3_8}</text>
-						<text fill="#f6f6f6" x="44" y="1169" id="svg_87" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Промова</text>
+						<text fill="#f6f6f6" x="${HV[HV_3_4][1]}" y="1169" id="svg_87" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${HV[HV_3_4][0]}</text>
 						<text fill="#323232" x="144.5" y="1169" id="svg_90" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${H_3_9}</text>
 						</g>
 					</g>
@@ -1711,9 +1898,9 @@
 					<g>
 						<rect fill="#ffffff" x="708" y="784" width="655" height="40" id="svg_177" rx="10"/>
 						<rect fill="#f6f6f6" stroke="null" stroke-width="0" x="824" y="789" width="197" height="30" id="svg_178" rx="10"/>
-						<rect fill="#779953" stroke-width="0" x="714" y="789" width="100" height="30" id="svg_179" stroke="null" rx="10"/>
+						<rect fill="#8859c5" stroke-width="0" x="714" y="789" width="100" height="30" id="svg_179" stroke="null" rx="10"/>
 						<rect fill="#f6f6f6" stroke="null" stroke-width="0" x="1157" y="789" width="197" height="30" id="svg_180" rx="10"/>
-						<rect fill="#779953" stroke-width="0" x="1047" y="789" width="100" height="30" id="svg_181" stroke="null" rx="10"/>
+						<rect fill="#8859c5" stroke-width="0" x="1047" y="789" width="100" height="30" id="svg_181" stroke="null" rx="10"/>
 					</g>
 					<g>
 						<rect fill="#ffffff" x="708" y="828" width="655" height="40" id="svg_183" rx="10"/>
@@ -1777,13 +1964,13 @@
 					<g>
 						<text stroke="null" fill="#f6f6f6" x="905" y="1019" id="svg_237" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Вдосконалюймо своє служіння</text>
 						<g>
-						<text fill="#f6f6f6" x="724.5" y="1063" id="svg_238" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Розмова 1</text>
+						<text fill="#f6f6f6" x="${HV[HV_4_1][2]}" y="1063" id="svg_238" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${HV[HV_4_1][0]}</text>
 						<text fill="#323232" x="832.5" y="1063" id="svg_239" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${H_4_6}</text>
-						<text fill="#f6f6f6" x="724.5" y="1099" id="svg_240" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Розмова 2</text>
+						<text fill="#f6f6f6" x="${HV[HV_4_2][2]}" y="1099" id="svg_240" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${HV[HV_4_2][0]}</text>
 						<text fill="#323232" x="832.5" y="1099" id="svg_241" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${H_4_7}</text>
-						<text fill="#f6f6f6" x="724.5" y="1136" id="svg_242" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Розмова 3</text>
+						<text fill="#f6f6f6" x="${HV[HV_4_3][2]}" y="1136" id="svg_242" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${HV[HV_4_3][0]}</text>
 						<text fill="#323232" x="832.5" y="1135" id="svg_243" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${H_4_8}</text>
-						<text fill="#f6f6f6" x="732" y="1170" id="svg_244" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">Промова</text>
+						<text fill="#f6f6f6" x="${HV[HV_4_4][2]}" y="1170" id="svg_244" stroke-width="0" font-size="16" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${HV[HV_4_4][0]}</text>
 						<text fill="#323232" x="832.5" y="1170" id="svg_245" stroke-width="0" font-size="14" font-family="'Roboto Mono'" text-anchor="start" xml:space="preserve">${H_4_9}</text>
 						</g>
 					</g>
@@ -2263,6 +2450,23 @@
 			document.getElementsByTagName("input")[93].value = '';
 			document.getElementsByTagName("input")[94].value = '';
 			document.getElementsByTagName("input")[95].value = '';
+
+			document.getElementsByTagName("select")[0].value = 0,
+			document.getElementsByTagName("select")[1].value = 0,
+			document.getElementsByTagName("select")[2].value = 0,
+			document.getElementsByTagName("select")[3].value = 0,
+			document.getElementsByTagName("select")[4].value = 0,
+			document.getElementsByTagName("select")[5].value = 0,
+			document.getElementsByTagName("select")[6].value = 0,
+			document.getElementsByTagName("select")[7].value = 0,
+			document.getElementsByTagName("select")[8].value = 0,
+			document.getElementsByTagName("select")[9].value = 0,
+			document.getElementsByTagName("select")[10].value = 0,
+			document.getElementsByTagName("select")[11].value = 0,
+			document.getElementsByTagName("select")[12].value = 0,
+			document.getElementsByTagName("select")[13].value = 0,
+			document.getElementsByTagName("select")[14].value = 0,
+			document.getElementsByTagName("select")[15].value = 0;
 		}
 		
 	</script>
@@ -2288,59 +2492,59 @@
 		}
 
 		// Проверка того, что наш браузер поддерживает Service Worker API.
-if ('serviceWorker' in navigator) {
-	// Отображать уведомление, когда доступно новое обновление
-	var presentUpdateAvailable = serviceWorker => {
-		document.getElementById('update-banner-1').dataset.state = 'updateavailable';
-		document.querySelector('#update-banner-1 .headline').innerHTML = 'Доступне оновлення';
-		document.querySelector('#update-banner-1 .subhead').innerHTML = 'Натисніть, щоб оновити програму до останньої версії!';
-		document.getElementById('update-banner-1').addEventListener('click', clickEvent => {
-			document.getElementById('update-banner-1-icon').style.display = "block";
-			document.querySelector('#update-banner-1 .headline').innerHTML = '';
-			document.querySelector('#update-banner-1 .subhead').innerHTML = '';
-			serviceWorker.postMessage('skipWaiting');
-		});
-	}
-
-	// Регистрация Service Worker
-	navigator.serviceWorker.register('./sw.js')
-	.then(registration => {
-
-		// Отображение уведомления, если обновление ожидает установки
-		if (registration.waiting) presentUpdateAvailable(registration.waiting);
-
-		// Мы ждем UpdateFoundEvent, который запускается каждый раз, когда приобретается новый Service Worker.
-		registration.onupdatefound = updatefoundevent => {
-			// Игнорировать событие, если это наш первый Service Worker и, следовательно, не обновление.
-			if (!registration.active) return;
-
-			// Слушаем любые изменения состояния нового воркера.
-			registration.installing.addEventListener('statechange', statechangeevent => {
-					if (statechangeevent.target.state !== 'installed') return;
-					presentUpdateAvailable(registration.waiting);
-			});
-		};
-
-		// Мы ждем ControllerEvent, который запускается, когда документ получает новый Service Worker.
-		navigator.serviceWorker.addEventListener('controllerchange', controllerchangeevent => {
-
-				// Ждём новый Service Worker
-				controllerchangeevent.target.ready.then(registration => {
-						// Перезагружаем страницу
-						if (!window.isReloading) {
-								window.isReloading = true;
-								window.location.reload();
-						}
-						
+		if ('serviceWorker' in navigator) {
+			// Отображать уведомление, когда доступно новое обновление
+			var presentUpdateAvailable = serviceWorker => {
+				document.getElementById('update-banner-1').dataset.state = 'updateavailable';
+				document.querySelector('#update-banner-1 .headline').innerHTML = 'Доступне оновлення';
+				document.querySelector('#update-banner-1 .subhead').innerHTML = 'Натисніть, щоб оновити програму до останньої версії!';
+				document.getElementById('update-banner-1').addEventListener('click', clickEvent => {
+					document.getElementById('update-banner-1-icon').style.display = "block";
+					document.querySelector('#update-banner-1 .headline').innerHTML = '';
+					document.querySelector('#update-banner-1 .subhead').innerHTML = '';
+					serviceWorker.postMessage('skipWaiting');
 				});
-		});
+			}
 
-		// Сообщение об обновлении версии приложения
-		navigator.serviceWorker.addEventListener('message', (event) => {
-			localStorage.setItem('mess_update_SW', event.data.msg)
-		});
-	});
-}
+			// Регистрация Service Worker
+			navigator.serviceWorker.register('./sw.js')
+			.then(registration => {
+
+				// Отображение уведомления, если обновление ожидает установки
+				if (registration.waiting) presentUpdateAvailable(registration.waiting);
+
+				// Мы ждем UpdateFoundEvent, который запускается каждый раз, когда приобретается новый Service Worker.
+				registration.onupdatefound = updatefoundevent => {
+					// Игнорировать событие, если это наш первый Service Worker и, следовательно, не обновление.
+					if (!registration.active) return;
+
+					// Слушаем любые изменения состояния нового воркера.
+					registration.installing.addEventListener('statechange', statechangeevent => {
+							if (statechangeevent.target.state !== 'installed') return;
+							presentUpdateAvailable(registration.waiting);
+					});
+				};
+
+				// Мы ждем ControllerEvent, который запускается, когда документ получает новый Service Worker.
+				navigator.serviceWorker.addEventListener('controllerchange', controllerchangeevent => {
+
+						// Ждём новый Service Worker
+						controllerchangeevent.target.ready.then(registration => {
+								// Перезагружаем страницу
+								if (!window.isReloading) {
+										window.isReloading = true;
+										window.location.reload();
+								}
+								
+						});
+				});
+
+				// Сообщение об обновлении версии приложения
+				navigator.serviceWorker.addEventListener('message', (event) => {
+					localStorage.setItem('mess_update_SW', event.data.msg)
+				});
+			});
+		}
 	</script>
   </body>
 </html>
